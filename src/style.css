@@ -1,0 +1,190 @@
+.manage-emails-text-block p {
+  display: none;
+}
+
+.manage-emails-text-block h1 {
+  font-size: 28px;
+}
+
+.en__field--emailAddress {
+  display: flex;
+  flex-direction: column;
+}
+
+.en__field--emailAddress input {
+  color: gray;
+}
+
+.incorrect-email-link {
+  text-decoration: underline;
+}
+
+.less-emails-section {
+  border: 1px solid #c5c5c5;
+  max-width: 272px;
+  padding: 11px 18px;
+  margin-bottom: 32px;
+}
+
+.less-emails-header {
+  display: flex;
+  column-gap: 18px;
+  margin-bottom: 16px;
+}
+
+.less-emails-header h3 {
+  font-weight: 500;
+  font-size: 18px;
+  margin: 0;
+  margin-top: 2px;
+}
+
+.less-emails-section svg {
+  transition: 0.3s;
+}
+
+.show-paragraph-button {
+  transform: rotate(-45deg);
+}
+
+.hide-paragraph-button {
+  transform: rotate(0deg);
+}
+
+.less-emails-paragraph {
+  padding: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.hide-paragraph-animation {
+  animation: hide 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.hide-less-emails-paragraph {
+  height: 0;
+}
+
+.reveal-paragraph {
+  height: 100%;
+  animation: reveal 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  margin-bottom: 20px;
+}
+
+.less-emails-button {
+  cursor: pointer;
+  font-size: 16px;
+  background-color: #d32626;
+  width: fit-content;
+  padding: 15px 20px 13px 20px;
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+  text-align: center;
+  min-width: 238px;
+}
+
+.unsubscribe-options-header h3 {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.graphic-imagery-section {
+  border: 1px solid #c5c5c5;
+  padding: 11px 18px;
+}
+
+.graphic-slider {
+  cursor: pointer;
+}
+
+.enable-graphic-images {
+  animation: turn-on 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  transform: translate(27px, 0);
+}
+
+.disable-graphic-images {
+  animation: turn-off 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  transform: translate(0, 0);
+}
+
+.en__field--NOT_TAGGED_134 {
+  visibility: hidden;
+}
+
+@keyframes reveal {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 650px;
+  }
+}
+
+@keyframes hide {
+  0% {
+    max-height: 650px;
+  }
+
+  100% {
+    max-height: 0;
+  }
+}
+
+@keyframes turn-off {
+  0% {
+    transform: translate(27px, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes turn-on {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(27px, 0);
+  }
+}
+
+@media (min-width: 600px) {
+  .manage-emails-text-block {
+    margin-bottom: 25px;
+  }
+
+  .manage-emails-text-block h1 {
+    font-size: 32px;
+  }
+
+  .less-emails-section {
+    max-width: none;
+    padding: 24px 32px 32px 32px;
+    margin-bottom: 48px;
+  }
+
+  .less-emails-section svg {
+    display: none;
+  }
+
+  .less-emails-section .less-emails-paragraph {
+    height: 100%;
+    margin-bottom: 24px;
+  }
+
+  .less-emails-header h3 {
+    font-size: 26px;
+  }
+
+  .less-emails-button {
+    max-width: 176px;
+    margin: 0 auto;
+  }
+
+  .unsubscribe-options-header h3 {
+    font-size: 26px;
+  }
+}
