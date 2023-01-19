@@ -121,6 +121,85 @@
   cursor: pointer;
 }
 
+.preference-update-header {
+  padding-left: 24px;
+}
+
+.preference-update-header h1,
+.preference-update-header h2 {
+  color: #254d68;
+}
+
+.preference-update-header h1 {
+  font-size: 28px;
+  margin-bottom: 0;
+}
+
+.preference-update-header h2 {
+  font-size: 20px;
+  padding: 0;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.mobile-advocacy-parent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.mobile-advocacy-header {
+  background-color: #418fde;
+  width: 100vw;
+  display: flex;
+  height: 128px;
+  overflow: hidden;
+  position: relative;
+}
+
+.mobile-advocacy-header p {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  min-width: 210px;
+  padding: 25px 24px;
+  letter-spacing: -0.03em;
+}
+
+.mobile-advocacy-header img {
+  width: 206px;
+  height: 239px;
+  position: relative;
+  right: 65px;
+  bottom: 20px;
+}
+
+.mobile-advocacy-section {
+  color: white;
+  padding: 16px 24px;
+  background-color: #254d68;
+  width: 100vw;
+}
+
+.mobile-advocacy-section a {
+  color: #a3d1d6;
+}
+
+.mobile-join-button {
+  cursor: pointer;
+  background-color: #418fde;
+  width: fit-content;
+  padding: 15px 20px 13px 20px;
+  min-width: 172px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  border-radius: 5px;
+}
+
 @keyframes reveal {
   0% {
     max-height: 0;
@@ -195,5 +274,83 @@
 
   .unsubscribe-options-header h3 {
     font-size: 26px;
+  }
+
+  .mobile-advocacy-header {
+    column-gap: 10%;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .mobile-advocacy-section {
+    width: 100%;
+  }
+}
+
+@media (min-width: 900px) {
+  .preference-update-header {
+    margin: 0 auto;
+    max-width: 712px;
+  }
+
+  .preference-update-header h1 {
+    font-size: 54px;
+    font-weight: 800;
+    line-height: 38px;
+  }
+
+  .preference-update-header h2 {
+    font-size: 26px;
+    line-height: 38px;
+    margin-top: 10px;
+  }
+  .mobile-advocacy-header,
+  .mobile-advocacy-section {
+    background: transparent;
+  }
+
+  .mobile-advocacy-header {
+    height: auto;
+    overflow: visible;
+    justify-content: initial;
+  }
+
+  .mobile-advocacy-header p {
+    font-size: 32px;
+    width: 240px;
+    line-height: 38px;
+    padding: 0;
+    margin-top: 75px;
+    margin-left: 50px;
+  }
+
+  .mobile-advocacy-header img {
+    width: 258px;
+    height: auto;
+    transform: scaleX(-1);
+    right: -70px;
+    bottom: -140px;
+    position: absolute;
+  }
+
+  .mobile-advocacy-section {
+    margin-top: 41px;
+  }
+
+  .mobile-advocacy-section p:last-child {
+    line-height: 20px;
+  }
+
+  .mobile-advocacy-parent {
+    background-image: linear-gradient(
+      -70deg,
+      #254d68,
+      #254d68 62%,
+      #418fde 38%,
+      #418fde
+    );
+    flex-direction: row;
+    overflow: hidden;
+    height: 305px;
   }
 }
