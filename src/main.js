@@ -69,15 +69,23 @@ graphicSVG.addEventListener("click", (e) => {
     graphicSlider.classList.remove("disable-graphic-images");
     graphicSlider.classList.add("enable-graphic-images");
     enableGraphicImages.checked = true;
+    enableGraphicImages.value = "Y";
   } else {
     graphicSlider.classList.remove("enable-graphic-images");
     graphicSlider.classList.add("disable-graphic-images");
     enableGraphicImages.checked = false;
+    enableGraphicImages.value = "N";
   }
 });
 
 // Unsubscribe All Button
 unsubscribeAllBtn.addEventListener("click", (e) => {
+  const masterSuppressionBtn = document.querySelector(
+    "#en__field_supporter_questions_178"
+  );
+  masterSuppressionBtn.checked = true;
+  masterSuppressionBtn.value = "Y";
+
   document
     .querySelectorAll(".subscription_title input")
     .forEach((subscription) => {
