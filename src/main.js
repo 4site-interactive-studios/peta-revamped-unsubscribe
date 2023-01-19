@@ -18,7 +18,7 @@ document.querySelector(".less-emails-section").appendChild(lessEmailsBox);
 const lessEmailsBtn = document.querySelector(".less-emails-button");
 lessEmailsBtn.addEventListener("click", (e) => {
   lessEmailsBox.checked = "true";
-  document.querySelector("en__submit").click();
+  document.querySelector(".en__submit button").click();
 });
 
 if (screen.width >= 600) {
