@@ -6,6 +6,8 @@ const enableGraphicImages = document.querySelector(
 );
 const graphicSVG = document.querySelector(".graphic-slider");
 const graphicSlider = graphicSVG.querySelector("circle");
+const unsubscribeAllBtn = document.querySelector(".unsubscribe-all-button");
+const submitBtn = document.querySelector(".en__submit button");
 
 const lessEmailsBox = document.createElement("input");
 lessEmailsBox.id = "en__field_supporter_questions_1855";
@@ -18,7 +20,7 @@ document.querySelector(".less-emails-section").appendChild(lessEmailsBox);
 const lessEmailsBtn = document.querySelector(".less-emails-button");
 lessEmailsBtn.addEventListener("click", (e) => {
   lessEmailsBox.checked = "true";
-  document.querySelector(".en__submit button").click();
+  submitBtn.click();
 });
 
 if (screen.width >= 600) {
@@ -30,6 +32,7 @@ if (enableGraphicImages.checked) {
   graphicSlider.classList.add("enable-graphic-images");
 }
 
+// Send Fewer Emails Button
 document
   .querySelector(".less-emails-header svg")
   .addEventListener("click", (e) => {
@@ -57,6 +60,7 @@ document
     }
   });
 
+// Reduce Graphic Imagery Button
 graphicSVG.addEventListener("click", (e) => {
   if (
     graphicSlider.classList.length == 0 ||
@@ -70,6 +74,18 @@ graphicSVG.addEventListener("click", (e) => {
     graphicSlider.classList.add("disable-graphic-images");
     enableGraphicImages.checked = false;
   }
+});
+
+// Unsubscribe All Button
+unsubscribeAllBtn.addEventListener("click", (e) => {
+  document
+    .querySelectorAll(".subscription_title input")
+    .forEach((subscription) => {
+      subscription.value = "N";
+      subscription.checked = false;
+    });
+
+  submitBtn.click();
 });
 
 if (userEmail.value != "") {

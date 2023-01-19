@@ -112,6 +112,15 @@
   visibility: hidden;
 }
 
+.unsubscribe-all-button {
+  text-align: center;
+  color: #d32626;
+  font-weight: 600;
+  text-decoration: underline;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 @keyframes reveal {
   0% {
     max-height: 0;
