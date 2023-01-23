@@ -1,3 +1,16 @@
+form[action="/page/48122/subscriptions/2"].en__component
+  .en__component--row--1:nth-of-type(2)
+  > .en__component.en__component--column--1 {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+form[action="/page/48210/data/2"].en__component
+  > .en__component--row--1:nth-of-type(2)
+  > .en__component--column--1 {
+  padding-left: 0;
+}
+
 .manage-emails-text-block p {
   display: none;
 }
@@ -13,6 +26,7 @@
 
 .en__field--emailAddress input {
   color: gray;
+  height: 48px;
 }
 
 .incorrect-email-link {
@@ -21,14 +35,17 @@
 
 .less-emails-section {
   border: 1px solid #c5c5c5;
-  max-width: 272px;
+  max-width: 400px;
   padding: 11px 18px;
+  margin: 0 auto;
   margin-bottom: 32px;
 }
 
 .less-emails-header {
+  justify-content: center;
   display: flex;
   column-gap: 18px;
+  margin: 0 auto;
   margin-bottom: 16px;
 }
 
@@ -82,6 +99,7 @@
   border-radius: 5px;
   text-align: center;
   min-width: 238px;
+  margin: 0 auto;
 }
 
 .unsubscribe-options-header h3 {
@@ -244,6 +262,13 @@
 }
 
 @media (min-width: 600px) {
+  form[action="/page/48122/subscriptions/2"].en__component
+    .en__component--row--1:nth-of-type(2)
+    > .en__component.en__component--column--1 {
+    margin-left: 32px;
+    max-width: 775px;
+  }
+
   .manage-emails-text-block {
     margin-bottom: 25px;
   }
@@ -252,8 +277,12 @@
     font-size: 32px;
   }
 
+  .en__field--emailAddress input {
+    width: 510px;
+  }
+
   .less-emails-section {
-    max-width: none;
+    max-width: 775px;
     padding: 24px 32px 32px 32px;
     margin-bottom: 48px;
   }
@@ -273,11 +302,28 @@
 
   .less-emails-button {
     max-width: 176px;
-    margin: 0 auto;
   }
 
   .unsubscribe-options-header h3 {
     font-size: 26px;
+  }
+
+  form[action="/page/48122/subscriptions/2"].en__component
+    .en__component--row--1:nth-of-type(4)
+    > .en__component--column--1 {
+    max-width: 711px;
+    margin: 0 auto;
+  }
+
+  form[action="/page/48122/subscriptions/2"].en__component
+    > .en__component--row:nth-of-type(5) {
+    justify-content: center;
+  }
+
+  form[action="/page/48122/subscriptions/2"].en__component
+    > .en__component--row:nth-of-type(5)
+    .en__component--column {
+    max-width: 388px;
   }
 
   .mobile-advocacy-header {
@@ -289,9 +335,20 @@
   .mobile-advocacy-section {
     width: 100%;
   }
+
+  .graphic-imagery-section {
+    margin: 0 auto;
+    max-width: 775px;
+  }
 }
 
 @media (min-width: 900px) {
+  form[action="/page/48122/subscriptions/2"].en__component
+    .en__component--row--1:nth-of-type(2)
+    > .en__component.en__component--column--1 {
+    margin-left: 107px;
+  }
+
   .preference-update-header {
     margin: 0 auto;
     max-width: 712px;
