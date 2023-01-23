@@ -24,7 +24,7 @@ export default defineConfig({
         main: resolve(__dirname, "index.html"),
       },
     },
-    minify: "esbuild",
+    minify: false,
     target: "esnext",
   },
   plugins: [basicSsl(), cssInjectedByJsPlugin()],
