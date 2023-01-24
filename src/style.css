@@ -126,6 +126,10 @@ form[action="/page/48210/data/2"].en__component
   transform: translate(0, 0);
 }
 
+.on-text {
+  display: none;
+}
+
 .en__field--NOT_TAGGED_134 {
   visibility: hidden;
 }

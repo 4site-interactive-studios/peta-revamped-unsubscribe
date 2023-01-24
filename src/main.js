@@ -4,6 +4,8 @@ const lessEmailsParagraph = document.querySelector(".less-emails-paragraph");
 const enableGraphicImages = document.querySelector(
   "#en__field_supporter_NOT_TAGGED_134"
 );
+const offText = graphicSVG.querySelector(".off-text");
+const onText = graphicSVG.querySelector(".on-text");
 const graphicSVG = document.querySelector(".graphic-slider");
 const graphicSlider = graphicSVG.querySelector("circle");
 const unsubscribeAllBtn = document.querySelector(".unsubscribe-all-button");
@@ -28,6 +30,8 @@ if (screen.width >= 600) {
 }
 
 if (enableGraphicImages.checked) {
+  offText.style.display = "none";
+  onText.style.display = "inline";
   graphicSlider.classList.remove("disable-graphic-images");
   graphicSlider.classList.add("enable-graphic-images");
 }
@@ -70,11 +74,15 @@ graphicSVG.addEventListener("click", (e) => {
     graphicSlider.classList.add("enable-graphic-images");
     enableGraphicImages.checked = true;
     enableGraphicImages.value = "Y";
+    offText.style.display = "none";
+    onText.style.display = "inline";
   } else {
     graphicSlider.classList.remove("enable-graphic-images");
     graphicSlider.classList.add("disable-graphic-images");
     enableGraphicImages.checked = false;
     enableGraphicImages.value = "N";
+    onText.style.display = "none";
+    offText.style.display = "inline";
   }
 });
 
