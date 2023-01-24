@@ -75,14 +75,19 @@ graphicSVG.addEventListener("click", (e) => {
     enableGraphicImages.checked = true;
     enableGraphicImages.value = "Y";
     offText.style.display = "none";
-    onText.style.display = "inline";
+    setTimeout(() => {
+      onText.style.display = "inline";
+    }, 500);
   } else {
     graphicSlider.classList.remove("enable-graphic-images");
     graphicSlider.classList.add("disable-graphic-images");
     enableGraphicImages.checked = false;
     enableGraphicImages.value = "N";
     onText.style.display = "none";
-    offText.style.display = "inline";
+
+    setTimeout(() => {
+      offText.style.display = "inline";
+    }, 500);
   }
 });
 
