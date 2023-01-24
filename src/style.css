@@ -22,20 +22,29 @@ form[action="/page/48210/data/2"].en__component
 .en__field--emailAddress {
   display: flex;
   flex-direction: column;
+  padding-bottom: 12px;
 }
 
 .en__field--emailAddress input {
-  color: gray;
+  color: #ccc;
   height: 48px;
 }
 
 .incorrect-email-link {
   text-decoration: underline;
+  font-weight: 600;
+  line-height: 20px;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  padding-bottom: 32px;
+}
+.incorrect-email-link p {
+  padding-bottom: 0;
 }
 
 .less-emails-section {
   border: 1px solid #c5c5c5;
-  max-width: 400px;
+  max-width: 272px;
   padding: 11px 18px;
   margin: 0 auto;
   margin-bottom: 32px;
@@ -92,28 +101,45 @@ form[action="/page/48210/data/2"].en__component
   cursor: pointer;
   font-size: 16px;
   background-color: #d32626;
-  width: fit-content;
   padding: 15px 20px 13px 20px;
   color: white;
   font-weight: 600;
   border-radius: 5px;
   text-align: center;
   min-width: 238px;
+  max-width: 272px;
   margin: 0 auto;
 }
 
 .unsubscribe-options-header h3 {
   font-size: 28px;
   font-weight: 500;
+  margin-bottom: 12px;
 }
 
 .graphic-imagery-section {
   border: 1px solid #c5c5c5;
-  padding: 11px 18px;
+  padding: 20px 16px 16px 16px;
+}
+
+.graphic-imagery-section h4 {
+  line-height: 22px;
+  margin: 0;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.graphic-imagery-section p {
+  font-size: 12px;
+  font-style: italic;
+  line-height: 18px;
+  padding: 0;
 }
 
 .graphic-slider {
   cursor: pointer;
+  margin-top: 16px;
 }
 
 .enable-graphic-images {
@@ -130,8 +156,11 @@ form[action="/page/48210/data/2"].en__component
   display: none;
 }
 
-.en__field--NOT_TAGGED_134 {
+.en__field--NOT_TAGGED_134,
+.en__field--178 {
   visibility: hidden;
+  height: 0;
+  padding-bottom: 0;
 }
 
 .unsubscribe-all-button {
@@ -226,6 +255,14 @@ form[action="/page/48210/data/2"].en__component
   visibility: hidden;
 }
 
+.en__submit {
+  margin-top: 32px;
+}
+
+.privacy-policy {
+  text-align: center;
+}
+
 @keyframes reveal {
   0% {
     max-height: 0;
@@ -273,12 +310,25 @@ form[action="/page/48210/data/2"].en__component
     max-width: 775px;
   }
 
+  .incorrect-email-link {
+    line-height: 22px;
+    padding-bottom: 26px;
+  }
+
+  .incorrect-email-link p {
+    height: 44px;
+  }
+
   .manage-emails-text-block {
     margin-bottom: 25px;
   }
 
   .manage-emails-text-block h1 {
     font-size: 32px;
+  }
+
+  .en__field--emailAddress input {
+    padding-bottom: 8px;
   }
 
   .en__field--emailAddress input {
@@ -300,16 +350,22 @@ form[action="/page/48210/data/2"].en__component
     margin-bottom: 24px;
   }
 
+  .less-emails-header {
+    justify-content: flex-start;
+  }
+
   .less-emails-header h3 {
     font-size: 26px;
   }
 
   .less-emails-button {
     max-width: 176px;
+    min-width: none;
   }
 
   .unsubscribe-options-header h3 {
     font-size: 26px;
+    margin-top: 0;
   }
 
   form[action="/page/48122/subscriptions/2"].en__component
@@ -342,7 +398,30 @@ form[action="/page/48210/data/2"].en__component
 
   .graphic-imagery-section {
     margin: 0 auto;
+    margin-top: 48px;
     max-width: 775px;
+    display: flex;
+    column-gap: 56px;
+    align-items: center;
+    padding: 20px 32px;
+  }
+
+  .graphic-imagery-section p {
+    font-size: 13px;
+    font-style: italic;
+    line-height: 20px;
+  }
+
+  .graphic-slider {
+    margin: 0;
+  }
+
+  .en__submit {
+    margin-top: 48px;
+  }
+
+  .privacy-policy {
+    text-align: left;
   }
 }
 
