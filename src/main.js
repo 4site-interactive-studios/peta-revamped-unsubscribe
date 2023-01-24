@@ -4,9 +4,9 @@ const lessEmailsParagraph = document.querySelector(".less-emails-paragraph");
 const enableGraphicImages = document.querySelector(
   "#en__field_supporter_NOT_TAGGED_134"
 );
+const graphicSVG = document.querySelector(".graphic-slider");
 const offText = graphicSVG.querySelector(".off-text");
 const onText = graphicSVG.querySelector(".on-text");
-const graphicSVG = document.querySelector(".graphic-slider");
 const graphicSlider = graphicSVG.querySelector("circle");
 const unsubscribeAllBtn = document.querySelector(".unsubscribe-all-button");
 const submitBtn = document.querySelector(".en__submit button");
