@@ -12,6 +12,7 @@ form[action="/page/48388/data/2"].en__component
   > .en__component--row--1:nth-of-type(2)
   > .en__component--column--1 {
   padding-left: 0;
+  padding-right: 0;
 }
 
 .manage-emails-text-block p {
@@ -177,6 +178,12 @@ form[action="/page/48388/data/2"].en__component
 
 .preference-update-header {
   padding-left: 24px;
+  padding-right: 24px;
+  margin-bottom: 24px;
+}
+
+.preference-update-header p {
+  padding-bottom: 0;
 }
 
 .preference-update-header h1,
@@ -241,6 +248,14 @@ form[action="/page/48388/data/2"].en__component
   width: 100vw;
 }
 
+.mobile-advocacy-section > p:first-child {
+  font-size: 16px;
+}
+
+.mobile-advocacy-section > p:nth-child(2) {
+  font-size: 12px;
+}
+
 .mobile-advocacy-section a {
   color: #a3d1d6;
 }
@@ -256,6 +271,10 @@ form[action="/page/48388/data/2"].en__component
   font-size: 16px;
   line-height: 18px;
   border-radius: 5px;
+}
+
+.mobile-join-button a {
+  color: white;
 }
 
 .en__field--178 {
@@ -443,6 +462,7 @@ form[action="/page/48388/data/2"].en__component
   .preference-update-header {
     margin: 0 auto;
     max-width: 712px;
+    margin-bottom: 48px;
   }
 
   .preference-update-header h1 {
@@ -486,7 +506,11 @@ form[action="/page/48388/data/2"].en__component
   }
 
   .mobile-advocacy-section {
-    margin-top: 41px;
+    padding: 26px 62px;
+  }
+
+  .mobile-advocacy-section > p:nth-child(2) {
+    font-size: 13px;
   }
 
   .mobile-advocacy-section p:last-child {
