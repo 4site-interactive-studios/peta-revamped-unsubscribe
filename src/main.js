@@ -36,6 +36,14 @@ if (enableGraphicImages.checked) {
   graphicSlider.classList.add("enable-graphic-images");
 }
 
+// Make opt-in labels clickable
+document.querySelectorAll(".subscription_title").forEach((subscription) => {
+  const subscription_label = subscription.querySelector("label");
+  const subscription_box = subscription.querySelector("input");
+
+  subscription_label.setAttribute("for", subscription_box.id);
+});
+
 // Send Fewer Emails Button
 document
   .querySelector(".less-emails-header svg")

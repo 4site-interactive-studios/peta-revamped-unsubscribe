@@ -3,6 +3,7 @@ form[action="/page/48122/subscriptions/2"].en__component
   > .en__component.en__component--column--1 {
   max-width: 300px;
   margin: 0 auto;
+  padding-bottom: 32px;
 }
 
 form[action="/page/48210/data/2"].en__component
@@ -40,7 +41,6 @@ form[action="/page/48388/data/2"].en__component
   line-height: 20px;
   font-size: 16px;
   letter-spacing: -0.02em;
-  padding-bottom: 32px;
 }
 .incorrect-email-link p {
   padding-bottom: 0;
@@ -121,6 +121,11 @@ form[action="/page/48388/data/2"].en__component
   margin-bottom: 12px;
 }
 
+.subscription_title > .en__field--checkbox > .en__field__label {
+  width: fit-content;
+  cursor: pointer;
+}
+
 .graphic-imagery-section {
   border: 1px solid #c5c5c5;
   padding: 20px 16px 16px 16px;
@@ -174,6 +179,8 @@ form[action="/page/48388/data/2"].en__component
   text-decoration: underline;
   font-size: 16px;
   cursor: pointer;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .preference-update-header {
@@ -334,11 +341,11 @@ form[action="/page/48388/data/2"].en__component
     > .en__component.en__component--column--1 {
     margin-left: 32px;
     max-width: 775px;
+    padding-bottom: 26px;
   }
 
   .incorrect-email-link {
     line-height: 22px;
-    padding-bottom: 26px;
   }
 
   .incorrect-email-link p {
