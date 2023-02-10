@@ -121,6 +121,10 @@ form[action="/page/48388/data/2"].en__component
   margin-bottom: 12px;
 }
 
+.en__field--podcast-e-news label {
+  font-style: italic;
+}
+
 .subscription_title > .en__field--checkbox > .en__field__label {
   width: fit-content;
   cursor: pointer;
