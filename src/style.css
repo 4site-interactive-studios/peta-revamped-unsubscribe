@@ -36,6 +36,7 @@ form[action="/page/48388/data/2"].en__component
 }
 
 .incorrect-email-link {
+  display: none;
   text-decoration: underline;
   font-weight: 600;
   line-height: 20px;
