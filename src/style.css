@@ -136,6 +136,8 @@ form[action="/page/49041/subscriptions/2"] .incorrect-email-link a {
 
 form[action="/page/49041/subscriptions/2"] .less-emails-button {
   max-width: 392px;
+  background-color: #ef4136;
+  border-radius: 0;
 }
 
 .unsubscribe-options-header h3 {
@@ -226,6 +228,10 @@ form[action="/page/49041/subscriptions/2"] .less-emails-button {
   visibility: hidden;
   height: 0;
   padding-bottom: 0;
+}
+
+form[action="/page/49041/subscriptions/2"] .unsubscribe-all-button {
+  color: #ef4136;
 }
 
 .unsubscribe-all-button {
@@ -367,6 +373,11 @@ form[action="/page/49060/data/2"] .mobile-advocacy-header .mobile-join-button {
 
 .en__submit {
   margin-top: 32px;
+}
+
+form[action="/page/49041/subscriptions/2"] .en__submit button {
+  background-color: #ef4136;
+  border-radius: 0;
 }
 
 .privacy-policy {
