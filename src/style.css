@@ -1,4 +1,15 @@
+/* 
+Page 48122: PETA New Unubscribe Page
+Page 49041: PETA Latino New Unsubscribe Page
+Page 48210: PETA Thank You For Updating Your Preferences Page
+Page 48388: PETA Unsubscribe All Thank You Page
+Page 49060: PETA Latino Thank You For Updating Your Preferences Page
+*/
+
 form[action="/page/48122/subscriptions/2"].en__component
+  .en__component--row--1:nth-of-type(2)
+  > .en__component.en__component--column--1,
+form[action="/page/49041/subscriptions/2"].en__component
   .en__component--row--1:nth-of-type(2)
   > .en__component.en__component--column--1 {
   max-width: 300px;
@@ -10,6 +21,9 @@ form[action="/page/48210/data/2"].en__component
   > .en__component--row--1:nth-of-type(2)
   > .en__component--column--1,
 form[action="/page/48388/data/2"].en__component
+  > .en__component--row--1:nth-of-type(2)
+  > .en__component--column--1,
+form[action="/page/49060/data/2"].en__component
   > .en__component--row--1:nth-of-type(2)
   > .en__component--column--1 {
   padding-left: 0;
@@ -45,6 +59,10 @@ form[action="/page/48388/data/2"].en__component
 }
 .incorrect-email-link p {
   padding-bottom: 0;
+}
+
+form[action="/page/49041/subscriptions/2"] .incorrect-email-link a {
+  color: #00bfb3;
 }
 
 .less-emails-section {
@@ -116,6 +134,10 @@ form[action="/page/48388/data/2"].en__component
   margin: 0 auto;
 }
 
+form[action="/page/49041/subscriptions/2"] .less-emails-button {
+  max-width: 392px;
+}
+
 .unsubscribe-options-header h3 {
   font-size: 28px;
   font-weight: 500;
@@ -156,6 +178,39 @@ form[action="/page/48388/data/2"].en__component
   margin-top: 16px;
 }
 
+.graphic-slider rect {
+  transition: all 0.3s;
+}
+
+.latino-graphic-slider.slider-enabled circle {
+  fill: white;
+}
+
+.latino-graphic-slider.slider-enabled rect {
+  fill: #418fde;
+}
+
+.off-text,
+.on-text {
+  transition: all 0.3s;
+}
+
+.slider-disabled .off-text {
+  opacity: 1;
+}
+
+.slider-disabled .on-text {
+  opacity: 0;
+}
+
+.slider-enabled .off-text {
+  opacity: 0;
+}
+
+.slider-enabled .on-text {
+  opacity: 1;
+}
+
 .enable-graphic-images {
   animation: turn-on 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   transform: translate(27px, 0);
@@ -164,10 +219,6 @@ form[action="/page/48388/data/2"].en__component
 .disable-graphic-images {
   animation: turn-off 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   transform: translate(0, 0);
-}
-
-.on-text {
-  display: none;
 }
 
 .en__field--NOT_TAGGED_134,
@@ -226,6 +277,10 @@ form[action="/page/48388/data/2"].en__component
   width: 100%;
 }
 
+form[action="/page/49060/data/2"] .mobile-advocacy-header {
+  background-color: #5160f1;
+}
+
 .mobile-advocacy-header {
   background-color: #418fde;
   width: 100vw;
@@ -235,7 +290,7 @@ form[action="/page/48388/data/2"].en__component
   position: relative;
 }
 
-.mobile-advocacy-header p {
+.mobile-advocacy-header p:not(.mobile-join-button) {
   color: #ffffff;
   font-weight: 600;
   font-size: 20px;
@@ -251,6 +306,10 @@ form[action="/page/48388/data/2"].en__component
   position: relative;
   right: 65px;
   bottom: 20px;
+}
+
+form[action="/page/49060/data/2"] .mobile-advocacy-section {
+  background-color: #19252e;
 }
 
 .mobile-advocacy-section {
@@ -272,6 +331,15 @@ form[action="/page/48388/data/2"].en__component
   color: #a3d1d6;
 }
 
+form[action="/page/49060/data/2"] .mobile-join-button {
+  background-color: #00bfb3;
+  border-radius: 0;
+}
+
+form[action="/page/49060/data/2"] .mobile-advocacy-header .mobile-join-button {
+  display: none;
+}
+
 .mobile-join-button {
   cursor: pointer;
   background-color: #418fde;
@@ -287,6 +355,10 @@ form[action="/page/48388/data/2"].en__component
 
 .mobile-join-button a {
   color: white;
+}
+
+.latino-header-join-button {
+  display: none;
 }
 
 .en__field--178 {
@@ -342,6 +414,9 @@ form[action="/page/48388/data/2"].en__component
 
 @media (min-width: 600px) {
   form[action="/page/48122/subscriptions/2"].en__component
+    .en__component--row--1:nth-of-type(2)
+    > .en__component.en__component--column--1,
+  form[action="/page/49041/subscriptions/2"].en__component
     .en__component--row--1:nth-of-type(2)
     > .en__component.en__component--column--1 {
     margin-left: 32px;
@@ -408,6 +483,9 @@ form[action="/page/48388/data/2"].en__component
 
   form[action="/page/48122/subscriptions/2"].en__component
     .en__component--row--1:nth-of-type(4)
+    > .en__component--column--1,
+  form[action="/page/49041/subscriptions/2"].en__component
+    .en__component--row--1:nth-of-type(4)
     > .en__component--column--1 {
     max-width: 711px;
     margin: 0 auto;
@@ -415,11 +493,16 @@ form[action="/page/48388/data/2"].en__component
   }
 
   form[action="/page/48122/subscriptions/2"].en__component
+    > .en__component--row:nth-of-type(5),
+  form[action="/page/49041/subscriptions/2"].en__component
     > .en__component--row:nth-of-type(5) {
     justify-content: center;
   }
 
   form[action="/page/48122/subscriptions/2"].en__component
+    > .en__component--row:nth-of-type(5)
+    .en__component--column,
+  form[action="/page/49041/subscriptions/2"].en__component
     > .en__component--row:nth-of-type(5)
     .en__component--column {
     max-width: 400px;
@@ -467,6 +550,9 @@ form[action="/page/48388/data/2"].en__component
 @media (min-width: 900px) {
   form[action="/page/48122/subscriptions/2"].en__component
     .en__component--row--1:nth-of-type(2)
+    > .en__component.en__component--column--1,
+  form[action="/page/49041/subscriptions/2"].en__component
+    .en__component--row--1:nth-of-type(2)
     > .en__component.en__component--column--1 {
     margin-left: 107px;
   }
@@ -488,8 +574,11 @@ form[action="/page/48388/data/2"].en__component
     line-height: 38px;
     margin-top: 10px;
   }
+
   .mobile-advocacy-header,
-  .mobile-advocacy-section {
+  .mobile-advocacy-section,
+  form[action="/page/49060/data/2"] .mobile-advocacy-header,
+  form[action="/page/49060/data/2"] .mobile-advocacy-section {
     background: transparent;
   }
 
@@ -499,12 +588,12 @@ form[action="/page/48388/data/2"].en__component
     justify-content: initial;
   }
 
-  .mobile-advocacy-header p {
+  .mobile-advocacy-header p:not(.mobile-join-button) {
     font-size: 32px;
     width: 240px;
     line-height: 38px;
     padding: 0;
-    margin-top: 75px;
+    margin-top: 37px;
     margin-left: 50px;
   }
 
@@ -527,6 +616,49 @@ form[action="/page/48388/data/2"].en__component
 
   .mobile-advocacy-section p:last-child {
     line-height: 20px;
+  }
+
+  .latino-mobile-advocacy-header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+  }
+
+  form[action="/page/49060/data/2"]
+    .mobile-advocacy-header
+    .mobile-join-button {
+    display: block;
+    cursor: pointer;
+    width: fit-content;
+    padding: 15px 20px 13px 20px;
+    min-width: 172px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    margin-left: 50px;
+  }
+
+  form[action="/page/49060/data/2"]
+    .mobile-advocacy-section
+    .mobile-join-button {
+    display: none;
+  }
+
+  form[action="/page/49060/data/2"] .mobile-advocacy-parent {
+    background-image: linear-gradient(
+      -70deg,
+      #19252e,
+      #19252e 55%,
+      #5160f1 38%,
+      #5160f1
+    );
+  }
+
+  form[action="/page/49060/data/2"] .mobile-advocacy-header img {
+    width: 320px;
+    right: -110px;
+    bottom: -180px;
   }
 
   .mobile-advocacy-parent {

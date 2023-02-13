@@ -36,8 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (enableGraphicImages.checked) {
-    offText.style.display = "none";
-    onText.style.display = "inline";
+    // offText.style.display = "none";
+    // onText.style.display = "inline";
+    graphicSVG.classList.add("slider-enabled");
+    graphicSVG.classList.remove("slider-disabled");
     graphicSlider.classList.remove("disable-graphic-images");
     graphicSlider.classList.add("enable-graphic-images");
   }
@@ -86,22 +88,25 @@ document.addEventListener("DOMContentLoaded", () => {
     ) {
       graphicSlider.classList.remove("disable-graphic-images");
       graphicSlider.classList.add("enable-graphic-images");
+      graphicSVG.classList.add("slider-enabled");
+      graphicSVG.classList.remove("slider-disabled");
       enableGraphicImages.checked = true;
       enableGraphicImages.value = "Y";
-      offText.style.display = "none";
-      setTimeout(() => {
-        onText.style.display = "inline";
-      }, 500);
+      // offText.style.display = "none";
+      // setTimeout(() => {
+      //   onText.style.display = "inline";
+      // }, 500);
     } else {
       graphicSlider.classList.remove("enable-graphic-images");
       graphicSlider.classList.add("disable-graphic-images");
+      graphicSVG.classList.add("slider-disabled");
+      graphicSVG.classList.remove("slider-enabled");
       enableGraphicImages.checked = false;
       enableGraphicImages.value = "N";
-      onText.style.display = "none";
-
-      setTimeout(() => {
-        offText.style.display = "inline";
-      }, 500);
+      // onText.style.display = "none";
+      // setTimeout(() => {
+      //   offText.style.display = "inline";
+      // }, 500);
     }
   });
 
