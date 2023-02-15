@@ -153,6 +153,7 @@ form[action="/page/49041/subscriptions/2"] .less-emails-button {
 .required-action-team-fields {
   width: fit-content;
   margin: 0 auto;
+  max-width: 258px;
 }
 
 .subscription_title > .en__field--checkbox > .en__field__label {
