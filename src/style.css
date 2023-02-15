@@ -150,6 +150,11 @@ form[action="/page/49041/subscriptions/2"] .less-emails-button {
   font-style: italic;
 }
 
+.required-action-team-fields {
+  width: fit-content;
+  margin: 0 auto;
+}
+
 .subscription_title > .en__field--checkbox > .en__field__label {
   width: fit-content;
   cursor: pointer;

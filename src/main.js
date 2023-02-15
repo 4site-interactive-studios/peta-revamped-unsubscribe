@@ -11,6 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const graphicSlider = graphicSVG.querySelector("circle");
   const unsubscribeAllBtn = document.querySelector(".unsubscribe-all-button");
   const submitBtn = document.querySelector(".en__submit button");
+  const actionTeamDesc = document.querySelector(
+    ".en__field--peta-action-team-alerts"
+  ).parentElement.nextElementSibling;
+  const actionTeamFields = document.querySelector(
+    ".required-action-team-fields"
+  );
 
   const lessEmailsBox = document.createElement("input");
   lessEmailsBox.id = "en__field_supporter_questions_1855";
@@ -19,6 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
   lessEmailsBox.name = "supporter.questions.1855";
   lessEmailsBox.style.visibility = "hidden";
   document.querySelector(".less-emails-section").appendChild(lessEmailsBox);
+
+  if (actionTeamDesc && actionTeamFields) {
+    actionTeamDesc.after(actionTeamFields);
+  }
 
   if (userEmail.value != "") {
     userEmail.setAttribute("disabled", "");
