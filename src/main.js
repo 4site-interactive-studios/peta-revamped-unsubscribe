@@ -18,13 +18,21 @@ document.addEventListener("DOMContentLoaded", () => {
     ".required-action-team-fields"
   );
 
-  const lessEmailsBox = document.createElement("input");
-  lessEmailsBox.id = "en__field_supporter_questions_1855";
-  lessEmailsBox.type = "checkbox";
-  lessEmailsBox.classList.add("en__field__input", "en__field__input--checkbox");
-  lessEmailsBox.name = "supporter.questions.1855";
-  lessEmailsBox.style.visibility = "hidden";
-  document.querySelector(".less-emails-section").appendChild(lessEmailsBox);
+  // const lessEmailsBox = document.createElement("input");
+  // lessEmailsBox.id = "en__field_supporter_questions_1855";
+  // lessEmailsBox.type = "checkbox";
+  // lessEmailsBox.classList.add("en__field__input", "en__field__input--checkbox");
+  // lessEmailsBox.name = "supporter.questions.1855";
+  // lessEmailsBox.value = "Y";
+  // lessEmailsBox.style.visibility = "hidden";
+  // document.querySelector(".less-emails-section").appendChild(lessEmailsBox);
+  const lessEmailsBox = document.querySelector(
+    "#en__field_supporter_questions_1855"
+  );
+
+  if (lessEmailsBox) {
+    lessEmailsBox.removeAttribute("disabled");
+  }
 
   if (actionTeamDesc && actionTeamFields) {
     actionTeamDesc.after(actionTeamFields);
