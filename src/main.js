@@ -1,5 +1,7 @@
 import "./style.css";
-document.addEventListener("DOMContentLoaded", () => {
+
+// Encapsulate your code into a function
+const runScript = () => {
   const userEmail = document.querySelector("#en__field_supporter_emailAddress");
   const lessEmailsParagraph = document.querySelector(".less-emails-paragraph");
   const enableGraphicImages = document.querySelector(
@@ -145,4 +147,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     submitBtn.click();
   });
-});
+};
+
+// Check if the document's content has already loaded
+if (document.readyState === "loading") {
+  // If the content is still loading, add an event listener for DOMContentLoaded
+  document.addEventListener("DOMContentLoaded", runScript);
+} else {
+  // If the content has already loaded, run the function immediately
+  runScript();
+}

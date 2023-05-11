@@ -10,6 +10,9 @@ form[action="/page/48122/subscriptions/2"].en__component
   > .en__component.en__component--column--1,
 form[action="/page/49041/subscriptions/2"].en__component
   .en__component--row--1:nth-of-type(2)
+  > .en__component.en__component--column--1,
+form[action="/page/52319/subscriptions/2"].en__component
+  .en__component--row--1:nth-of-type(2)
   > .en__component.en__component--column--1 {
   max-width: 300px;
   margin: 0 auto;
@@ -363,6 +366,9 @@ form[action="/page/49041/subscriptions/2"] .en__submit button {
     > .en__component.en__component--column--1,
   form[action="/page/49041/subscriptions/2"].en__component
     .en__component--row--1:nth-of-type(2)
+    > .en__component.en__component--column--1,
+  form[action="/page/52319/subscriptions/2"].en__component
+    .en__component--row--1:nth-of-type(2)
     > .en__component.en__component--column--1 {
     margin-left: 32px;
     max-width: 775px;
@@ -417,6 +423,9 @@ form[action="/page/49041/subscriptions/2"] .en__submit button {
     > .en__component--column--1,
   form[action="/page/49041/subscriptions/2"].en__component
     .en__component--row--1:nth-of-type(4)
+    > .en__component--column--1,
+  form[action="/page/52319/subscriptions/2"].en__component
+    .en__component--row--1:nth-of-type(4)
     > .en__component--column--1 {
     max-width: 711px;
     margin: 0 auto;
@@ -425,6 +434,8 @@ form[action="/page/49041/subscriptions/2"] .en__submit button {
   form[action="/page/48122/subscriptions/2"].en__component
     > .en__component--row:nth-of-type(5),
   form[action="/page/49041/subscriptions/2"].en__component
+    > .en__component--row:nth-of-type(5),
+  form[action="/page/52319/subscriptions/2"].en__component
     > .en__component--row:nth-of-type(5) {
     justify-content: center;
   }
@@ -432,6 +443,9 @@ form[action="/page/49041/subscriptions/2"] .en__submit button {
     > .en__component--row:nth-of-type(5)
     .en__component--column,
   form[action="/page/49041/subscriptions/2"].en__component
+    > .en__component--row:nth-of-type(5)
+    .en__component--column,
+  form[action="/page/52319/subscriptions/2"].en__component
     > .en__component--row:nth-of-type(5)
     .en__component--column {
     max-width: 400px;
@@ -473,6 +487,9 @@ form[action="/page/49041/subscriptions/2"] .en__submit button {
     .en__component--row--1:nth-of-type(2)
     > .en__component.en__component--column--1,
   form[action="/page/49041/subscriptions/2"].en__component
+    .en__component--row--1:nth-of-type(2)
+    > .en__component.en__component--column--1,
+  form[action="/page/52319/subscriptions/2"].en__component
     .en__component--row--1:nth-of-type(2)
     > .en__component.en__component--column--1 {
     margin-left: 107px;
@@ -625,7 +642,8 @@ true&&(function polyfill() {
 
 const style = '';
 
-document.addEventListener("DOMContentLoaded", () => {
+// Encapsulate your code into a function
+const runScript = () => {
   const userEmail = document.querySelector("#en__field_supporter_emailAddress");
   const lessEmailsParagraph = document.querySelector(".less-emails-paragraph");
   const enableGraphicImages = document.querySelector(
@@ -771,4 +789,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     submitBtn.click();
   });
-});
+};
+
+// Check if the document's content has already loaded
+if (document.readyState === "loading") {
+  // If the content is still loading, add an event listener for DOMContentLoaded
+  document.addEventListener("DOMContentLoaded", runScript);
+} else {
+  // If the content has already loaded, run the function immediately
+  runScript();
+}
