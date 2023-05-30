@@ -1,11 +1,26 @@
 (function(){"use strict";try{if(typeof document!="undefined"){var n=document.createElement("style");n.appendChild(document.createTextNode(`/* 
-Page 48122: PETA New Unubscribe Page
-Page 49041: PETA Latino New Unsubscribe Page
-Page 48210: PETA Thank You For Updating Your Preferences Page
-Page 48388: PETA Unsubscribe All Thank You Page
-Page 49060: PETA Latino Thank You For Updating Your Preferences Page
+PETA US Unsubscribe Pages
+1) Landing Page URL:
+   4Site - Development - New Unsubscribe Page - List Subscription (Warm Visitor) #48122
+2) If the visitor comes to the Landing Page URL cold, they get redirected here:
+   4Site - Development - New Unsubscribe Page - DCF (Cold Visitor) #53017
+3) After either of the above forms is completed, they get redirected here:
+   4Site - Development - New Post-Unsubscribe All Page #48388
+PETA Latino Unsubscribe Pages
+1) Landing Page URL
+   4Site - Development - New Latino Unsubscribe Page #49041
+2) If the visitor comes to the Landing Page URL cold, they get redirected here:
+   TBD
+3) After either of the above forms is completed, they get redirected here:
+   	4Site - Development - New Latino Post-Unsubscribe Mobile Opt-In Page #49060
+Miscellaneous Pages
+1) Page 48210: PETA Thank You For Updating Your Preferences Page
+2) Page 52319: 4Site - Development - New Unsubscribe Page (Take 2)
 */
 form[action="/page/48122/subscriptions/2"].en__component
+  .en__component--row--1:nth-of-type(2)
+  > .en__component.en__component--column--1,
+form[action="/page/53017/data/2"].en__component
   .en__component--row--1:nth-of-type(2)
   > .en__component.en__component--column--1,
 form[action="/page/49041/subscriptions/2"].en__component
@@ -56,7 +71,10 @@ form[action="/page/49060/data/2"].en__component
 .incorrect-email-link p {
   padding-bottom: 0;
 }
-form[action="/page/49041/subscriptions/2"] .incorrect-email-link a {
+form[action="/page/48122/subscriptions/2"] .incorrect-email-link a,
+form[action="/page/53017/data/2"] .incorrect-email-link a,
+form[action="/page/49041/subscriptions/2"] .incorrect-email-link a,
+form[action="/page/52319/subscriptions/2"] .incorrect-email-link a {
   color: #00bfb3;
 }
 .less-emails-section {
@@ -117,7 +135,10 @@ form[action="/page/49041/subscriptions/2"] .incorrect-email-link a {
   max-width: 272px;
   margin: 0 auto;
 }
-form[action="/page/49041/subscriptions/2"] .less-emails-button {
+form[action="/page/48122/subscriptions/2"] .less-emails-button,
+form[action="/page/52017/subscriptions/2"] .less-emails-button,
+form[action="/page/49041/subscriptions/2"] .less-emails-button,
+form[action="/page/52319/subscriptions/2"] .less-emails-button {
   max-width: 392px;
   background-color: #ef4136;
   border-radius: 0;
@@ -201,7 +222,10 @@ body:not(#en__pagebuilder) .en__field--1855 {
   height: 0;
   padding-bottom: 0;
 }
-form[action="/page/49041/subscriptions/2"] .unsubscribe-all-button {
+form[action="/page/48122/subscriptions/2"] .unsubscribe-all-button,
+form[action="/page/53017/data/2"] .unsubscribe-all-button,
+form[action="/page/49041/subscriptions/2"] .unsubscribe-all-button,
+form[action="/page/52319/subscriptions/2"] .unsubscribe-all-button {
   color: #ef4136;
 }
 .unsubscribe-all-button {
@@ -321,7 +345,10 @@ form[action="/page/49060/data/2"] .mobile-advocacy-header .mobile-join-button {
 .en__submit {
   margin-top: 32px;
 }
-form[action="/page/49041/subscriptions/2"] .en__submit button {
+form[action="/page/48122/subscriptions/2"] .en__submit button,
+form[action="/page/53017/data/2"] .en__submit button,
+form[action="/page/49041/subscriptions/2"] .en__submit button,
+form[action="/page/52319/subscriptions/2"] .en__submit button {
   background-color: #ef4136;
   border-radius: 0;
 }
@@ -362,6 +389,9 @@ form[action="/page/49041/subscriptions/2"] .en__submit button {
 }
 @media (min-width: 600px) {
   form[action="/page/48122/subscriptions/2"].en__component
+    .en__component--row--1:nth-of-type(2)
+    > .en__component.en__component--column--1,
+  form[action="/page/53017/data/2"].en__component
     .en__component--row--1:nth-of-type(2)
     > .en__component.en__component--column--1,
   form[action="/page/49041/subscriptions/2"].en__component
@@ -421,6 +451,9 @@ form[action="/page/49041/subscriptions/2"] .en__submit button {
   form[action="/page/48122/subscriptions/2"].en__component
     .en__component--row--1:nth-of-type(4)
     > .en__component--column--1,
+  form[action="/page/53017/data/2"].en__component
+    .en__component--row--1:nth-of-type(4)
+    > .en__component--column--1,
   form[action="/page/49041/subscriptions/2"].en__component
     .en__component--row--1:nth-of-type(4)
     > .en__component--column--1,
@@ -433,6 +466,8 @@ form[action="/page/49041/subscriptions/2"] .en__submit button {
   }
   form[action="/page/48122/subscriptions/2"].en__component
     > .en__component--row:nth-of-type(5),
+  form[action="/page/53017/data/2"].en__component
+    > .en__component--row:nth-of-type(5),
   form[action="/page/49041/subscriptions/2"].en__component
     > .en__component--row:nth-of-type(5),
   form[action="/page/52319/subscriptions/2"].en__component
@@ -440,6 +475,9 @@ form[action="/page/49041/subscriptions/2"] .en__submit button {
     justify-content: center;
   }
   form[action="/page/48122/subscriptions/2"].en__component
+    > .en__component--row:nth-of-type(5)
+    .en__component--column,
+  form[action="/page/53017/data/2"].en__component
     > .en__component--row:nth-of-type(5)
     .en__component--column,
   form[action="/page/49041/subscriptions/2"].en__component
@@ -484,6 +522,9 @@ form[action="/page/49041/subscriptions/2"] .en__submit button {
 }
 @media (min-width: 900px) {
   form[action="/page/48122/subscriptions/2"].en__component
+    .en__component--row--1:nth-of-type(2)
+    > .en__component.en__component--column--1,
+  form[action="/page/53017/data/2"].en__component
     .en__component--row--1:nth-of-type(2)
     > .en__component.en__component--column--1,
   form[action="/page/49041/subscriptions/2"].en__component
