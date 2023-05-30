@@ -1,28 +1,28 @@
 /* 
 
 PETA US Unsubscribe Pages
-1) Landing Page URL:
+1) Email Subscription Landing Page URL:
    4Site - Development - New Unsubscribe Page - List Subscription (Warm Visitor) #48122
 
-2) If the visitor comes to the Landing Page URL cold, they get redirected here:
+2) If the visitor comes to the Landing Page URL cold, they get redirected to this DCF page.
    4Site - Development - New Unsubscribe Page - DCF (Cold Visitor) #53017
 
 3) After either of the above forms is completed, they get redirected here:
    4Site - Development - New Post-Unsubscribe All Page #48388
 
 PETA Latino Unsubscribe Pages
-1) Landing Page URL
+1) Email Subscription Landing Page URL
    4Site - Development - New Latino Unsubscribe Page #49041
 
-2) If the visitor comes to the Landing Page URL cold, they get redirected here:
+2) If the visitor comes to the Landing Page URL cold, they get redirected this DCF page.
    TBD
 
 3) After either of the above forms is completed, they get redirected here:
    	4Site - Development - New Latino Post-Unsubscribe Mobile Opt-In Page #49060
 
-Miscellaneous Pages
-1) Page 48210: PETA Thank You For Updating Your Preferences Page
-2) Page 52319: 4Site - Development - New Unsubscribe Page (Take 2)
+Miscellaneous Pages (To Be Deleted After Development)
+1) 4Site - Development - New Post-Unsubscribe Mobile Opt-In Page #48210 - Set up by Ry
+2) 4Site - Development - New Unsubscribe Page (Take 2) #52319 - Set up by Bryan
 
 */
 
@@ -38,7 +38,7 @@ form[action="/page/49041/subscriptions/2"].en__component
 form[action="/page/52319/subscriptions/2"].en__component
   .en__component--row--1:nth-of-type(2)
   > .en__component.en__component--column--1 {
-  max-width: 300px;
+  /* max-width: 300px; */
   margin: 0 auto;
   padding-bottom: 32px;
 }
@@ -94,15 +94,17 @@ form[action="/page/52319/subscriptions/2"] .incorrect-email-link a {
   color: #00bfb3;
 }
 
-.less-emails-section {
+.less-emails-section,
+.graphic-imagery-section {
   border: 1px solid #c5c5c5;
-  max-width: 272px;
+  /* max-width: 272px; */
   padding: 11px 18px;
   margin: 0 auto;
   margin-bottom: 32px;
 }
 
-.less-emails-header {
+.less-emails-header,
+.reduce-graphic-imagery-header {
   justify-content: center;
   display: flex;
   column-gap: 18px;
@@ -110,14 +112,16 @@ form[action="/page/52319/subscriptions/2"] .incorrect-email-link a {
   margin-bottom: 16px;
 }
 
-.less-emails-header h3 {
+.less-emails-header h3,
+.reduce-graphic-imagery-header h3 {
   font-weight: 500;
   font-size: 18px;
   margin: 0;
   margin-top: 2px;
 }
 
-.less-emails-section svg {
+.less-emails-section svg,
+.reduce-graphic-imagery-header svg {
   transition: 0.3s;
 }
 
@@ -129,7 +133,7 @@ form[action="/page/52319/subscriptions/2"] .incorrect-email-link a {
   transform: rotate(0deg);
 }
 
-.less-emails-paragraph {
+.section-paragraph {
   padding: 0;
   overflow: hidden;
   transition: 0.5s;
@@ -139,7 +143,7 @@ form[action="/page/52319/subscriptions/2"] .incorrect-email-link a {
   animation: hide 0.5s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-.hide-less-emails-paragraph {
+.hide-section-paragraph {
   height: 0;
 }
 
@@ -149,7 +153,7 @@ form[action="/page/52319/subscriptions/2"] .incorrect-email-link a {
   margin-bottom: 20px;
 }
 
-.less-emails-button {
+/* .less-emails-button {
   cursor: pointer;
   font-size: 16px;
   background-color: #d32626;
@@ -161,16 +165,16 @@ form[action="/page/52319/subscriptions/2"] .incorrect-email-link a {
   min-width: 238px;
   max-width: 272px;
   margin: 0 auto;
-}
+} */
 
-form[action="/page/48122/subscriptions/2"] .less-emails-button,
+/* form[action="/page/48122/subscriptions/2"] .less-emails-button,
 form[action="/page/52017/subscriptions/2"] .less-emails-button,
 form[action="/page/49041/subscriptions/2"] .less-emails-button,
 form[action="/page/52319/subscriptions/2"] .less-emails-button {
   max-width: 392px;
   background-color: #ef4136;
   border-radius: 0;
-}
+} */
 
 .unsubscribe-options-header h3 {
   font-size: 28px;
@@ -189,12 +193,24 @@ form[action="/page/52319/subscriptions/2"] .less-emails-button {
   margin-left: 35px;
 }
 
+.less-emails-radio-select > .en__field--question,
+.reduce-graphic-imagery-radio-select .en__field--radio {
+  padding-bottom: 0;
+}
+
+.less-emails-radio-select .en__field--question > .en__field__label,
+.reduce-graphic-imagery-radio-select .en__field--radio > .en__field__label {
+  font-weight: 700;
+}
+
 .subscription_title > .en__field--checkbox > .en__field__label {
   width: fit-content;
   cursor: pointer;
+  position: relative;
+  top: -3px;
 }
 
-.graphic-imagery-section {
+/* .graphic-imagery-section {
   border: 1px solid #c5c5c5;
   padding: 20px 16px 16px 16px;
 }
@@ -212,9 +228,9 @@ form[action="/page/52319/subscriptions/2"] .less-emails-button {
   font-style: italic;
   line-height: 18px;
   padding: 0;
-}
+} */
 
-.graphic-slider {
+/* .graphic-slider {
   cursor: pointer;
   margin-top: 16px;
 }
@@ -229,7 +245,7 @@ form[action="/page/52319/subscriptions/2"] .less-emails-button {
 
 .latino-graphic-slider.slider-enabled rect {
   fill: #418fde;
-}
+} */
 
 .off-text,
 .on-text {
@@ -262,9 +278,7 @@ form[action="/page/52319/subscriptions/2"] .less-emails-button {
   transform: translate(0, 0);
 }
 
-body:not(#en__pagebuilder) .en__field--NOT_TAGGED_134,
-body:not(#en__pagebuilder) .en__field--178,
-body:not(#en__pagebuilder) .en__field--1855 {
+body:not(#en__pagebuilder) .en__field--178 {
   visibility: hidden;
   height: 0;
   padding-bottom: 0;
@@ -275,6 +289,18 @@ form[action="/page/53017/data/2"] .unsubscribe-all-button,
 form[action="/page/49041/subscriptions/2"] .unsubscribe-all-button,
 form[action="/page/52319/subscriptions/2"] .unsubscribe-all-button {
   color: #ef4136;
+}
+
+.en__field--NOT_TAGGED_134 .en__field__element,
+.en__field--1855 .en__field__element {
+  display: flex;
+  flex-direction: column;
+}
+
+.en__field--NOT_TAGGED_134 .en__field__element .en__field__label--item,
+.en__field--1855 .en__field__element .en__field__label--item {
+  position: relative;
+  top: -3px;
 }
 
 .unsubscribe-all-button {
@@ -430,6 +456,16 @@ form[action="/page/52319/subscriptions/2"] .en__submit button {
   text-align: center;
 }
 
+.less-emails-header,
+.reduce-graphic-imagery-header {
+  justify-content: flex-start;
+}
+
+.less-emails-header h3,
+.reduce-graphic-imagery-header h3 {
+  font-size: 26px;
+}
+
 @keyframes reveal {
   0% {
     max-height: 0;
@@ -511,33 +547,31 @@ form[action="/page/52319/subscriptions/2"] .en__submit button {
     width: 510px;
   }
 
-  .less-emails-section {
+  .less-emails-section,
+  .graphic-imagery-section {
     max-width: 775px;
     padding: 24px 32px 32px 32px;
     margin-bottom: 48px;
   }
 
-  .less-emails-section svg {
+  .graphic-imagery-section {
+    margin-top: 32px;
+  }
+
+  .less-emails-section svg,
+  .graphic-imagery-section svg {
     display: none;
   }
 
-  .less-emails-section .less-emails-paragraph {
+  .section-paragraph {
     height: 100%;
     margin-bottom: 24px;
   }
 
-  .less-emails-header {
-    justify-content: flex-start;
-  }
-
-  .less-emails-header h3 {
-    font-size: 26px;
-  }
-
-  .less-emails-button {
+  /* .less-emails-button {
     max-width: 176px;
     min-width: none;
-  }
+  } */
 
   .unsubscribe-options-header h3 {
     font-size: 26px;
@@ -597,7 +631,7 @@ form[action="/page/52319/subscriptions/2"] .en__submit button {
     width: 100%;
   }
 
-  .graphic-imagery-section {
+  /* .graphic-imagery-section {
     margin: 0 auto;
     margin-top: 48px;
     max-width: 775px;
@@ -605,20 +639,20 @@ form[action="/page/52319/subscriptions/2"] .en__submit button {
     column-gap: 56px;
     align-items: center;
     padding: 20px 32px;
-  }
+  } */
 
-  .graphic-imagery-section p {
+  /* .graphic-imagery-section p {
     font-size: 13px;
     font-style: italic;
     line-height: 20px;
-  }
-
+  } */
+  /* 
   .graphic-slider {
     margin: 0;
-  }
+  } */
 
   .en__submit {
-    margin-top: 48px;
+    margin-top: 0px;
   }
 
   .privacy-policy {
@@ -757,5 +791,12 @@ form[action="/page/52319/subscriptions/2"] .en__submit button {
     flex-direction: row;
     overflow: hidden;
     height: 305px;
+  }
+}
+
+@media screen and (max-width: 825px) {
+  .unsubscribe-options-header {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
