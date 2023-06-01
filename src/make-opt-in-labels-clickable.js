@@ -16,9 +16,11 @@ export const toggleSubscriptionCheckboxOnClick = () => {
     // for each title, bind a click event listener
     subscriptionTitles.forEach((title, index) => {
       let input = title.querySelector('input[type="checkbox"]');
+      let titleLabel = title.querySelector("label");
 
       // for the corresponding title label
-      title.addEventListener("click", (event) => {
+      titleLabel.addEventListener("click", (event) => {
+        console.log("title clicked", event);
         event.preventDefault();
         input.checked = !input.checked;
 
@@ -30,6 +32,7 @@ export const toggleSubscriptionCheckboxOnClick = () => {
       // for the corresponding description paragraph
       let description = subscriptionDescriptions[index];
       description.addEventListener("click", (event) => {
+        console.log("description clicked", event);
         event.preventDefault();
         input.checked = !input.checked;
 
