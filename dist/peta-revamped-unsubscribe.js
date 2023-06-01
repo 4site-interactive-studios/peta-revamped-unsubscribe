@@ -17,50 +17,84 @@ Miscellaneous Pages (To Be Deleted After Development)
 1) 4Site - Development - New Post-Unsubscribe Mobile Opt-In Page #48210 - Set up by Ry
 2) 4Site - Development - New Unsubscribe Page (Take 2) #52319 - Set up by Bryan
 */
-form[action="/page/48122/subscriptions/2"].en__component
-  .en__component--row--1:nth-of-type(2)
-  > .en__component.en__component--column--1,
-form[action="/page/53017/data/2"].en__component
-  .en__component--row--1:nth-of-type(2)
-  > .en__component.en__component--column--1,
-form[action="/page/49041/subscriptions/2"].en__component
-  .en__component--row--1:nth-of-type(2)
-  > .en__component.en__component--column--1,
-form[action="/page/52319/subscriptions/2"].en__component
-  .en__component--row--1:nth-of-type(2)
-  > .en__component.en__component--column--1 {
-  /* max-width: 300px; */
-  margin: 0 auto;
-  padding-bottom: 32px;
+[data-page-context=new-unsubscribe] {
+  /* .less-emails-button {
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #d32626;
+    padding: 15px 20px 13px 20px;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    text-align: center;
+    min-width: 238px;
+    max-width: 272px;
+    margin: 0 auto;
+  } */
+  /* form[action="/page/48122/subscriptions/2"] .less-emails-button,
+  form[action="/page/52017/subscriptions/2"] .less-emails-button,
+  form[action="/page/49041/subscriptions/2"] .less-emails-button,
+  form[action="/page/52319/subscriptions/2"] .less-emails-button {
+    max-width: 392px;
+    background-color: #ef4136;
+    border-radius: 0;
+  } */
+  /* .graphic-imagery-section {
+    border: 1px solid #c5c5c5;
+    padding: 20px 16px 16px 16px;
+  }
+  .graphic-imagery-section h4 {
+    line-height: 22px;
+    margin: 0;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+  .graphic-imagery-section p {
+    font-size: 12px;
+    font-style: italic;
+    line-height: 18px;
+    padding: 0;
+  } */
+  /* .graphic-slider {
+    cursor: pointer;
+    margin-top: 16px;
+  }
+  .graphic-slider rect {
+    transition: all 0.3s;
+  }
+  .latino-graphic-slider.slider-enabled circle {
+    fill: white;
+  }
+  .latino-graphic-slider.slider-enabled rect {
+    fill: #418fde;
+  } */
 }
-form[action="/page/48210/data/2"].en__component
-  > .en__component--row--1:nth-of-type(2)
-  > .en__component--column--1,
-form[action="/page/48388/data/2"].en__component
-  > .en__component--row--1:nth-of-type(2)
-  > .en__component--column--1,
-form[action="/page/49060/data/2"].en__component
-  > .en__component--row--1:nth-of-type(2)
-  > .en__component--column--1 {
+[data-page-context=new-unsubscribe] form[action="/page/48210/data/2"].en__component > .en__component--row--1:nth-of-type(2) > .en__component--column--1,
+[data-page-context=new-unsubscribe] form[action="/page/48388/data/2"].en__component > .en__component--row--1:nth-of-type(2) > .en__component--column--1,
+[data-page-context=new-unsubscribe] form[action="/page/49060/data/2"].en__component > .en__component--row--1:nth-of-type(2) > .en__component--column--1 {
   padding-left: 0;
   padding-right: 0;
 }
-.manage-emails-text-block p {
+[data-page-context=new-unsubscribe] .manage-emails-text-block p {
   display: none;
 }
-.manage-emails-text-block h1 {
+[data-page-context=new-unsubscribe] .manage-emails-text-block h1 {
   font-size: 28px;
 }
-.en__field--emailAddress {
+[data-page-context=new-unsubscribe] .en__field--emailAddress {
   display: flex;
   flex-direction: column;
   padding-bottom: 12px;
 }
-.en__field--emailAddress input {
-  color: #ccc;
+[data-page-context=new-unsubscribe] #en__field_supporter_emailAddress {
   height: 48px;
+  width: 100% !important;
 }
-.incorrect-email-link {
+[data-page-context=new-unsubscribe] #en__field_supporter_emailAddress[disabled] {
+  color: #ccc;
+}
+[data-page-context=new-unsubscribe] .incorrect-email-link {
   display: none;
   text-decoration: underline;
   font-weight: 600;
@@ -68,189 +102,157 @@ form[action="/page/49060/data/2"].en__component
   font-size: 16px;
   letter-spacing: -0.02em;
 }
-.incorrect-email-link p {
+[data-page-context=new-unsubscribe] .incorrect-email-link p {
   padding-bottom: 0;
 }
-form[action="/page/48122/subscriptions/2"] .incorrect-email-link a,
-form[action="/page/53017/data/2"] .incorrect-email-link a,
-form[action="/page/49041/subscriptions/2"] .incorrect-email-link a,
-form[action="/page/52319/subscriptions/2"] .incorrect-email-link a {
+[data-page-context=new-unsubscribe] form[action="/page/48122/subscriptions/2"] .incorrect-email-link a,
+[data-page-context=new-unsubscribe] form[action="/page/53017/data/2"] .incorrect-email-link a,
+[data-page-context=new-unsubscribe] form[action="/page/49041/subscriptions/2"] .incorrect-email-link a,
+[data-page-context=new-unsubscribe] form[action="/page/52319/subscriptions/2"] .incorrect-email-link a {
   color: #00bfb3;
 }
-.less-emails-section,
-.graphic-imagery-section {
-  border: 1px solid #c5c5c5;
-  /* max-width: 272px; */
-  padding: 11px 18px;
-  margin: 0 auto;
-  margin-bottom: 32px;
-}
-.less-emails-header,
-.reduce-graphic-imagery-header {
+[data-page-context=new-unsubscribe] .manage-emails-container {
+  display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 32px;
+}
+[data-page-context=new-unsubscribe] .manage-emails-container > * {
+  max-width: 530px;
+  width: 100%;
+}
+[data-page-context=new-unsubscribe] .unsubscribe-options-header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+[data-page-context=new-unsubscribe] .unsubscribe-options-header > * {
+  max-width: 710px;
+  width: 100%;
+}
+[data-page-context=new-unsubscribe] .email-preferences-copy {
+  padding-bottom: 32px;
+}
+[data-page-context=new-unsubscribe] .less-emails-header,
+[data-page-context=new-unsubscribe] .reduce-graphic-imagery-header {
   display: flex;
   column-gap: 18px;
   margin: 0 auto;
   margin-bottom: 16px;
 }
-.less-emails-header h3,
-.reduce-graphic-imagery-header h3 {
+[data-page-context=new-unsubscribe] .less-emails-header h3,
+[data-page-context=new-unsubscribe] .reduce-graphic-imagery-header h3 {
   font-weight: 500;
   font-size: 18px;
   margin: 0;
   margin-top: 2px;
 }
-.less-emails-section svg,
-.reduce-graphic-imagery-header svg {
+[data-page-context=new-unsubscribe] .less-emails-section svg,
+[data-page-context=new-unsubscribe] .reduce-graphic-imagery-header svg {
   transition: 0.3s;
+  width: 27px;
+  height: 27px;
 }
-.show-paragraph-button {
+[data-page-context=new-unsubscribe] .en__field--reduced-e-mail-program.en__field--radio .en__field__item,
+[data-page-context=new-unsubscribe] .en__field--NOT_TAGGED_134.en__field--radio .en__field__item {
+  display: flex;
+}
+[data-page-context=new-unsubscribe] .show-paragraph-button {
   transform: rotate(-45deg);
 }
-.hide-paragraph-button {
+[data-page-context=new-unsubscribe] .hide-paragraph-button {
   transform: rotate(0deg);
 }
-.section-paragraph {
+[data-page-context=new-unsubscribe] .section-paragraph {
   padding: 0;
   overflow: hidden;
   transition: 0.5s;
 }
-.hide-paragraph-animation {
+[data-page-context=new-unsubscribe] .hide-paragraph-animation {
   animation: hide 0.5s cubic-bezier(0.77, 0, 0.175, 1);
 }
-.hide-section-paragraph {
-  height: 0;
-}
-.reveal-paragraph {
+[data-page-context=new-unsubscribe] .reveal-paragraph {
   height: 100%;
   animation: reveal 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   margin-bottom: 20px;
+  height: auto !important;
 }
-/* .less-emails-button {
-  cursor: pointer;
-  font-size: 16px;
-  background-color: #d32626;
-  padding: 15px 20px 13px 20px;
-  color: white;
-  font-weight: 600;
-  border-radius: 5px;
-  text-align: center;
-  min-width: 238px;
-  max-width: 272px;
-  margin: 0 auto;
-} */
-/* form[action="/page/48122/subscriptions/2"] .less-emails-button,
-form[action="/page/52017/subscriptions/2"] .less-emails-button,
-form[action="/page/49041/subscriptions/2"] .less-emails-button,
-form[action="/page/52319/subscriptions/2"] .less-emails-button {
-  max-width: 392px;
-  background-color: #ef4136;
-  border-radius: 0;
-} */
-.unsubscribe-options-header h3 {
+[data-page-context=new-unsubscribe] .unsubscribe-options-header h3 {
   font-size: 28px;
   font-weight: 500;
   margin-bottom: 12px;
 }
-.en__field--podcast-e-news label {
+[data-page-context=new-unsubscribe] .en__field--podcast-e-news label {
   font-style: italic;
 }
-.required-action-team-fields {
+[data-page-context=new-unsubscribe] .required-action-team-fields {
   width: fit-content;
   margin: 0 auto;
   max-width: 258px;
   margin-left: 35px;
 }
-.less-emails-radio-select > .en__field--question,
-.reduce-graphic-imagery-radio-select .en__field--radio {
+[data-page-context=new-unsubscribe] .less-emails-radio-select > .en__field--question,
+[data-page-context=new-unsubscribe] .reduce-graphic-imagery-radio-select .en__field--radio {
   padding-bottom: 0;
 }
-.less-emails-radio-select .en__field--question > .en__field__label,
-.reduce-graphic-imagery-radio-select .en__field--radio > .en__field__label {
+[data-page-context=new-unsubscribe] .less-emails-radio-select .en__field--question > .en__field__label,
+[data-page-context=new-unsubscribe] .reduce-graphic-imagery-radio-select .en__field--radio > .en__field__label {
   font-weight: 700;
 }
-.subscription_title > .en__field--checkbox > .en__field__label {
+[data-page-context=new-unsubscribe] .subscription_title > .en__field--checkbox > .en__field__label {
   width: fit-content;
   cursor: pointer;
   position: relative;
   top: -3px;
 }
-/* .graphic-imagery-section {
-  border: 1px solid #c5c5c5;
-  padding: 20px 16px 16px 16px;
-}
-.graphic-imagery-section h4 {
-  line-height: 22px;
-  margin: 0;
-  font-weight: 700;
-  font-size: 16px;
-  margin-bottom: 6px;
-}
-.graphic-imagery-section p {
-  font-size: 12px;
-  font-style: italic;
-  line-height: 18px;
-  padding: 0;
-} */
-/* .graphic-slider {
-  cursor: pointer;
-  margin-top: 16px;
-}
-.graphic-slider rect {
+[data-page-context=new-unsubscribe] .off-text,
+[data-page-context=new-unsubscribe] .on-text {
   transition: all 0.3s;
 }
-.latino-graphic-slider.slider-enabled circle {
-  fill: white;
-}
-.latino-graphic-slider.slider-enabled rect {
-  fill: #418fde;
-} */
-.off-text,
-.on-text {
-  transition: all 0.3s;
-}
-.slider-disabled .off-text {
+[data-page-context=new-unsubscribe] .slider-disabled .off-text {
   opacity: 1;
 }
-.slider-disabled .on-text {
+[data-page-context=new-unsubscribe] .slider-disabled .on-text {
   opacity: 0;
 }
-.slider-enabled .off-text {
+[data-page-context=new-unsubscribe] .slider-enabled .off-text {
   opacity: 0;
 }
-.slider-enabled .on-text {
+[data-page-context=new-unsubscribe] .slider-enabled .on-text {
   opacity: 1;
 }
-.enable-graphic-images {
+[data-page-context=new-unsubscribe] .enable-graphic-images {
   animation: turn-on 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   transform: translate(27px, 0);
 }
-.disable-graphic-images {
+[data-page-context=new-unsubscribe] .disable-graphic-images {
   animation: turn-off 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   transform: translate(0, 0);
 }
-body:not(#en__pagebuilder) .en__field--178 {
+[data-page-context=new-unsubscribe] body:not(#en__pagebuilder) .en__field--178 {
   visibility: hidden;
   height: 0;
   padding-bottom: 0;
 }
-form[action="/page/48122/subscriptions/2"] .unsubscribe-all-button,
-form[action="/page/53017/data/2"] .unsubscribe-all-button,
-form[action="/page/49041/subscriptions/2"] .unsubscribe-all-button,
-form[action="/page/52319/subscriptions/2"] .unsubscribe-all-button {
+[data-page-context=new-unsubscribe] form[action="/page/48122/subscriptions/2"] .unsubscribe-all-button,
+[data-page-context=new-unsubscribe] form[action="/page/53017/data/2"] .unsubscribe-all-button,
+[data-page-context=new-unsubscribe] form[action="/page/49041/subscriptions/2"] .unsubscribe-all-button,
+[data-page-context=new-unsubscribe] form[action="/page/52319/subscriptions/2"] .unsubscribe-all-button {
   color: #ef4136;
 }
-.en__field--NOT_TAGGED_134 .en__field__element,
-.en__field--1855 .en__field__element {
+[data-page-context=new-unsubscribe] .en__field--NOT_TAGGED_134 .en__field__element,
+[data-page-context=new-unsubscribe] .en__field--1855 .en__field__element {
   display: flex;
   flex-direction: column;
 }
-.en__field--NOT_TAGGED_134 .en__field__element .en__field__label--item,
-.en__field--1855 .en__field__element .en__field__label--item {
+[data-page-context=new-unsubscribe] .en__field--NOT_TAGGED_134 .en__field__element .en__field__label--item,
+[data-page-context=new-unsubscribe] .en__field--1855 .en__field__element .en__field__label--item {
   position: relative;
   top: -3px;
 }
-.unsubscribe-all-button {
+[data-page-context=new-unsubscribe] .unsubscribe-all-button {
   text-align: center;
   color: #d32626;
   font-weight: 600;
@@ -260,41 +262,41 @@ form[action="/page/52319/subscriptions/2"] .unsubscribe-all-button {
   width: fit-content;
   margin: 0 auto;
 }
-.preference-update-header {
+[data-page-context=new-unsubscribe] .preference-update-header {
   padding-left: 24px;
   padding-right: 24px;
   margin-bottom: 24px;
 }
-.preference-update-header p {
+[data-page-context=new-unsubscribe] .preference-update-header p {
   padding-bottom: 0;
 }
-.preference-update-header h1,
-.preference-update-header h2 {
+[data-page-context=new-unsubscribe] .preference-update-header h1,
+[data-page-context=new-unsubscribe] .preference-update-header h2 {
   color: #254d68;
 }
-.preference-update-header h1 {
+[data-page-context=new-unsubscribe] .preference-update-header h1 {
   font-size: 28px;
   margin-bottom: 0;
 }
-.preference-update-header .unsubscribe-all-header {
+[data-page-context=new-unsubscribe] .preference-update-header .unsubscribe-all-header {
   margin-bottom: 15px;
 }
-.preference-update-header h2 {
+[data-page-context=new-unsubscribe] .preference-update-header h2 {
   font-size: 20px;
   padding: 0;
   font-weight: 400;
   font-style: italic;
   margin-bottom: 16px;
 }
-.mobile-advocacy-parent {
+[data-page-context=new-unsubscribe] .mobile-advocacy-parent {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-form[action="/page/49060/data/2"] .mobile-advocacy-header {
+[data-page-context=new-unsubscribe] form[action="/page/49060/data/2"] .mobile-advocacy-header {
   background-color: #5160f1;
 }
-.mobile-advocacy-header {
+[data-page-context=new-unsubscribe] .mobile-advocacy-header {
   background-color: #418fde;
   width: 100vw;
   display: flex;
@@ -302,7 +304,7 @@ form[action="/page/49060/data/2"] .mobile-advocacy-header {
   overflow: hidden;
   position: relative;
 }
-.mobile-advocacy-header p:not(.mobile-join-button) {
+[data-page-context=new-unsubscribe] .mobile-advocacy-header p:not(.mobile-join-button) {
   color: #ffffff;
   font-weight: 600;
   font-size: 20px;
@@ -311,39 +313,39 @@ form[action="/page/49060/data/2"] .mobile-advocacy-header {
   padding: 25px 24px;
   letter-spacing: -0.03em;
 }
-.mobile-advocacy-header img {
+[data-page-context=new-unsubscribe] .mobile-advocacy-header img {
   width: 206px;
   height: 239px;
   position: relative;
   right: 65px;
   bottom: 20px;
 }
-form[action="/page/49060/data/2"] .mobile-advocacy-section {
+[data-page-context=new-unsubscribe] form[action="/page/49060/data/2"] .mobile-advocacy-section {
   background-color: #19252e;
 }
-.mobile-advocacy-section {
+[data-page-context=new-unsubscribe] .mobile-advocacy-section {
   color: white;
   padding: 16px 24px;
   background-color: #254d68;
   width: 100vw;
 }
-.mobile-advocacy-section > p:first-child {
+[data-page-context=new-unsubscribe] .mobile-advocacy-section > p:first-child {
   font-size: 16px;
 }
-.mobile-advocacy-section > p:nth-child(2) {
+[data-page-context=new-unsubscribe] .mobile-advocacy-section > p:nth-child(2) {
   font-size: 12px;
 }
-.mobile-advocacy-section a {
+[data-page-context=new-unsubscribe] .mobile-advocacy-section a {
   color: #a3d1d6;
 }
-form[action="/page/49060/data/2"] .mobile-join-button {
+[data-page-context=new-unsubscribe] form[action="/page/49060/data/2"] .mobile-join-button {
   background-color: #00bfb3;
   border-radius: 0;
 }
-form[action="/page/49060/data/2"] .mobile-advocacy-header .mobile-join-button {
+[data-page-context=new-unsubscribe] form[action="/page/49060/data/2"] .mobile-advocacy-header .mobile-join-button {
   display: none;
 }
-.mobile-join-button {
+[data-page-context=new-unsubscribe] .mobile-join-button {
   cursor: pointer;
   background-color: #418fde;
   width: fit-content;
@@ -355,34 +357,35 @@ form[action="/page/49060/data/2"] .mobile-advocacy-header .mobile-join-button {
   line-height: 18px;
   border-radius: 5px;
 }
-.mobile-join-button a {
+[data-page-context=new-unsubscribe] .mobile-join-button a {
   color: white;
 }
-.latino-header-join-button {
+[data-page-context=new-unsubscribe] .latino-header-join-button {
   display: none;
 }
-.en__field--178 {
+[data-page-context=new-unsubscribe] .en__field--178 {
   visibility: hidden;
 }
-.en__submit {
+[data-page-context=new-unsubscribe] .en__submit {
   margin-top: 32px;
 }
-form[action="/page/48122/subscriptions/2"] .en__submit button,
-form[action="/page/53017/data/2"] .en__submit button,
-form[action="/page/49041/subscriptions/2"] .en__submit button,
-form[action="/page/52319/subscriptions/2"] .en__submit button {
+[data-page-context=new-unsubscribe] form[action="/page/48122/subscriptions/2"] .en__submit button,
+[data-page-context=new-unsubscribe] form[action="/page/53017/data/2"] .en__submit button,
+[data-page-context=new-unsubscribe] form[action="/page/49041/subscriptions/2"] .en__submit button,
+[data-page-context=new-unsubscribe] form[action="/page/52319/subscriptions/2"] .en__submit button {
   background-color: #ef4136;
   border-radius: 0;
 }
-.privacy-policy {
+[data-page-context=new-unsubscribe] .privacy-policy {
   text-align: center;
 }
-.less-emails-header,
-.reduce-graphic-imagery-header {
+[data-page-context=new-unsubscribe] .less-emails-header,
+[data-page-context=new-unsubscribe] .reduce-graphic-imagery-header {
   justify-content: flex-start;
+  align-items: center;
 }
-.less-emails-header h3,
-.reduce-graphic-imagery-header h3 {
+[data-page-context=new-unsubscribe] .less-emails-header h3,
+[data-page-context=new-unsubscribe] .reduce-graphic-imagery-header h3 {
   font-size: 26px;
 }
 @keyframes reveal {
@@ -418,180 +421,231 @@ form[action="/page/52319/subscriptions/2"] .en__submit button {
   }
 }
 @media (min-width: 600px) {
-  form[action="/page/48122/subscriptions/2"].en__component
-    .en__component--row--1:nth-of-type(2)
-    > .en__component.en__component--column--1,
-  form[action="/page/53017/data/2"].en__component
-    .en__component--row--1:nth-of-type(2)
-    > .en__component.en__component--column--1,
-  form[action="/page/49041/subscriptions/2"].en__component
-    .en__component--row--1:nth-of-type(2)
-    > .en__component.en__component--column--1,
-  form[action="/page/52319/subscriptions/2"].en__component
-    .en__component--row--1:nth-of-type(2)
-    > .en__component.en__component--column--1 {
-    margin-left: 32px;
-    max-width: 775px;
-    padding-bottom: 26px;
+  [data-page-context=new-unsubscribe] {
+    /* .less-emails-button {
+      max-width: 176px;
+      min-width: none;
+    } */
+    /* .graphic-imagery-section {
+      margin: 0 auto;
+      margin-top: 48px;
+      max-width: 775px;
+      display: flex;
+      column-gap: 56px;
+      align-items: center;
+      padding: 20px 32px;
+    } */
+    /* .graphic-imagery-section p {
+      font-size: 13px;
+      font-style: italic;
+      line-height: 20px;
+    } */
+    /* 
+    .graphic-slider {
+      margin: 0;
+    } */
   }
-  .incorrect-email-link {
+  [data-page-context=new-unsubscribe] form[action="/page/48122/subscriptions/2"].en__component .en__component--row--1:nth-of-type(2) > .en__component.en__component--column--1,
+  [data-page-context=new-unsubscribe] form[action="/page/53017/data/2"].en__component .en__component--row--1:nth-of-type(2) > .en__component.en__component--column--1,
+  [data-page-context=new-unsubscribe] form[action="/page/49041/subscriptions/2"].en__component .en__component--row--1:nth-of-type(2) > .en__component.en__component--column--1,
+  [data-page-context=new-unsubscribe] form[action="/page/52319/subscriptions/2"].en__component .en__component--row--1:nth-of-type(2) > .en__component.en__component--column--1 {
+    /* margin-left: 32px; */
+  }
+  [data-page-context=new-unsubscribe] .incorrect-email-link {
     line-height: 22px;
   }
-  .incorrect-email-link p {
+  [data-page-context=new-unsubscribe] .incorrect-email-link p {
     height: 44px;
   }
-  .manage-emails-text-block {
+  [data-page-context=new-unsubscribe] .manage-emails-text-block {
     margin-bottom: 25px;
   }
-  .manage-emails-text-block h1 {
+  [data-page-context=new-unsubscribe] .manage-emails-text-block h1 {
     font-size: 32px;
   }
-  .en__field--emailAddress input {
+  [data-page-context=new-unsubscribe] #en__field_supporter_emailAddress {
     padding-bottom: 8px;
   }
-  .en__field--emailAddress input {
-    width: 510px;
+  [data-page-context=new-unsubscribe] #en__field_supporter_emailAddress {
+    width: 100%;
   }
-  .less-emails-section,
-  .graphic-imagery-section {
-    max-width: 775px;
-    padding: 24px 32px 32px 32px;
-    margin-bottom: 48px;
-  }
-  .graphic-imagery-section {
+  [data-page-context=new-unsubscribe] .graphic-imagery-section {
     margin-top: 32px;
   }
-  .less-emails-section svg,
-  .graphic-imagery-section svg {
+  [data-page-context=new-unsubscribe] .less-emails-section svg,
+  [data-page-context=new-unsubscribe] .graphic-imagery-section svg {
     display: none;
   }
-  .section-paragraph {
+  [data-page-context=new-unsubscribe] .section-paragraph {
     height: 100%;
     margin-bottom: 24px;
+    animation: none;
   }
-  /* .less-emails-button {
-    max-width: 176px;
-    min-width: none;
-  } */
-  .unsubscribe-options-header h3 {
+  [data-page-context=new-unsubscribe] .unsubscribe-options-header h3 {
     font-size: 26px;
     margin-top: 0;
   }
-  form[action="/page/48122/subscriptions/2"].en__component
-    .en__component--row--1:nth-of-type(4)
-    > .en__component--column--1,
-  form[action="/page/53017/data/2"].en__component
-    .en__component--row--1:nth-of-type(4)
-    > .en__component--column--1,
-  form[action="/page/49041/subscriptions/2"].en__component
-    .en__component--row--1:nth-of-type(4)
-    > .en__component--column--1,
-  form[action="/page/52319/subscriptions/2"].en__component
-    .en__component--row--1:nth-of-type(4)
-    > .en__component--column--1 {
-    max-width: 711px;
-    margin: 0 auto;
-    padding: 0;
-  }
-  form[action="/page/48122/subscriptions/2"].en__component
-    > .en__component--row:nth-of-type(5),
-  form[action="/page/53017/data/2"].en__component
-    > .en__component--row:nth-of-type(5),
-  form[action="/page/49041/subscriptions/2"].en__component
-    > .en__component--row:nth-of-type(5),
-  form[action="/page/52319/subscriptions/2"].en__component
-    > .en__component--row:nth-of-type(5) {
-    justify-content: center;
-  }
-  form[action="/page/48122/subscriptions/2"].en__component
-    > .en__component--row:nth-of-type(5)
-    .en__component--column,
-  form[action="/page/53017/data/2"].en__component
-    > .en__component--row:nth-of-type(5)
-    .en__component--column,
-  form[action="/page/49041/subscriptions/2"].en__component
-    > .en__component--row:nth-of-type(5)
-    .en__component--column,
-  form[action="/page/52319/subscriptions/2"].en__component
-    > .en__component--row:nth-of-type(5)
-    .en__component--column {
-    max-width: 400px;
-  }
-  .mobile-advocacy-header {
+  [data-page-context=new-unsubscribe] .mobile-advocacy-header {
     column-gap: 10%;
     justify-content: center;
     width: 100%;
   }
-  .mobile-advocacy-section {
+  [data-page-context=new-unsubscribe] .mobile-advocacy-section {
     width: 100%;
   }
-  /* .graphic-imagery-section {
-    margin: 0 auto;
-    margin-top: 48px;
-    max-width: 775px;
-    display: flex;
-    column-gap: 56px;
-    align-items: center;
-    padding: 20px 32px;
-  } */
-  /* .graphic-imagery-section p {
-    font-size: 13px;
-    font-style: italic;
-    line-height: 20px;
-  } */
-  /* 
-  .graphic-slider {
-    margin: 0;
-  } */
-  .en__submit {
+  [data-page-context=new-unsubscribe] .en__submit {
     margin-top: 0px;
   }
-  .privacy-policy {
+  [data-page-context=new-unsubscribe] .privacy-policy {
     text-align: left;
   }
 }
-@media (min-width: 900px) {
-  form[action="/page/48122/subscriptions/2"].en__component
-    .en__component--row--1:nth-of-type(2)
-    > .en__component.en__component--column--1,
-  form[action="/page/53017/data/2"].en__component
-    .en__component--row--1:nth-of-type(2)
-    > .en__component.en__component--column--1,
-  form[action="/page/49041/subscriptions/2"].en__component
-    .en__component--row--1:nth-of-type(2)
-    > .en__component.en__component--column--1,
-  form[action="/page/52319/subscriptions/2"].en__component
-    .en__component--row--1:nth-of-type(2)
-    > .en__component.en__component--column--1 {
-    margin-left: 107px;
+[data-page-context=new-unsubscribe] .dcf-receive-fewer-emails-container-and-reduce-graphic-imagery-container {
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem 2rem 1rem;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-auto-rows: 1fr;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  justify-items: center;
+}
+[data-page-context=new-unsubscribe] .dcf-receive-fewer-emails-container {
+  justify-self: flex-end;
+}
+[data-page-context=new-unsubscribe] .dcf-reduce-graphic-imagery-container {
+  justify-self: flex-start;
+}
+[data-page-context=new-unsubscribe] .dcf-receive-fewer-emails-container,
+[data-page-context=new-unsubscribe] .dcf-reduce-graphic-imagery-container {
+  border: 1px solid #c5c5c5;
+  border-radius: 4px;
+  max-width: 352px;
+  padding: 1rem;
+  flex: 1 0 auto;
+  height: 100%;
+  cursor: pointer;
+}
+[data-page-context=new-unsubscribe] .dcf-receive-fewer-emails-container label,
+[data-page-context=new-unsubscribe] .dcf-reduce-graphic-imagery-container label {
+  font-size: 22px !important;
+  font-weight: 700;
+  flex-basis: 100%;
+  padding-bottom: 0;
+}
+[data-page-context=new-unsubscribe] .dcf-receive-fewer-emails-container p,
+[data-page-context=new-unsubscribe] .dcf-reduce-graphic-imagery-container p {
+  line-height: 1.25rem;
+  font-size: 14px;
+  padding-bottom: 0;
+}
+[data-page-context=new-unsubscribe] .dcf-receive-fewer-emails-container .en__field__element--checkbox .en__field__item,
+[data-page-context=new-unsubscribe] .dcf-reduce-graphic-imagery-container .en__field__element--checkbox .en__field__item {
+  padding-bottom: 0;
+}
+[data-page-context=new-unsubscribe] .dcf-reduce-graphic-imagery-container #en__field_supporter_NOT_TAGGED_134 {
+  margin-right: 15px !important;
+  position: relative;
+  top: 2px;
+}
+[data-page-context=new-unsubscribe] .dcf-receive-fewer-emails-container .en__field--1855 {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+}
+[data-page-context=new-unsubscribe] .el-receive-fewer-emails-container,
+[data-page-context=new-unsubscribe] .el-reduce-graphic-imagery-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+[data-page-context=new-unsubscribe] .el-receive-fewer-emails-container > *:first-child,
+[data-page-context=new-unsubscribe] .el-reduce-graphic-imagery-container > *:first-child {
+  border: 1px solid #c5c5c5;
+  max-width: 775px;
+  padding: 24px 32px 32px 32px;
+  margin-bottom: 48px;
+}
+[data-page-context=new-unsubscribe] .privacy-policy {
+  max-width: 630px;
+  margin-left: auto;
+  margin-right: auto;
+}
+[data-page-context=new-unsubscribe] .email-preferences-copy {
+  max-width: 630px;
+  margin-left: auto;
+  margin-right: auto;
+}
+[data-page-context=new-unsubscribe] .en__component--advcolumn.center .en__field--emailAddress {
+  max-width: 450px;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 900px) {
+  [data-page-context=new-unsubscribe] .dcf-receive-fewer-emails-container-and-reduce-graphic-imagery-container {
+    display: flex !important;
+    flex-direction: column;
   }
-  .preference-update-header {
+  [data-page-context=new-unsubscribe] .dcf-receive-fewer-emails-container,
+  [data-page-context=new-unsubscribe] .dcf-reduce-graphic-imagery-container {
+    max-width: 450px;
+  }
+}
+@media (min-width: 900px) {
+  [data-page-context=new-unsubscribe] {
+    /* form[action="/page/48122/subscriptions/2"].en__component
+      .en__component--row--1:nth-of-type(2)
+      > .en__component.en__component--column--1,
+    form[action="/page/53017/data/2"].en__component
+      .en__component--row--1:nth-of-type(2)
+      > .en__component.en__component--column--1,
+    form[action="/page/49041/subscriptions/2"].en__component
+      .en__component--row--1:nth-of-type(2)
+      > .en__component.en__component--column--1,
+    form[action="/page/52319/subscriptions/2"].en__component
+      .en__component--row--1:nth-of-type(2)
+      > .en__component.en__component--column--1 {
+      margin-left: 107px;
+    } */
+  }
+  [data-page-context=new-unsubscribe] .el-opt-in-columns {
+    justify-content: center;
+  }
+  [data-page-context=new-unsubscribe] .el-opt-in-column {
+    max-width: 379px;
+  }
+  [data-page-context=new-unsubscribe] .preference-update-header {
     margin: 0 auto;
     max-width: 712px;
     margin-bottom: 48px;
   }
-  .preference-update-header h1 {
+  [data-page-context=new-unsubscribe] .preference-update-header h1 {
     font-size: 54px;
     font-weight: 800;
     line-height: 38px;
   }
-  .preference-update-header h2 {
+  [data-page-context=new-unsubscribe] .preference-update-header h2 {
     font-size: 26px;
     line-height: 38px;
     margin-top: 10px;
   }
-  .mobile-advocacy-header,
-  .mobile-advocacy-section,
-  form[action="/page/49060/data/2"] .mobile-advocacy-header,
-  form[action="/page/49060/data/2"] .mobile-advocacy-section {
+  [data-page-context=new-unsubscribe] .mobile-advocacy-header,
+  [data-page-context=new-unsubscribe] .mobile-advocacy-section,
+  [data-page-context=new-unsubscribe] form[action="/page/49060/data/2"] .mobile-advocacy-header,
+  [data-page-context=new-unsubscribe] form[action="/page/49060/data/2"] .mobile-advocacy-section {
     background: transparent;
   }
-  .mobile-advocacy-header {
+  [data-page-context=new-unsubscribe] .mobile-advocacy-header {
     height: auto;
     overflow: visible;
     justify-content: initial;
   }
-  .mobile-advocacy-header p:not(.mobile-join-button) {
+  [data-page-context=new-unsubscribe] .mobile-advocacy-header p:not(.mobile-join-button) {
     font-size: 32px;
     width: 240px;
     line-height: 38px;
@@ -599,7 +653,7 @@ form[action="/page/52319/subscriptions/2"] .en__submit button {
     margin-top: 37px;
     margin-left: 50px;
   }
-  .mobile-advocacy-header img {
+  [data-page-context=new-unsubscribe] .mobile-advocacy-header img {
     width: 258px;
     height: auto;
     transform: scaleX(-1);
@@ -607,23 +661,21 @@ form[action="/page/52319/subscriptions/2"] .en__submit button {
     bottom: -140px;
     position: absolute;
   }
-  .mobile-advocacy-section {
+  [data-page-context=new-unsubscribe] .mobile-advocacy-section {
     padding: 26px 62px;
   }
-  .mobile-advocacy-section > p:nth-child(2) {
+  [data-page-context=new-unsubscribe] .mobile-advocacy-section > p:nth-child(2) {
     font-size: 13px;
   }
-  .mobile-advocacy-section p:last-child {
+  [data-page-context=new-unsubscribe] .mobile-advocacy-section p:last-child {
     line-height: 20px;
   }
-  .latino-mobile-advocacy-header {
+  [data-page-context=new-unsubscribe] .latino-mobile-advocacy-header {
     display: flex;
     flex-direction: column;
     row-gap: 32px;
   }
-  form[action="/page/49060/data/2"]
-    .mobile-advocacy-header
-    .mobile-join-button {
+  [data-page-context=new-unsubscribe] form[action="/page/49060/data/2"] .mobile-advocacy-header .mobile-join-button {
     display: block;
     cursor: pointer;
     width: fit-content;
@@ -635,42 +687,32 @@ form[action="/page/52319/subscriptions/2"] .en__submit button {
     line-height: 18px;
     margin-left: 50px;
   }
-  form[action="/page/49060/data/2"]
-    .mobile-advocacy-section
-    .mobile-join-button {
+  [data-page-context=new-unsubscribe] form[action="/page/49060/data/2"] .mobile-advocacy-section .mobile-join-button {
     display: none;
   }
-  form[action="/page/49060/data/2"] .mobile-advocacy-parent {
-    background-image: linear-gradient(
-      -70deg,
-      #19252e,
-      #19252e 55%,
-      #5160f1 38%,
-      #5160f1
-    );
+  [data-page-context=new-unsubscribe] form[action="/page/49060/data/2"] .mobile-advocacy-parent {
+    background-image: linear-gradient(-70deg, #19252e, #19252e 55%, #5160f1 38%, #5160f1);
   }
-  form[action="/page/49060/data/2"] .mobile-advocacy-header img {
+  [data-page-context=new-unsubscribe] form[action="/page/49060/data/2"] .mobile-advocacy-header img {
     width: 320px;
     right: -110px;
     bottom: -180px;
   }
-  .mobile-advocacy-parent {
-    background-image: linear-gradient(
-      -70deg,
-      #254d68,
-      #254d68 55%,
-      #418fde 38%,
-      #418fde
-    );
+  [data-page-context=new-unsubscribe] .mobile-advocacy-parent {
+    background-image: linear-gradient(-70deg, #254d68, #254d68 55%, #418fde 38%, #418fde);
     flex-direction: row;
     overflow: hidden;
     height: 305px;
   }
 }
-@media screen and (max-width: 825px) {
-  .unsubscribe-options-header {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+@media screen and (max-width: 600px) {
+  [data-page-context=new-unsubscribe] .unsubscribe-options-header h3 {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 832px) {
+  [data-page-context=new-unsubscribe] .unsubscribe-options-header > * {
+    max-width: 100%;
   }
 }`)),document.head.appendChild(n)}}catch(e){console.error("vite-plugin-css-injected-by-js",e)}})();
 true&&(function polyfill() {
@@ -719,43 +761,29 @@ true&&(function polyfill() {
 
 const style = '';
 
-// Encapsulate your code into a function
-const runScript = () => {
-  const userEmail = document.querySelector("#en__field_supporter_emailAddress");
-  // const enableGraphicImages = document.querySelector(
-  //   "#en__field_supporter_NOT_TAGGED_134"
-  // );
-  // const graphicSVG = document.querySelector(".graphic-slider");
-  // const offText = graphicSVG.querySelector(".off-text");
-  // const onText = graphicSVG.querySelector(".on-text");
-  // const graphicSlider = graphicSVG.querySelector("circle");
-  const unsubscribeAllBtn = document.querySelector(".unsubscribe-all-button");
-  const submitBtn = document.querySelector(".en__submit button");
-  const actionTeamDesc = document.querySelector(
-    ".en__field--peta-action-team-alerts"
-  ).parentElement.nextElementSibling;
-  const actionTeamFields = document.querySelector(
-    ".required-action-team-fields"
-  );
+const setBodyAttributes = () => {
+  // This function sets custom attributes to the body based on URL and pageJson
 
-  // const lessEmailsBox = document.createElement("input");
-  // lessEmailsBox.id = "en__field_supporter_questions_1855";
-  // lessEmailsBox.type = "checkbox";
-  // lessEmailsBox.classList.add("en__field__input", "en__field__input--checkbox");
-  // lessEmailsBox.name = "supporter.questions.1855";
-  // lessEmailsBox.value = "Y";
-  // lessEmailsBox.style.visibility = "hidden";
-  // document.querySelector(".less-emails-section").appendChild(lessEmailsBox);
-  // const lessEmailsBox = document.querySelector(
-  //   "#en__field_supporter_questions_1855"
-  // );
+  function setBodyAttributes() {
+    const url = new URL(window.location.href);
 
-  // if (lessEmailsBox) {
-  //   lessEmailsBox.removeAttribute("disabled");
-  // }
+    // If the URL contains any of the specified page IDs, set data-page-context to "new-unsubscribe"
+    if (/48122|49041|52319|53017|48210|48388|49060/.test(url.pathname)) {
+      document.body.setAttribute("data-page-context", "new-unsubscribe");
+    }
 
+    // Assuming `pageJson` is a global variable, if it exists and contains a pageType, set data-page-type to its value
+    if (window.pageJson && window.pageJson.pageType) {
+      document.body.setAttribute("data-page-type", window.pageJson.pageType);
+    }
+  }
+
+  setBodyAttributes();
+};
+
+const convert1855CheckboxToRadioButtons = () => {
   /**
-   * Function to convert a checkbox into two radio buttons.
+   * Function to convert a Reduce Email checkbox into two radio buttons.
    * The radio buttons will be labeled "Yes" and "No".
    * The "Yes" radio button will be selected if the checkbox was checked.
    */
@@ -855,6 +883,343 @@ const runScript = () => {
 
   // Call the function to start the conversion
   convert1855CheckboxToRadioButtons();
+};
+
+const setUnsubscribeAllOnClick = () => {
+  /**
+   * Function to set the value of master suppression checkbox to true,
+   * set the value of all subscription checkboxes to false,
+   * and then simulate a click on the submit button,
+   * when the "Unsubscribe All" button is clicked.
+   */
+  function setUnsubscribeAllOnClick() {
+    // Get the "Unsubscribe All" button
+    const unsubscribeAllBtn = document.querySelector(".unsubscribe-all-button");
+
+    // If the "Unsubscribe All" button exists
+    if (unsubscribeAllBtn) {
+      // Add a click event listener to the "Unsubscribe All" button
+      unsubscribeAllBtn.addEventListener("click", (e) => {
+        // Get the master suppression checkbox
+        const masterSuppressionBtn = document.querySelector(
+          "#en__field_supporter_questions_178"
+        );
+
+        // If the master suppression checkbox exists
+        if (masterSuppressionBtn) {
+          // Set the value of the master suppression checkbox to true
+          masterSuppressionBtn.checked = true;
+          masterSuppressionBtn.value = "Y";
+        }
+
+        // Get all subscription checkboxes
+        const subscriptionCheckboxes = document.querySelectorAll(
+          ".subscription_title input"
+        );
+
+        // For each subscription checkbox
+        subscriptionCheckboxes.forEach((subscription) => {
+          // Set the value of the subscription checkbox to false
+          subscription.value = "N";
+          subscription.checked = false;
+        });
+
+        // Get the submit button
+        const submitBtn = document.querySelector(".en__component--button");
+
+        // If the submit button exists
+        if (submitBtn) {
+          // Simulate a click on the submit button
+          submitBtn.click();
+        }
+      });
+    }
+  }
+
+  // Call the function
+  setUnsubscribeAllOnClick();
+};
+
+const toggleSubscriptionCheckboxOnClick = () => {
+  /**
+   * This function, toggleSubscriptionCheckboxOnClick, adds interactivity to the subscription_title
+   * and subscription_description divs such that clicking on these divs will toggle the checked status
+   * of the corresponding checkbox input. This function assumes that there are matching pairs of
+   * .subscription_title and .subscription_description divs in the DOM, and that each .subscription_title
+   * div contains exactly one checkbox input.
+   */
+  function toggleSubscriptionCheckboxOnClick() {
+    // get all subscription_title and subscription_description divs
+    let subscriptionTitles = document.querySelectorAll(".subscription_title");
+    let subscriptionDescriptions = document.querySelectorAll(
+      ".subscription_description"
+    );
+
+    // for each title, bind a click event listener
+    subscriptionTitles.forEach((title, index) => {
+      let input = title.querySelector('input[type="checkbox"]');
+
+      // for the corresponding title label
+      title.addEventListener("click", () => {
+        input.checked = !input.checked;
+      });
+
+      // for the corresponding description paragraph
+      let description = subscriptionDescriptions[index];
+      description.addEventListener("click", () => {
+        input.checked = !input.checked;
+      });
+    });
+  }
+  toggleSubscriptionCheckboxOnClick();
+};
+
+const toggleCheckboxOnClickOrTouch = () => {
+  /**
+   * Function to toggle the checkbox value of a specified input
+   * when a specified container is clicked or touched.
+   *
+   * @param {string} containerSelector - The CSS selector of the container.
+   * @param {string} checkboxName - The name attribute of the checkbox.
+   */
+  function toggleCheckboxOnClickOrTouch(containerSelector, checkboxName) {
+    // Function to toggle the checkbox value
+    const toggleCheckboxValue = () => {
+      // Get the checkbox element
+      const checkbox = document.querySelector(`input[name="${checkboxName}"]`);
+
+      // If the checkbox element exists
+      if (checkbox) {
+        // Toggle the checkbox value
+        checkbox.checked = !checkbox.checked;
+      }
+    };
+
+    // Get the container element
+    const container = document.querySelector(containerSelector);
+
+    // If the container element exists
+    if (container) {
+      // Add event listeners for click and touch events
+      container.addEventListener("click", toggleCheckboxValue);
+      container.addEventListener("touchend", (event) => {
+        event.preventDefault();
+        toggleCheckboxValue();
+      });
+    }
+  }
+
+  // Call the function for each container and checkbox pair
+  toggleCheckboxOnClickOrTouch(
+    ".dcf-reduce-graphic-imagery-container",
+    "supporter.NOT_TAGGED_134"
+  );
+  toggleCheckboxOnClickOrTouch(
+    ".dcf-receive-fewer-emails-container",
+    "supporter.questions.1855"
+  );
+};
+
+const toggleSectionParagraphVisibility = () => {
+  /**
+   * Function to set the height of '.section-paragraph' elements
+   * to 0px when screen width is < 600 and remove that style when screen width is >= 600.
+   */
+  function toggleVisibility() {
+    // Select all '.section-paragraph' elements
+    const sectionParagraphs = document.querySelectorAll(".section-paragraph");
+
+    // For each '.section-paragraph' element
+    sectionParagraphs.forEach((sectionParagraph) => {
+      // If the screen width is >= 600
+      if (window.innerWidth >= 600) {
+        // Remove the height style
+        sectionParagraph.style.height = "";
+      } else {
+        // Set the height to 0px
+        sectionParagraph.style.height = "0px";
+      }
+    });
+  }
+
+  // Call the function initially
+  toggleVisibility();
+
+  // Call the function whenever the window is resized
+  window.addEventListener("resize", toggleVisibility);
+};
+
+// Call the function
+toggleSectionParagraphVisibility();
+
+const addSVGAndH3ClickListeners = () => {
+  /**
+   * Function to add event listeners to SVG elements within section headers.
+   * Clicking the SVG or its preceding H3 element will toggle the visibility of the corresponding section paragraph.
+   */
+  function addSVGAndH3ClickListeners() {
+    // Select all SVG elements within section headers
+    const svgElements = [
+      ...document.querySelectorAll(".less-emails-header svg"),
+      ...document.querySelectorAll(".reduce-graphic-imagery-header svg"),
+    ];
+
+    svgElements.forEach((svgElement) => {
+      // Add a click event listener to each SVG element
+      svgElement.addEventListener("click", toggleVisibility);
+
+      // Get the preceding H3
+      const precedingH3 = svgElement.parentElement.querySelector("h3");
+
+      if (precedingH3) {
+        // When H3 is clicked, perform the same action as if the SVG was clicked
+        precedingH3.addEventListener("click", () => {
+          // Create a new 'click' event
+          var event = new MouseEvent("click", {
+            view: window,
+            bubbles: true,
+            cancelable: true,
+          });
+          // Dispatch the event to the SVG element
+          svgElement.dispatchEvent(event);
+        });
+      }
+    });
+
+    function toggleVisibility(e) {
+      const target = e.currentTarget;
+      const container = target.closest(".en__component");
+      const paragraph = container.querySelector(".section-paragraph");
+
+      if (
+        target.classList.contains("hide-paragraph-button") ||
+        (target.classList.length == 1 &&
+          target.classList.contains("section-paragraph"))
+      ) {
+        target.classList.remove("hide-paragraph-button");
+        target.classList.add("show-paragraph-button");
+        paragraph.classList.remove("hide-section-paragraph");
+        paragraph.classList.add("reveal-paragraph");
+      } else {
+        target.classList.remove("show-paragraph-button");
+        target.classList.add("hide-paragraph-button");
+        paragraph.classList.remove("reveal-paragraph");
+        paragraph.classList.add("hide-paragraph-animation");
+
+        setTimeout(() => {
+          paragraph.classList.add("hide-section-paragraph");
+        }, 550);
+      }
+    }
+  }
+
+  addSVGAndH3ClickListeners();
+};
+
+const emailDisabler = () => {
+  /**
+   * Function to convert a Reduce Email checkbox into two radio buttons.
+   * The radio buttons will be labeled "Yes" and "No".
+   * The "Yes" radio button will be selected if the checkbox was checked.
+   */
+  function emailDisabler() {
+    const userEmail = document.querySelector(
+      "#en__field_supporter_emailAddress"
+    );
+    if (userEmail.value != "") {
+      userEmail.setAttribute("disabled", "");
+      document.querySelector(".incorrect-email-link").style.display = "block";
+    }
+  }
+  emailDisabler();
+};
+
+const updateLabelContents = () => {
+  function updateLabelContents() {
+    // Get the label for the ".dcf-receive-fewer-emails-container" element
+    const fewerEmailsLabel = document.querySelector(
+      ".dcf-receive-fewer-emails-container label"
+    );
+
+    // If the label exists
+    if (fewerEmailsLabel) {
+      // Update the label's contents
+      fewerEmailsLabel.textContent = "Receive Fewer E-Mails";
+    }
+
+    // Get the label for the ".dcf-reduce-graphic-imagery-container" element
+    const reduceGraphicImageryLabel = document.querySelector(
+      ".dcf-reduce-graphic-imagery-container label"
+    );
+
+    // If the label exists
+    if (reduceGraphicImageryLabel) {
+      // Update the label's contents
+      reduceGraphicImageryLabel.textContent = "Reduce Graphic Imagery";
+    }
+  }
+
+  // Call the function
+  updateLabelContents();
+};
+
+// Encapsulate your code into a function
+const runScript = () => {
+  // Check if "data-new-unsubscribe" is a data attribute on the body
+  // if (document.body.getAttribute("data-new-unsubscribe")) {
+  //   // Check if the document's content has already loaded
+  // }
+  setBodyAttributes();
+  convert1855CheckboxToRadioButtons();
+  setUnsubscribeAllOnClick();
+  toggleSubscriptionCheckboxOnClick();
+  toggleCheckboxOnClickOrTouch();
+  toggleSectionParagraphVisibility();
+  addSVGAndH3ClickListeners();
+  emailDisabler();
+  updateLabelContents();
+
+  // const enableGraphicImages = document.querySelector(
+  //   "#en__field_supporter_NOT_TAGGED_134"
+  // );
+  // const graphicSVG = document.querySelector(".graphic-slider");
+  // const offText = graphicSVG.querySelector(".off-text");
+  // const onText = graphicSVG.querySelector(".on-text");
+  // const graphicSlider = graphicSVG.querySelector("circle");
+
+  document.querySelector(".en__submit button");
+  let actionTeamDesc = document.querySelector(
+    ".en__field--peta-action-team-alerts"
+  );
+  if (actionTeamDesc) {
+    let actionTeamDescParent = actionTeamDesc.parentElement;
+    if (actionTeamDescParent) {
+      let actionTeamDescParentNextSibling =
+        actionTeamDescParent.nextElementSibling;
+      if (actionTeamDescParentNextSibling) {
+        actionTeamDesc = actionTeamDescParentNextSibling;
+      }
+    }
+  }
+  const actionTeamFields = document.querySelector(
+    ".required-action-team-fields"
+  );
+
+  // const lessEmailsBox = document.createElement("input");
+  // lessEmailsBox.id = "en__field_supporter_questions_1855";
+  // lessEmailsBox.type = "checkbox";
+  // lessEmailsBox.classList.add("en__field__input", "en__field__input--checkbox");
+  // lessEmailsBox.name = "supporter.questions.1855";
+  // lessEmailsBox.value = "Y";
+  // lessEmailsBox.style.visibility = "hidden";
+  // document.querySelector(".less-emails-section").appendChild(lessEmailsBox);
+  // const lessEmailsBox = document.querySelector(
+  //   "#en__field_supporter_questions_1855"
+  // );
+
+  // if (lessEmailsBox) {
+  //   lessEmailsBox.removeAttribute("disabled");
+  // }
 
   /**
    * Function to move the '.en__field--NOT_TAGGED_134' field into the
@@ -886,9 +1251,15 @@ const runScript = () => {
     actionTeamDesc.after(actionTeamFields);
   }
 
-  if (userEmail.value != "") {
-    userEmail.setAttribute("disabled", "");
-    document.querySelector(".incorrect-email-link").style.display = "block";
+  // Shouldn't be checked by default on DCF pageload
+  const dcfReducedEmailCheckbox = document.querySelector(
+    ".dcf-receive-fewer-emails-container #en__field_supporter_questions_1855"
+  );
+
+  // If the checkbox exists
+  if (dcfReducedEmailCheckbox) {
+    // Uncheck the checkbox
+    dcfReducedEmailCheckbox.checked = false;
   }
 
   // const lessEmailsBtn = document.querySelector(".less-emails-button");
@@ -896,27 +1267,6 @@ const runScript = () => {
   //   lessEmailsBox.checked = "true";
   //   submitBtn.click();
   // });
-
-  /**
-   * Function to remove the 'hide-section-paragraph' class from
-   * all '.section-paragraph' elements when the screen width is >= 600.
-   */
-  function removeHideClassOnWideScreens() {
-    // Select all '.section-paragraph' elements
-    const sectionParagraphs = document.querySelectorAll(".section-paragraph");
-
-    // If the screen width is >= 600
-    if (screen.width >= 600) {
-      // For each '.section-paragraph' element
-      sectionParagraphs.forEach((sectionParagraph) => {
-        // Remove the 'hide-section-paragraph' class
-        sectionParagraph.classList.remove("hide-section-paragraph");
-      });
-    }
-  }
-
-  // Call the function
-  removeHideClassOnWideScreens();
 
   // if (enableGraphicImages.checked) {
   //   offText.style.display = "none";
@@ -926,68 +1276,6 @@ const runScript = () => {
   //   graphicSlider.classList.remove("disable-graphic-images");
   //   graphicSlider.classList.add("enable-graphic-images");
   // }
-
-  // Make opt-in labels clickable
-  document.querySelectorAll(".subscription_title").forEach((subscription) => {
-    const subscription_label = subscription.querySelector("label");
-    const subscription_box = subscription.querySelector("input");
-
-    subscription_label.setAttribute("for", subscription_box.id);
-  });
-
-  /**
-   * Function to add event listeners to SVG elements within section headers.
-   * Clicking the SVG will toggle the visibility of the corresponding section paragraph.
-   */
-  function addSVGClickListeners() {
-    // Select all SVG elements within section headers
-    const svgElements = [
-      ...document.querySelectorAll(".less-emails-header svg"),
-      ...document.querySelectorAll(".reduce-graphic-imagery-header svg"),
-    ];
-
-    svgElements.forEach((svgElement) => {
-      // Add a click event listener to each SVG element
-      svgElement.addEventListener("click", (e) => {
-        // The clicked SVG element
-        const target = e.target;
-        // The container that contains the clicked SVG
-        const container = target.closest(".en__component");
-        // The paragraph within the same container as the clicked SVG
-        const paragraph = container.querySelector(".section-paragraph");
-
-        // If the SVG has the class "hide-paragraph-button" or if it only has the class "section-paragraph"
-        if (
-          target.classList.contains("hide-paragraph-button") ||
-          (target.classList.length == 1 &&
-            target.classList.contains("section-paragraph"))
-        ) {
-          // Remove the "hide" class and add the "show" class to the SVG
-          target.classList.remove("hide-paragraph-button");
-          target.classList.add("show-paragraph-button");
-          // Remove the "hide" animation class and add the "reveal" class to the paragraph
-          paragraph.classList.remove("hide-section-paragraph");
-          paragraph.classList.add("reveal-paragraph");
-        } else {
-          // If the SVG does not have the "hide" class or only has the "section-paragraph" class
-          // Remove the "show" class and add the "hide" class to the SVG
-          target.classList.remove("show-paragraph-button");
-          target.classList.add("hide-paragraph-button");
-          // Remove the "reveal" class and add the "hide" animation class to the paragraph
-          paragraph.classList.remove("reveal-paragraph");
-          paragraph.classList.add("hide-paragraph-animation");
-
-          // After a delay, add the class to completely hide the paragraph
-          setTimeout(() => {
-            paragraph.classList.add("hide-section-paragraph");
-          }, 550);
-        }
-      });
-    });
-  }
-
-  // Call the function to add the event listeners
-  addSVGClickListeners();
 
   // Reduce Graphic Imagery Button
   // graphicSVG.addEventListener("click", (e) => {
@@ -1018,27 +1306,8 @@ const runScript = () => {
   //     // }, 500);
   //   }
   // });
-
-  // Unsubscribe All Button
-  unsubscribeAllBtn.addEventListener("click", (e) => {
-    const masterSuppressionBtn = document.querySelector(
-      "#en__field_supporter_questions_178"
-    );
-    masterSuppressionBtn.checked = true;
-    masterSuppressionBtn.value = "Y";
-
-    document
-      .querySelectorAll(".subscription_title input")
-      .forEach((subscription) => {
-        subscription.value = "N";
-        subscription.checked = false;
-      });
-
-    submitBtn.click();
-  });
 };
 
-// Check if the document's content has already loaded
 if (document.readyState === "loading") {
   // If the content is still loading, add an event listener for DOMContentLoaded
   document.addEventListener("DOMContentLoaded", runScript);
