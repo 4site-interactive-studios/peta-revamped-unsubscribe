@@ -22,7 +22,7 @@ export const toggleSubscriptionCheckboxOnClick = () => {
       titleLabel.addEventListener("click", (event) => {
         // console.log("title clicked", event);
         event.preventDefault();
-        input.checked = !input.checked;
+        if (event.target.tagName !== "INPUT") input.checked = !input.checked;
 
         // Create a bubbling change event and dispatch it
         const changeEvent = new Event("change", { bubbles: true });
@@ -34,7 +34,7 @@ export const toggleSubscriptionCheckboxOnClick = () => {
       description.addEventListener("click", (event) => {
         // console.log("description clicked", event);
         event.preventDefault();
-        input.checked = !input.checked;
+        if (event.target.tagName !== "INPUT") input.checked = !input.checked;
 
         // Create a bubbling change event and dispatch it
         const changeEvent = new Event("change", { bubbles: true });
