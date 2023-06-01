@@ -1,6 +1,6 @@
 import "./style.scss";
 import { setBodyAttributes } from "./set-body-data-attributes";
-import { convert1855CheckboxToRadioButtons } from "./checkbox-to-radio.js";
+// import { convert1855CheckboxToRadioButtons } from "./checkbox-to-radio.js";
 import { setUnsubscribeAllOnClick } from "./unsubscribe-all-link.js";
 import { toggleSubscriptionCheckboxOnClick } from "./make-opt-in-labels-clickable.js";
 import { toggleCheckboxOnClickOrTouch } from "./toggle-checkbox-when-container-is-clicked-or-touched.js";
@@ -11,12 +11,8 @@ import { updateLabelContents } from "./update-label-contents";
 
 // Encapsulate your code into a function
 const runScript = () => {
-  // Check if "data-new-unsubscribe" is a data attribute on the body
-  // if (document.body.getAttribute("data-new-unsubscribe")) {
-  //   // Check if the document's content has already loaded
-  // }
   setBodyAttributes();
-  convert1855CheckboxToRadioButtons();
+  // convert1855CheckboxToRadioButtons();
   setUnsubscribeAllOnClick();
   toggleSubscriptionCheckboxOnClick();
   toggleCheckboxOnClickOrTouch();
@@ -25,56 +21,130 @@ const runScript = () => {
   emailDisabler();
   updateLabelContents();
 
-  // const enableGraphicImages = document.querySelector(
-  //   "#en__field_supporter_NOT_TAGGED_134"
-  // );
-  // const graphicSVG = document.querySelector(".graphic-slider");
-  // const offText = graphicSVG.querySelector(".off-text");
-  // const onText = graphicSVG.querySelector(".on-text");
-  // const graphicSlider = graphicSVG.querySelector("circle");
-
-  const submitBtn = document.querySelector(".en__submit button");
-  let actionTeamDesc = document.querySelector(
-    ".en__field--peta-action-team-alerts"
+  const lessEmailsRadioSelect = document.querySelector(".less-emails-picker");
+  const field1855Component = document.querySelector(
+    ".en__component--formblock .en__field--1855"
   );
-  if (actionTeamDesc) {
-    let actionTeamDescParent = actionTeamDesc.parentElement;
-    if (actionTeamDescParent) {
-      let actionTeamDescParentNextSibling =
-        actionTeamDescParent.nextElementSibling;
-      if (actionTeamDescParentNextSibling) {
-        actionTeamDesc = actionTeamDescParentNextSibling;
+
+  // Check if both elements exist
+  if (lessEmailsRadioSelect && field1855Component) {
+    // Clear the contents of lessEmailsRadioSelect
+    lessEmailsRadioSelect.innerHTML = "";
+    // Move field1855Component into lessEmailsRadioSelect
+    lessEmailsRadioSelect.appendChild(field1855Component);
+  }
+
+  /**
+   * toggleSliderAndCheckbox - Toggles the 'slider-disabled' and 'slider-enabled' classes on the SVG element and
+   * also toggles the checked state of the associated checkbox. On first run, it also hides the
+   * checkbox field container. The initial state of the SVG slider reflects the initial state of the checkbox.
+   * @param {string} svgSelector - The CSS selector for the SVG element.
+   * @param {string} checkboxSelector - The CSS selector for the checkbox element.
+   * @param {string} checkboxWrapperSelector - The CSS selector for the checkbox wrapper element.
+   */
+  function toggleSliderAndCheckbox(
+    svgSelector,
+    checkboxSelector,
+    checkboxWrapperSelector
+  ) {
+    // Get the SVG element
+    const svg = document.querySelector(svgSelector);
+
+    // Get the checkbox element
+    const checkbox = document.querySelector(checkboxSelector);
+
+    // Get the checkbox wrapper element
+    const checkboxWrapper = document.querySelector(checkboxWrapperSelector);
+
+    // If the SVG and checkbox exist
+    if (svg && checkbox) {
+      // Hide the checkbox wrapper
+      checkboxWrapper.style.display = "none";
+
+      // Set the initial state of the SVG slider to reflect the checkbox state
+      if (checkbox.checked) {
+        svg.classList.remove("slider-disabled");
+        svg.classList.add("slider-enabled");
+      } else {
+        svg.classList.remove("slider-enabled");
+        svg.classList.add("slider-disabled");
       }
+
+      // Function to toggle the slider and checkbox states
+      const toggleStates = () => {
+        // If the checkbox is checked
+        if (checkbox.checked) {
+          // Uncheck the checkbox
+          checkbox.checked = false;
+
+          // Remove 'slider-enabled' and add 'slider-disabled'
+          svg.classList.remove("slider-enabled");
+          svg.classList.add("slider-disabled");
+        } else {
+          // Check the checkbox
+          checkbox.checked = true;
+
+          // Remove 'slider-disabled' and add 'slider-enabled'
+          svg.classList.remove("slider-disabled");
+          svg.classList.add("slider-enabled");
+        }
+      };
+
+      // Add click event listener
+      svg.addEventListener("click", toggleStates);
+
+      // Add touchend event listener for touch devices
+      svg.addEventListener("touchend", toggleStates);
     }
   }
-  const actionTeamFields = document.querySelector(
-    ".required-action-team-fields"
+
+  // Call the function for each SVG/checkbox pair
+  toggleSliderAndCheckbox(
+    ".el-receive-fewer-emails-container .graphic-slider",
+    'input[type="checkbox"]#en__field_supporter_questions_1855',
+    ".en__field--question.en__field--1855"
+  );
+  toggleSliderAndCheckbox(
+    ".el-reduce-graphic-imagery-container .graphic-slider",
+    'input[type="checkbox"]#en__field_supporter_NOT_TAGGED_134',
+    ".en__field--NOT_TAGGED_134"
   );
 
-  // const lessEmailsBox = document.createElement("input");
-  // lessEmailsBox.id = "en__field_supporter_questions_1855";
-  // lessEmailsBox.type = "checkbox";
-  // lessEmailsBox.classList.add("en__field__input", "en__field__input--checkbox");
-  // lessEmailsBox.name = "supporter.questions.1855";
-  // lessEmailsBox.value = "Y";
-  // lessEmailsBox.style.visibility = "hidden";
-  // document.querySelector(".less-emails-section").appendChild(lessEmailsBox);
-  // const lessEmailsBox = document.querySelector(
-  //   "#en__field_supporter_questions_1855"
-  // );
+  /**
+   * This function is used to move the '.required-action-team-fields' element to the
+   * next sibling element of the parent of the '.en__field--peta-action-team-alerts' element.
+   * If the parent or the next sibling of the parent do not exist,
+   * the '.required-action-team-fields' element will not be moved.
+   * Event listeners attached to '.required-action-team-fields' will not be affected by the move.
+   */
 
-  // if (lessEmailsBox) {
-  //   lessEmailsBox.removeAttribute("disabled");
-  // }
+  function moveActionTeamFields() {
+    let actionTeamDesc = document.querySelector(
+      ".en__field--peta-action-team-alerts"
+    );
+    actionTeamDesc =
+      actionTeamDesc?.parentElement?.nextElementSibling || actionTeamDesc;
+
+    const actionTeamFields = document.querySelector(
+      ".required-action-team-fields"
+    );
+
+    if (actionTeamDesc && actionTeamFields) {
+      actionTeamDesc.after(actionTeamFields);
+    }
+  }
+
+  // Call the function
+  moveActionTeamFields();
 
   /**
    * Function to move the '.en__field--NOT_TAGGED_134' field into the
-   * '.reduce-graphic-imagery-radio-select' element, replacing any contents that might already be there.
+   * '.reduce-graphic-imagery-picker' element, replacing any contents that might already be there.
    */
   function moveNotTagged134Field() {
     // Find the elements we need
     const reduceGraphicImageryRadioSelect = document.querySelector(
-      ".reduce-graphic-imagery-radio-select"
+      ".reduce-graphic-imagery-picker"
     );
     const fieldNOT_TAGGED_134Component = document.querySelector(
       ".en__component--formblock .en__field--NOT_TAGGED_134"
@@ -93,10 +163,6 @@ const runScript = () => {
   // Call the function to start the movement
   moveNotTagged134Field();
 
-  if (actionTeamDesc && actionTeamFields) {
-    actionTeamDesc.after(actionTeamFields);
-  }
-
   // Shouldn't be checked by default on DCF pageload
   const dcfReducedEmailCheckbox = document.querySelector(
     ".dcf-receive-fewer-emails-container #en__field_supporter_questions_1855"
@@ -108,49 +174,26 @@ const runScript = () => {
     dcfReducedEmailCheckbox.checked = false;
   }
 
+  // const lessEmailsBox = document.createElement("input");
+  // lessEmailsBox.id = "en__field_supporter_questions_1855";
+  // lessEmailsBox.type = "checkbox";
+  // lessEmailsBox.classList.add("en__field__input", "en__field__input--checkbox");
+  // lessEmailsBox.name = "supporter.questions.1855";
+  // lessEmailsBox.value = "Y";
+  // lessEmailsBox.style.visibility = "hidden";
+  // document.querySelector(".less-emails-section").appendChild(lessEmailsBox);
+  // const lessEmailsBox = document.querySelector(
+  //   "#en__field_supporter_questions_1855"
+  // );
+
+  // if (lessEmailsBox) {
+  //   lessEmailsBox.removeAttribute("disabled");
+  // }
+
   // const lessEmailsBtn = document.querySelector(".less-emails-button");
   // lessEmailsBtn.addEventListener("click", (e) => {
   //   lessEmailsBox.checked = "true";
   //   submitBtn.click();
-  // });
-
-  // if (enableGraphicImages.checked) {
-  //   offText.style.display = "none";
-  //   onText.style.display = "inline";
-  //   graphicSVG.classList.add("slider-enabled");
-  //   graphicSVG.classList.remove("slider-disabled");
-  //   graphicSlider.classList.remove("disable-graphic-images");
-  //   graphicSlider.classList.add("enable-graphic-images");
-  // }
-
-  // Reduce Graphic Imagery Button
-  // graphicSVG.addEventListener("click", (e) => {
-  //   if (
-  //     graphicSlider.classList.length == 0 ||
-  //     graphicSlider.classList.contains("disable-graphic-images")
-  //   ) {
-  //     graphicSlider.classList.remove("disable-graphic-images");
-  //     graphicSlider.classList.add("enable-graphic-images");
-  //     graphicSVG.classList.add("slider-enabled");
-  //     graphicSVG.classList.remove("slider-disabled");
-  //     enableGraphicImages.checked = true;
-  //     enableGraphicImages.value = "Y";
-  //     // offText.style.display = "none";
-  //     // setTimeout(() => {
-  //     //   onText.style.display = "inline";
-  //     // }, 500);
-  //   } else {
-  //     graphicSlider.classList.remove("enable-graphic-images");
-  //     graphicSlider.classList.add("disable-graphic-images");
-  //     graphicSVG.classList.add("slider-disabled");
-  //     graphicSVG.classList.remove("slider-enabled");
-  //     enableGraphicImages.checked = false;
-  //     enableGraphicImages.value = "N";
-  //     // onText.style.display = "none";
-  //     // setTimeout(() => {
-  //     //   offText.style.display = "inline";
-  //     // }, 500);
-  //   }
   // });
 };
 

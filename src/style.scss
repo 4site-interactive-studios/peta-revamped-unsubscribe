@@ -151,12 +151,12 @@ Miscellaneous Pages (To Be Deleted After Development)
     margin-top: 2px;
   }
 
-  .less-emails-section svg,
-  .reduce-graphic-imagery-header svg {
-    transition: 0.3s;
-    width: 27px;
-    height: 27px;
-  }
+  // .less-emails-section svg,
+  // .reduce-graphic-imagery-header svg {
+  //   transition: 0.3s;
+  //   width: 27px;
+  //   height: 27px;
+  // }
 
   .en__field--reduced-e-mail-program.en__field--radio .en__field__item,
   .en__field--NOT_TAGGED_134.en__field--radio .en__field__item {
@@ -228,13 +228,13 @@ form[action="/page/52319/subscriptions/2"] .less-emails-button {
     margin-left: 35px;
   }
 
-  .less-emails-radio-select > .en__field--question,
-  .reduce-graphic-imagery-radio-select .en__field--radio {
+  .less-emails-picker > .en__field--question,
+  .reduce-graphic-imagery-picker .en__field--radio {
     padding-bottom: 0;
   }
 
-  .less-emails-radio-select .en__field--question > .en__field__label,
-  .reduce-graphic-imagery-radio-select .en__field--radio > .en__field__label {
+  .less-emails-picker .en__field--question > .en__field__label,
+  .reduce-graphic-imagery-picker .en__field--radio > .en__field__label {
     font-weight: 700;
   }
 
@@ -245,42 +245,42 @@ form[action="/page/52319/subscriptions/2"] .less-emails-button {
     top: -3px;
   }
 
-  /* .graphic-imagery-section {
-  border: 1px solid #c5c5c5;
-  padding: 20px 16px 16px 16px;
-}
+  // .graphic-imagery-section {
+  //   border: 1px solid #c5c5c5;
+  //   padding: 20px 16px 16px 16px;
+  // }
 
-.graphic-imagery-section h4 {
-  line-height: 22px;
-  margin: 0;
-  font-weight: 700;
-  font-size: 16px;
-  margin-bottom: 6px;
-}
+  // .graphic-imagery-section h4 {
+  //   line-height: 22px;
+  //   margin: 0;
+  //   font-weight: 700;
+  //   font-size: 16px;
+  //   margin-bottom: 6px;
+  // }
 
-.graphic-imagery-section p {
-  font-size: 12px;
-  font-style: italic;
-  line-height: 18px;
-  padding: 0;
-} */
+  // .graphic-imagery-section p {
+  //   font-size: 12px;
+  //   font-style: italic;
+  //   line-height: 18px;
+  //   padding: 0;
+  // }
 
-  /* .graphic-slider {
-  cursor: pointer;
-  margin-top: 16px;
-}
+  .graphic-slider {
+    cursor: pointer;
+    margin-top: 16px;
+  }
 
-.graphic-slider rect {
-  transition: all 0.3s;
-}
+  .graphic-slider rect {
+    transition: all 0.3s;
+  }
 
-.latino-graphic-slider.slider-enabled circle {
-  fill: white;
-}
+  .graphic-slider.slider-enabled circle {
+    fill: white;
+  }
 
-.latino-graphic-slider.slider-enabled rect {
-  fill: #418fde;
-} */
+  .graphic-slider.slider-enabled rect {
+    fill: #41de42; // #418fde
+  }
 
   .off-text,
   .on-text {
@@ -301,6 +301,10 @@ form[action="/page/52319/subscriptions/2"] .less-emails-button {
 
   .slider-enabled .on-text {
     opacity: 1;
+  }
+
+  .slider-enabled circle {
+    cx: 45px;
   }
 
   .enable-graphic-images {
@@ -596,8 +600,8 @@ form[action="/page/52319/subscriptions/2"] .less-emails-button {
       margin-top: 32px;
     }
 
-    .less-emails-section svg,
-    .graphic-imagery-section svg {
+    .less-emails-section .hide-paragraph-button,
+    .graphic-imagery-section .hide-paragraph-button {
       display: none;
     }
 

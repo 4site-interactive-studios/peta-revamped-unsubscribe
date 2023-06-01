@@ -18,14 +18,24 @@ export const toggleSubscriptionCheckboxOnClick = () => {
       let input = title.querySelector('input[type="checkbox"]');
 
       // for the corresponding title label
-      title.addEventListener("click", () => {
+      title.addEventListener("click", (event) => {
+        event.preventDefault();
         input.checked = !input.checked;
+
+        // Create a bubbling change event and dispatch it
+        const changeEvent = new Event("change", { bubbles: true });
+        input.dispatchEvent(changeEvent);
       });
 
       // for the corresponding description paragraph
       let description = subscriptionDescriptions[index];
-      description.addEventListener("click", () => {
+      description.addEventListener("click", (event) => {
+        event.preventDefault();
         input.checked = !input.checked;
+
+        // Create a bubbling change event and dispatch it
+        const changeEvent = new Event("change", { bubbles: true });
+        input.dispatchEvent(changeEvent);
       });
     });
   }

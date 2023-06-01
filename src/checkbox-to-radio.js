@@ -6,9 +6,7 @@ export const convert1855CheckboxToRadioButtons = () => {
    */
   function convert1855CheckboxToRadioButtons() {
     // Find the elements we need
-    const lessEmailsRadioSelect = document.querySelector(
-      ".less-emails-radio-select"
-    );
+    const lessEmailsRadioSelect = document.querySelector(".less-emails-picker");
     const field1855Component = document.querySelector(
       ".en__component--formblock .en__field--1855"
     );

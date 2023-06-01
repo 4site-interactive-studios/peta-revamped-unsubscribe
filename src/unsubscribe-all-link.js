@@ -38,7 +38,7 @@ export const setUnsubscribeAllOnClick = () => {
         });
 
         // Get the submit button
-        const submitBtn = document.querySelector(".en__component--button");
+        const submitBtn = document.querySelector(".en__submit button");
 
         // If the submit button exists
         if (submitBtn) {
