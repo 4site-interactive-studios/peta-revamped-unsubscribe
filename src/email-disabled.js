@@ -10,7 +10,10 @@ export const emailDisabler = () => {
     );
     if (userEmail && userEmail.value != "") {
       userEmail.setAttribute("disabled", "");
-      document.querySelector(".incorrect-email-link").style.display = "block";
+      const incorrectEmail = document.querySelector(".incorrect-email-link");
+      if (incorrectEmail) {
+        incorrectEmail.style.display = "block";
+      }
     }
   }
   emailDisabler();

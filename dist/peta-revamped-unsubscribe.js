@@ -715,7 +715,7 @@ Miscellaneous Pages (To Be Deleted After Development)
 div:not(.less-emails-picker) > .en__field--1855 > label {
   cursor: pointer;
 }
-body:not(#en__pagebuilder) .en__field--1855 {
+body:not(#en__pagebuilder) div:not(.dcf-receive-fewer-emails-container) > div > .en__field--1855 {
   display: none;
 }
 body:not(#en__pagebuilder):not([data-status=unsubscribe]) .has-status_unsubscribe,
@@ -969,7 +969,10 @@ const emailDisabler = () => {
     );
     if (userEmail && userEmail.value != "") {
       userEmail.setAttribute("disabled", "");
-      document.querySelector(".incorrect-email-link").style.display = "block";
+      const incorrectEmail = document.querySelector(".incorrect-email-link");
+      if (incorrectEmail) {
+        incorrectEmail.style.display = "block";
+      }
     }
   }
   emailDisabler();

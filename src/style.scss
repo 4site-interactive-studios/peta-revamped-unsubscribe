@@ -1013,7 +1013,10 @@ div:not(.less-emails-picker) > .en__field--1855 > label {
   cursor: pointer;
 }
 
-body:not(#en__pagebuilder) .en__field--1855 {
+body:not(#en__pagebuilder)
+  div:not(.dcf-receive-fewer-emails-container)
+  > div
+  > .en__field--1855 {
   display: none;
 }
 
