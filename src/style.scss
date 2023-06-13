@@ -238,11 +238,17 @@ form[action="/page/52319/subscriptions/2"] .less-emails-button {
     font-weight: 700;
   }
 
-  .subscription_title > .en__field--checkbox > .en__field__label {
-    width: fit-content;
-    cursor: pointer;
-    position: relative;
-    top: -3px;
+  .subscription_title > .en__field--checkbox {
+    > .en__field__label {
+      width: fit-content;
+      // cursor: pointer;
+      position: relative;
+      top: -3px;
+    }
+
+    .en__field__input--checkbox {
+      cursor: pointer;
+    }
   }
 
   // .graphic-imagery-section {
@@ -733,7 +739,7 @@ form[action="/page/52319/subscriptions/2"] .less-emails-button {
     padding: 1rem;
     flex: 1 0 auto;
     height: 100%;
-    cursor: pointer;
+    // cursor: pointer;
   }
 
   .dcf-receive-fewer-emails-container label,
