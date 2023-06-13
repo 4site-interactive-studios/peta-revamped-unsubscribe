@@ -14,8 +14,8 @@ const runScript = () => {
   setBodyAttributes();
   // convert1855CheckboxToRadioButtons();
   setUnsubscribeAllOnClick();
-  toggleSubscriptionCheckboxOnClick();
-  toggleCheckboxOnClickOrTouch();
+  // toggleSubscriptionCheckboxOnClick();
+  // toggleCheckboxOnClickOrTouch();
   toggleSectionParagraphVisibility();
   addSVGAndH3ClickListeners();
   emailDisabler();

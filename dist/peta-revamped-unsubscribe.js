@@ -17,6 +17,9 @@ Miscellaneous Pages (To Be Deleted After Development)
 1) 4Site - Development - New Post-Unsubscribe Mobile Opt-In Page #48210 - Set up by Ry
 2) 4Site - Development - New Unsubscribe Page (Take 2) #52319 - Set up by Bryan
 */
+body {
+  border: 5px solid red !important;
+}
 [data-page-context=new-unsubscribe] {
   /* .less-emails-button {
     cursor: pointer;
@@ -965,8 +968,8 @@ const runScript = () => {
   setBodyAttributes();
   // convert1855CheckboxToRadioButtons();
   setUnsubscribeAllOnClick();
-  toggleSubscriptionCheckboxOnClick();
-  toggleCheckboxOnClickOrTouch();
+  // toggleSubscriptionCheckboxOnClick();
+  // toggleCheckboxOnClickOrTouch();
   toggleSectionParagraphVisibility();
   addSVGAndH3ClickListeners();
   emailDisabler();
