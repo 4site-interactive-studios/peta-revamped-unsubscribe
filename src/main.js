@@ -2,9 +2,9 @@ import "./style.scss";
 import { setBodyAttributes } from "./set-body-data-attributes";
 // import { convert1855CheckboxToRadioButtons } from "./checkbox-to-radio.js";
 import { setUnsubscribeAllOnClick } from "./unsubscribe-all-link.js";
-// import { toggleSubscriptionCheckboxOnClick } from "./make-opt-in-labels-clickable.js";
+import { toggleSubscriptionCheckboxOnClick } from "./make-opt-in-labels-clickable.js";
 // import { toggleCheckboxOnClickOrTouch } from "./toggle-checkbox-when-container-is-clicked-or-touched.js";
-import { toggleSectionParagraphVisibility } from "./toggle-section-paragraph-visibility.js";
+// import { toggleSectionParagraphVisibility } from "./toggle-section-paragraph-visibility.js";
 import { addSVGAndH3ClickListeners } from "./svg-and-h3-click-listeners";
 import { emailDisabler } from "./email-disabled";
 import { updateLabelContents } from "./update-label-contents";
@@ -14,9 +14,9 @@ const runScript = () => {
   setBodyAttributes();
   // convert1855CheckboxToRadioButtons();
   setUnsubscribeAllOnClick();
-  // toggleSubscriptionCheckboxOnClick();
+  toggleSubscriptionCheckboxOnClick();
   // toggleCheckboxOnClickOrTouch();
-  toggleSectionParagraphVisibility();
+  // toggleSectionParagraphVisibility();
   addSVGAndH3ClickListeners();
   emailDisabler();
   updateLabelContents();
@@ -174,6 +174,33 @@ const runScript = () => {
     dcfReducedEmailCheckbox.checked = false;
   }
 
+  (function toggleCheckboxOnClick() {
+    let label = document.querySelector(
+      "div:not(.less-emails-picker) > .en__field--1855 > label"
+    );
+    let checkbox = document.querySelector(
+      'input[name="supporter.questions.1855"]'
+    );
+
+    if (label && checkbox) {
+      label.addEventListener("click", () => {
+        checkbox.checked = !checkbox.checked;
+      });
+    }
+  })();
+
+  (function setStatusAttributeFromURL() {
+    // Create a URLSearchParams object
+    let params = new URLSearchParams(window.location.search);
+
+    // Check if the 'status' parameter is in the URL
+    if (params.has("status")) {
+      // If 'status' is found, get its value and set it as an attribute on the body
+      let statusValue = params.get("status");
+      document.body.setAttribute("data-status", statusValue);
+    }
+  })();
+
   // const lessEmailsBox = document.createElement("input");
   // lessEmailsBox.id = "en__field_supporter_questions_1855";
   // lessEmailsBox.type = "checkbox";
@@ -182,19 +209,23 @@ const runScript = () => {
   // lessEmailsBox.value = "Y";
   // lessEmailsBox.style.visibility = "hidden";
   // document.querySelector(".less-emails-section").appendChild(lessEmailsBox);
-  // const lessEmailsBox = document.querySelector(
-  //   "#en__field_supporter_questions_1855"
-  // );
+  const lessEmailsBox = document.querySelector(
+    "#en__field_supporter_questions_1855"
+  );
 
-  // if (lessEmailsBox) {
-  //   lessEmailsBox.removeAttribute("disabled");
-  // }
+  const lessEmailsBtn = document.querySelector(".less-emails-button");
+  if (lessEmailsBtn && lessEmailsBox) {
+    lessEmailsBtn.addEventListener("click", (e) => {
+      lessEmailsBox.checked = "true";
+      const submitBtn = document.querySelector(".en__submit button");
+      if (submitBtn) {
+        submitBtn.click();
+      }
+    });
+  }
 
-  // const lessEmailsBtn = document.querySelector(".less-emails-button");
-  // lessEmailsBtn.addEventListener("click", (e) => {
-  //   lessEmailsBox.checked = "true";
-  //   submitBtn.click();
-  // });
+  console.log("PETA Custom JS loaded");
+  document.body.setAttribute("data-custom-js", "loaded");
 };
 
 if (document.readyState === "loading") {

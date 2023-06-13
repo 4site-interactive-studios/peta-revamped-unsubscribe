@@ -8,7 +8,7 @@ export const emailDisabler = () => {
     const userEmail = document.querySelector(
       "#en__field_supporter_emailAddress"
     );
-    if (userEmail.value != "") {
+    if (userEmail && userEmail.value != "") {
       userEmail.setAttribute("disabled", "");
       document.querySelector(".incorrect-email-link").style.display = "block";
     }

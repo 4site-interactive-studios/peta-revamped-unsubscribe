@@ -17,23 +17,7 @@ Miscellaneous Pages (To Be Deleted After Development)
 1) 4Site - Development - New Post-Unsubscribe Mobile Opt-In Page #48210 - Set up by Ry
 2) 4Site - Development - New Unsubscribe Page (Take 2) #52319 - Set up by Bryan
 */
-body {
-  border: 5px solid red !important;
-}
 [data-page-context=new-unsubscribe] {
-  /* .less-emails-button {
-    cursor: pointer;
-    font-size: 16px;
-    background-color: #d32626;
-    padding: 15px 20px 13px 20px;
-    color: white;
-    font-weight: 600;
-    border-radius: 5px;
-    text-align: center;
-    min-width: 238px;
-    max-width: 272px;
-    margin: 0 auto;
-  } */
   /* form[action="/page/48122/subscriptions/2"] .less-emails-button,
   form[action="/page/52017/subscriptions/2"] .less-emails-button,
   form[action="/page/49041/subscriptions/2"] .less-emails-button,
@@ -146,6 +130,23 @@ body {
   margin-bottom: 20px;
   height: auto !important;
 }
+[data-page-context=new-unsubscribe] .less-emails-button {
+  cursor: pointer;
+  font-size: 16px;
+  background-color: #d32626;
+  padding: 15px 20px 13px 20px;
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+  text-align: center;
+  min-width: 238px;
+  max-width: 272px;
+  margin: 0 auto;
+  max-width: 392px;
+  background-color: #ef4136;
+  border-radius: 0;
+  min-width: none;
+}
 [data-page-context=new-unsubscribe] .unsubscribe-options-header h3 {
   font-size: 28px;
   font-weight: 500;
@@ -170,6 +171,7 @@ body {
 }
 [data-page-context=new-unsubscribe] .subscription_title > .en__field--checkbox > .en__field__label {
   width: fit-content;
+  cursor: pointer;
   position: relative;
   top: -3px;
 }
@@ -369,9 +371,18 @@ body {
   justify-content: flex-start;
   align-items: center;
 }
-[data-page-context=new-unsubscribe] .less-emails-header h3,
-[data-page-context=new-unsubscribe] .reduce-graphic-imagery-header h3 {
-  font-size: 26px;
+@media screen and (min-width: 480px) {
+  [data-page-context=new-unsubscribe] .less-emails-header h3,
+  [data-page-context=new-unsubscribe] .reduce-graphic-imagery-header h3 {
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 479px) {
+  [data-page-context=new-unsubscribe] .less-emails-header h3,
+  [data-page-context=new-unsubscribe] .reduce-graphic-imagery-header h3 {
+    font-size: 16px;
+    font-weight: 600;
+  }
 }
 @keyframes reveal {
   0% {
@@ -698,6 +709,21 @@ body {
   [data-page-context=new-unsubscribe] .unsubscribe-options-header > * {
     max-width: 100%;
   }
+}
+[name="supporter.questions.1855"],
+[name="supporter.NOT_TAGGED_134"],
+div:not(.less-emails-picker) > .en__field--1855 > label {
+  cursor: pointer;
+}
+body:not(#en__pagebuilder) .en__field--1855 {
+  display: none;
+}
+body:not(#en__pagebuilder):not([data-status=unsubscribe]) .has-status_unsubscribe,
+body:not(#en__pagebuilder):not([data-status=update]) .has-status_update {
+  display: none;
+}
+body[data-custom-js=loaded] {
+  opacity: 1;
 }`)),document.head.appendChild(n)}}catch(e){console.error("vite-plugin-css-injected-by-js",e)}})();
 true&&(function polyfill() {
     const relList = document.createElement('link').relList;
@@ -820,37 +846,52 @@ const setUnsubscribeAllOnClick = () => {
   setUnsubscribeAllOnClick();
 };
 
-const toggleSectionParagraphVisibility = () => {
+const toggleSubscriptionCheckboxOnClick = () => {
   /**
-   * Function to set the height of '.section-paragraph' elements
-   * to 0px when screen width is < 600 and remove that style when screen width is >= 600.
+   * This function, toggleSubscriptionCheckboxOnClick, adds interactivity to the subscription_title
+   * and subscription_description divs such that clicking on these divs will toggle the checked status
+   * of the corresponding checkbox input. This function assumes that there are matching pairs of
+   * .subscription_title and .subscription_description divs in the DOM, and that each .subscription_title
+   * div contains exactly one checkbox input.
    */
-  function toggleVisibility() {
-    // Select all '.section-paragraph' elements
-    const sectionParagraphs = document.querySelectorAll(".section-paragraph");
+  function toggleSubscriptionCheckboxOnClick() {
+    // get all subscription_title and subscription_description divs
+    let subscriptionTitles = document.querySelectorAll(".subscription_title");
+    // let subscriptionDescriptions = document.querySelectorAll(
+    //   ".subscription_description"
+    // );
 
-    // For each '.section-paragraph' element
-    sectionParagraphs.forEach((sectionParagraph) => {
-      // If the screen width is >= 600
-      if (window.innerWidth >= 600) {
-        // Remove the height style
-        sectionParagraph.style.height = "";
-      } else {
-        // Set the height to 0px
-        sectionParagraph.style.height = "0px";
-      }
+    // for each title, bind a click event listener
+    subscriptionTitles.forEach((title, index) => {
+      let input = title.querySelector('input[type="checkbox"]');
+      let titleLabel = title.querySelector("label");
+
+      // for the corresponding title label
+      titleLabel.addEventListener("click", (event) => {
+        // console.log("title clicked", event);
+        event.preventDefault();
+        if (event.target.tagName !== "INPUT") input.checked = !input.checked;
+
+        // Create a bubbling change event and dispatch it
+        const changeEvent = new Event("change", { bubbles: true });
+        input.dispatchEvent(changeEvent);
+      });
+
+      // for the corresponding description paragraph
+      // let description = subscriptionDescriptions[index];
+      // description.addEventListener("click", (event) => {
+      //   // console.log("description clicked", event);
+      //   event.preventDefault();
+      //   if (event.target.tagName !== "INPUT") input.checked = !input.checked;
+
+      //   // Create a bubbling change event and dispatch it
+      //   const changeEvent = new Event("change", { bubbles: true });
+      //   input.dispatchEvent(changeEvent);
+      // });
     });
   }
-
-  // Call the function initially
-  toggleVisibility();
-
-  // Call the function whenever the window is resized
-  window.addEventListener("resize", toggleVisibility);
+  toggleSubscriptionCheckboxOnClick();
 };
-
-// Call the function
-toggleSectionParagraphVisibility();
 
 const addSVGAndH3ClickListeners = () => {
   /**
@@ -926,7 +967,7 @@ const emailDisabler = () => {
     const userEmail = document.querySelector(
       "#en__field_supporter_emailAddress"
     );
-    if (userEmail.value != "") {
+    if (userEmail && userEmail.value != "") {
       userEmail.setAttribute("disabled", "");
       document.querySelector(".incorrect-email-link").style.display = "block";
     }
@@ -968,9 +1009,9 @@ const runScript = () => {
   setBodyAttributes();
   // convert1855CheckboxToRadioButtons();
   setUnsubscribeAllOnClick();
-  // toggleSubscriptionCheckboxOnClick();
+  toggleSubscriptionCheckboxOnClick();
   // toggleCheckboxOnClickOrTouch();
-  toggleSectionParagraphVisibility();
+  // toggleSectionParagraphVisibility();
   addSVGAndH3ClickListeners();
   emailDisabler();
   updateLabelContents();
@@ -1128,6 +1169,33 @@ const runScript = () => {
     dcfReducedEmailCheckbox.checked = false;
   }
 
+  (function toggleCheckboxOnClick() {
+    let label = document.querySelector(
+      "div:not(.less-emails-picker) > .en__field--1855 > label"
+    );
+    let checkbox = document.querySelector(
+      'input[name="supporter.questions.1855"]'
+    );
+
+    if (label && checkbox) {
+      label.addEventListener("click", () => {
+        checkbox.checked = !checkbox.checked;
+      });
+    }
+  })();
+
+  (function setStatusAttributeFromURL() {
+    // Create a URLSearchParams object
+    let params = new URLSearchParams(window.location.search);
+
+    // Check if the 'status' parameter is in the URL
+    if (params.has("status")) {
+      // If 'status' is found, get its value and set it as an attribute on the body
+      let statusValue = params.get("status");
+      document.body.setAttribute("data-status", statusValue);
+    }
+  })();
+
   // const lessEmailsBox = document.createElement("input");
   // lessEmailsBox.id = "en__field_supporter_questions_1855";
   // lessEmailsBox.type = "checkbox";
@@ -1136,19 +1204,23 @@ const runScript = () => {
   // lessEmailsBox.value = "Y";
   // lessEmailsBox.style.visibility = "hidden";
   // document.querySelector(".less-emails-section").appendChild(lessEmailsBox);
-  // const lessEmailsBox = document.querySelector(
-  //   "#en__field_supporter_questions_1855"
-  // );
+  const lessEmailsBox = document.querySelector(
+    "#en__field_supporter_questions_1855"
+  );
 
-  // if (lessEmailsBox) {
-  //   lessEmailsBox.removeAttribute("disabled");
-  // }
+  const lessEmailsBtn = document.querySelector(".less-emails-button");
+  if (lessEmailsBtn && lessEmailsBox) {
+    lessEmailsBtn.addEventListener("click", (e) => {
+      lessEmailsBox.checked = "true";
+      const submitBtn = document.querySelector(".en__submit button");
+      if (submitBtn) {
+        submitBtn.click();
+      }
+    });
+  }
 
-  // const lessEmailsBtn = document.querySelector(".less-emails-button");
-  // lessEmailsBtn.addEventListener("click", (e) => {
-  //   lessEmailsBox.checked = "true";
-  //   submitBtn.click();
-  // });
+  console.log("PETA Custom JS loaded");
+  document.body.setAttribute("data-custom-js", "loaded");
 };
 
 if (document.readyState === "loading") {

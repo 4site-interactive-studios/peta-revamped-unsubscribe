@@ -26,9 +26,9 @@ Miscellaneous Pages (To Be Deleted After Development)
 
 */
 
-body {
-  border: 5px solid red !important;
-}
+// body {
+//   border: 5px solid red !important;
+// }
 
 [data-page-context="new-unsubscribe"] {
   // form[action="/page/48122/subscriptions/2"].en__component
@@ -193,19 +193,24 @@ body {
     height: auto !important;
   }
 
-  /* .less-emails-button {
-  cursor: pointer;
-  font-size: 16px;
-  background-color: #d32626;
-  padding: 15px 20px 13px 20px;
-  color: white;
-  font-weight: 600;
-  border-radius: 5px;
-  text-align: center;
-  min-width: 238px;
-  max-width: 272px;
-  margin: 0 auto;
-} */
+  .less-emails-button {
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #d32626;
+    padding: 15px 20px 13px 20px;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    text-align: center;
+    min-width: 238px;
+    max-width: 272px;
+    margin: 0 auto;
+    max-width: 392px;
+    background-color: #ef4136;
+    border-radius: 0;
+    // max-width: 176px;
+    min-width: none;
+  }
 
   /* form[action="/page/48122/subscriptions/2"] .less-emails-button,
 form[action="/page/52017/subscriptions/2"] .less-emails-button,
@@ -246,7 +251,7 @@ form[action="/page/52319/subscriptions/2"] .less-emails-button {
   .subscription_title > .en__field--checkbox {
     > .en__field__label {
       width: fit-content;
-      // cursor: pointer;
+      cursor: pointer;
       position: relative;
       top: -3px;
     }
@@ -514,9 +519,19 @@ form[action="/page/52319/subscriptions/2"] .less-emails-button {
     align-items: center;
   }
 
-  .less-emails-header h3,
-  .reduce-graphic-imagery-header h3 {
-    font-size: 26px;
+  @media screen and (min-width: 480px) {
+    .less-emails-header h3,
+    .reduce-graphic-imagery-header h3 {
+      font-size: 26px;
+    }
+  }
+
+  @media screen and (max-width: 479px) {
+    .less-emails-header h3,
+    .reduce-graphic-imagery-header h3 {
+      font-size: 16px;
+      font-weight: 600;
+    }
   }
 
   @keyframes reveal {
@@ -990,4 +1005,24 @@ form[action="/page/52319/subscriptions/2"] .less-emails-button {
       max-width: 100%;
     }
   }
+}
+
+[name="supporter.questions.1855"],
+[name="supporter.NOT_TAGGED_134"],
+div:not(.less-emails-picker) > .en__field--1855 > label {
+  cursor: pointer;
+}
+
+body:not(#en__pagebuilder) .en__field--1855 {
+  display: none;
+}
+
+body:not(#en__pagebuilder):not([data-status="unsubscribe"])
+  .has-status_unsubscribe,
+body:not(#en__pagebuilder):not([data-status="update"]) .has-status_update {
+  display: none;
+}
+
+body[data-custom-js="loaded"] {
+  opacity: 1;
 }

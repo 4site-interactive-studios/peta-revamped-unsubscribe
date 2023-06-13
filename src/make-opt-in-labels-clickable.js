@@ -9,9 +9,9 @@ export const toggleSubscriptionCheckboxOnClick = () => {
   function toggleSubscriptionCheckboxOnClick() {
     // get all subscription_title and subscription_description divs
     let subscriptionTitles = document.querySelectorAll(".subscription_title");
-    let subscriptionDescriptions = document.querySelectorAll(
-      ".subscription_description"
-    );
+    // let subscriptionDescriptions = document.querySelectorAll(
+    //   ".subscription_description"
+    // );
 
     // for each title, bind a click event listener
     subscriptionTitles.forEach((title, index) => {
@@ -30,16 +30,16 @@ export const toggleSubscriptionCheckboxOnClick = () => {
       });
 
       // for the corresponding description paragraph
-      let description = subscriptionDescriptions[index];
-      description.addEventListener("click", (event) => {
-        // console.log("description clicked", event);
-        event.preventDefault();
-        if (event.target.tagName !== "INPUT") input.checked = !input.checked;
+      // let description = subscriptionDescriptions[index];
+      // description.addEventListener("click", (event) => {
+      //   // console.log("description clicked", event);
+      //   event.preventDefault();
+      //   if (event.target.tagName !== "INPUT") input.checked = !input.checked;
 
-        // Create a bubbling change event and dispatch it
-        const changeEvent = new Event("change", { bubbles: true });
-        input.dispatchEvent(changeEvent);
-      });
+      //   // Create a bubbling change event and dispatch it
+      //   const changeEvent = new Event("change", { bubbles: true });
+      //   input.dispatchEvent(changeEvent);
+      // });
     });
   }
   toggleSubscriptionCheckboxOnClick();
