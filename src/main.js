@@ -73,6 +73,7 @@ const runScript = () => {
       // Function to toggle the slider and checkbox states
       const toggleStates = () => {
         // If the checkbox is checked
+        console.log("checkbox", checkbox);
         if (checkbox.checked) {
           // Uncheck the checkbox
           checkbox.checked = false;
@@ -94,7 +95,7 @@ const runScript = () => {
       svg.addEventListener("click", toggleStates);
 
       // Add touchend event listener for touch devices
-      svg.addEventListener("touchend", toggleStates);
+      // svg.addEventListener("touchend", toggleStates);
     }
   }
 
