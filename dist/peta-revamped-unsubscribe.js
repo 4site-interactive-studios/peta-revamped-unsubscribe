@@ -161,6 +161,12 @@ Miscellaneous Pages (To Be Deleted After Development)
   max-width: 258px;
   margin-left: 35px;
 }
+[data-page-context=new-unsubscribe] .required-action-team-fields .action-team-signup-field-label {
+  font-weight: 700;
+}
+[data-page-context=new-unsubscribe] .required-action-team-fields .action-team-signup-field-label:after {
+  content: none;
+}
 [data-page-context=new-unsubscribe] .less-emails-picker > .en__field--question,
 [data-page-context=new-unsubscribe] .reduce-graphic-imagery-picker .en__field--radio {
   padding-bottom: 0;
@@ -1128,6 +1134,13 @@ const runScript = () => {
     );
 
     if (actionTeamDesc && actionTeamFields) {
+      let actionTeamFieldsFirstName = actionTeamFields.querySelector(
+        '[for="en__field_supporter_firstName"]'
+      );
+      actionTeamFieldsFirstName.insertAdjacentHTML(
+        "afterbegin",
+        '<span class="en__field__label action-team-signup-field-label" style="">Action Team Signup:</span>'
+      );
       actionTeamDesc.after(actionTeamFields);
     }
   }

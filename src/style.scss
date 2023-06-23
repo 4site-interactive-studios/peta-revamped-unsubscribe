@@ -236,6 +236,13 @@ form[action="/page/52319/subscriptions/2"] .less-emails-button {
     margin: 0 auto;
     max-width: 258px;
     margin-left: 35px;
+    .action-team-signup-field-label {
+      font-weight: 700;
+
+      &:after {
+        content: none;
+      }
+    }
   }
 
   .less-emails-picker > .en__field--question,
