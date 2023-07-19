@@ -176,10 +176,14 @@ Miscellaneous Pages (To Be Deleted After Development)
     transform: rotate(0deg);
   }
 
-  .section-paragraph {
+  .less-emails-section .section-paragraph,
+  .graphic-imagery-section .section-paragraph {
     padding: 0;
-    overflow: hidden;
-    transition: 0.5s;
+  }
+
+  .less-emails-section .section-paragraph,
+  .graphic-imagery-section .section-paragraph {
+    margin-bottom: 24px;
   }
 
   .hide-paragraph-animation {
@@ -236,6 +240,13 @@ form[action="/page/52319/subscriptions/2"] .less-emails-button {
     margin: 0 auto;
     max-width: 258px;
     margin-left: 35px;
+    .action-team-signup-field-label {
+      font-weight: 700;
+
+      &:after {
+        content: none;
+      }
+    }
   }
 
   .less-emails-picker > .en__field--question,
@@ -283,7 +294,7 @@ form[action="/page/52319/subscriptions/2"] .less-emails-button {
 
   .graphic-slider {
     cursor: pointer;
-    margin-top: 16px;
+    // margin-top: 16px;
   }
 
   .graphic-slider rect {
@@ -633,7 +644,6 @@ form[action="/page/52319/subscriptions/2"] .less-emails-button {
 
     .section-paragraph {
       height: 100%;
-      margin-bottom: 24px;
       animation: none;
     }
 

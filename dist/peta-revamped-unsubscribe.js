@@ -116,10 +116,13 @@ Miscellaneous Pages (To Be Deleted After Development)
 [data-page-context=new-unsubscribe] .hide-paragraph-button {
   transform: rotate(0deg);
 }
-[data-page-context=new-unsubscribe] .section-paragraph {
+[data-page-context=new-unsubscribe] .less-emails-section .section-paragraph,
+[data-page-context=new-unsubscribe] .graphic-imagery-section .section-paragraph {
   padding: 0;
-  overflow: hidden;
-  transition: 0.5s;
+}
+[data-page-context=new-unsubscribe] .less-emails-section .section-paragraph,
+[data-page-context=new-unsubscribe] .graphic-imagery-section .section-paragraph {
+  margin-bottom: 24px;
 }
 [data-page-context=new-unsubscribe] .hide-paragraph-animation {
   animation: hide 0.5s cubic-bezier(0.77, 0, 0.175, 1);
@@ -161,6 +164,12 @@ Miscellaneous Pages (To Be Deleted After Development)
   max-width: 258px;
   margin-left: 35px;
 }
+[data-page-context=new-unsubscribe] .required-action-team-fields .action-team-signup-field-label {
+  font-weight: 700;
+}
+[data-page-context=new-unsubscribe] .required-action-team-fields .action-team-signup-field-label:after {
+  content: none;
+}
 [data-page-context=new-unsubscribe] .less-emails-picker > .en__field--question,
 [data-page-context=new-unsubscribe] .reduce-graphic-imagery-picker .en__field--radio {
   padding-bottom: 0;
@@ -180,7 +189,6 @@ Miscellaneous Pages (To Be Deleted After Development)
 }
 [data-page-context=new-unsubscribe] .graphic-slider {
   cursor: pointer;
-  margin-top: 16px;
 }
 [data-page-context=new-unsubscribe] .graphic-slider rect {
   transition: all 0.3s;
@@ -474,7 +482,6 @@ Miscellaneous Pages (To Be Deleted After Development)
   }
   [data-page-context=new-unsubscribe] .section-paragraph {
     height: 100%;
-    margin-bottom: 24px;
     animation: none;
   }
   [data-page-context=new-unsubscribe] .unsubscribe-options-header h3 {
@@ -1071,6 +1078,7 @@ const runScript = () => {
       // Function to toggle the slider and checkbox states
       const toggleStates = () => {
         // If the checkbox is checked
+        console.log("checkbox", checkbox);
         if (checkbox.checked) {
           // Uncheck the checkbox
           checkbox.checked = false;
@@ -1092,7 +1100,7 @@ const runScript = () => {
       svg.addEventListener("click", toggleStates);
 
       // Add touchend event listener for touch devices
-      svg.addEventListener("touchend", toggleStates);
+      // svg.addEventListener("touchend", toggleStates);
     }
   }
 
@@ -1128,6 +1136,13 @@ const runScript = () => {
     );
 
     if (actionTeamDesc && actionTeamFields) {
+      let actionTeamFieldsFirstName = actionTeamFields.querySelector(
+        '[for="en__field_supporter_firstName"]'
+      );
+      actionTeamFieldsFirstName.insertAdjacentHTML(
+        "afterbegin",
+        '<span class="en__field__label action-team-signup-field-label" style="">Action Team Signup:</span>'
+      );
       actionTeamDesc.after(actionTeamFields);
     }
   }

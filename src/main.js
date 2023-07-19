@@ -73,6 +73,7 @@ const runScript = () => {
       // Function to toggle the slider and checkbox states
       const toggleStates = () => {
         // If the checkbox is checked
+        console.log("checkbox", checkbox);
         if (checkbox.checked) {
           // Uncheck the checkbox
           checkbox.checked = false;
@@ -94,7 +95,7 @@ const runScript = () => {
       svg.addEventListener("click", toggleStates);
 
       // Add touchend event listener for touch devices
-      svg.addEventListener("touchend", toggleStates);
+      // svg.addEventListener("touchend", toggleStates);
     }
   }
 
@@ -130,6 +131,13 @@ const runScript = () => {
     );
 
     if (actionTeamDesc && actionTeamFields) {
+      let actionTeamFieldsFirstName = actionTeamFields.querySelector(
+        '[for="en__field_supporter_firstName"]'
+      );
+      actionTeamFieldsFirstName.insertAdjacentHTML(
+        "afterbegin",
+        '<span class="en__field__label action-team-signup-field-label" style="">Action Team Signup:</span>'
+      );
       actionTeamDesc.after(actionTeamFields);
     }
   }
