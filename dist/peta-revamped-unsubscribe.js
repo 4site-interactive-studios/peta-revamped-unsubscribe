@@ -8,11 +8,11 @@ PETA US Unsubscribe Pages
    4Site - Development - New Post-Unsubscribe All Page #48388
 PETA Latino Unsubscribe Pages
 1) Email Subscription Landing Page URL
-   4Site - Development - New Latino Unsubscribe Page #49041
+  4Site - Development - New Latino Unsubscribe Page (Warm Visitor) #49041
 2) If the visitor comes to the Landing Page URL cold, they get redirected this DCF page.
-   TBD
+    4Site - Development - PETA Latino - New Unsubscribe Page - DCF (Cold Visitor) #55607
 3) After either of the above forms is completed, they get redirected here:
-   	4Site - Development - New Latino Post-Unsubscribe Mobile Opt-In Page #49060
+   	4Site - Development - New PETA Latino Post-Unsubscribe All Page #49060
 Miscellaneous Pages (To Be Deleted After Development)
 1) 4Site - Development - New Post-Unsubscribe Mobile Opt-In Page #48210 - Set up by Ry
 2) 4Site - Development - New Unsubscribe Page (Take 2) #52319 - Set up by Bryan
