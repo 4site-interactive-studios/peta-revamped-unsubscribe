@@ -239,7 +239,7 @@ const runScript = () => {
      */
     function uncheckQuestions178Checkbox() {
       const url = window.location.href;
-      if (url.includes("53017")) {
+      if (url.includes("53017"||"55607")) {
         const questions178Checkbox = document.querySelector("input[name='supporter.questions.178']");
         if (questions178Checkbox) {
           questions178Checkbox.checked = false;

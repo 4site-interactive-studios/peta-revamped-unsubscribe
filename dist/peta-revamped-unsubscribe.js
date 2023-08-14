@@ -739,7 +739,7 @@ const setBodyAttributes = () => {
     const url = new URL(window.location.href);
 
     // If the URL contains any of the specified page IDs, set data-page-context to "new-unsubscribe"
-    if (/48122|49041|52319|53017|48210|48388|49060/.test(url.pathname)) {
+    if (/48122|49041|52319|53017|55607|48210|48388|49060/.test(url.pathname)) {
       document.body.setAttribute("data-page-context", "new-unsubscribe");
     }
 
