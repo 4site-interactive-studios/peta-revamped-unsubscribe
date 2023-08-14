@@ -17,16 +17,6 @@ Miscellaneous Pages (To Be Deleted After Development)
 1) 4Site - Development - New Post-Unsubscribe Mobile Opt-In Page #48210 - Set up by Ry
 2) 4Site - Development - New Unsubscribe Page (Take 2) #52319 - Set up by Bryan
 */
-[data-page-context=new-unsubscribe] {
-  /* form[action="/page/48122/subscriptions/2"] .less-emails-button,
-  form[action="/page/52017/subscriptions/2"] .less-emails-button,
-  form[action="/page/49041/subscriptions/2"] .less-emails-button,
-  form[action="/page/52319/subscriptions/2"] .less-emails-button {
-    max-width: 392px;
-    background-color: #ef4136;
-    border-radius: 0;
-  } */
-}
 [data-page-context=new-unsubscribe] form[action="/page/48210/data/2"].en__component > .en__component--row--1:nth-of-type(2) > .en__component--column--1,
 [data-page-context=new-unsubscribe] form[action="/page/48388/data/2"].en__component > .en__component--row--1:nth-of-type(2) > .en__component--column--1,
 [data-page-context=new-unsubscribe] form[action="/page/49060/data/2"].en__component > .en__component--row--1:nth-of-type(2) > .en__component--column--1 {
@@ -425,30 +415,6 @@ Miscellaneous Pages (To Be Deleted After Development)
   }
 }
 @media (min-width: 600px) {
-  [data-page-context=new-unsubscribe] {
-    /* .less-emails-button {
-      max-width: 176px;
-      min-width: none;
-    } */
-    /* .graphic-imagery-section {
-      margin: 0 auto;
-      margin-top: 48px;
-      max-width: 775px;
-      display: flex;
-      column-gap: 56px;
-      align-items: center;
-      padding: 20px 32px;
-    } */
-    /* .graphic-imagery-section p {
-      font-size: 13px;
-      font-style: italic;
-      line-height: 20px;
-    } */
-    /* 
-    .graphic-slider {
-      margin: 0;
-    } */
-  }
   [data-page-context=new-unsubscribe] form[action="/page/48122/subscriptions/2"].en__component .en__component--row--1:nth-of-type(2) > .en__component.en__component--column--1,
   [data-page-context=new-unsubscribe] form[action="/page/53017/data/2"].en__component .en__component--row--1:nth-of-type(2) > .en__component.en__component--column--1,
   [data-page-context=new-unsubscribe] form[action="/page/49041/subscriptions/2"].en__component .en__component--row--1:nth-of-type(2) > .en__component.en__component--column--1,
@@ -599,22 +565,6 @@ Miscellaneous Pages (To Be Deleted After Development)
   }
 }
 @media (min-width: 900px) {
-  [data-page-context=new-unsubscribe] {
-    /* form[action="/page/48122/subscriptions/2"].en__component
-      .en__component--row--1:nth-of-type(2)
-      > .en__component.en__component--column--1,
-    form[action="/page/53017/data/2"].en__component
-      .en__component--row--1:nth-of-type(2)
-      > .en__component.en__component--column--1,
-    form[action="/page/49041/subscriptions/2"].en__component
-      .en__component--row--1:nth-of-type(2)
-      > .en__component.en__component--column--1,
-    form[action="/page/52319/subscriptions/2"].en__component
-      .en__component--row--1:nth-of-type(2)
-      > .en__component.en__component--column--1 {
-      margin-left: 107px;
-    } */
-  }
   [data-page-context=new-unsubscribe] .el-opt-in-columns {
     justify-content: center;
   }

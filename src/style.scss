@@ -31,23 +31,6 @@ Miscellaneous Pages (To Be Deleted After Development)
 // }
 
 [data-page-context="new-unsubscribe"] {
-  // form[action="/page/48122/subscriptions/2"].en__component
-  //   .en__component--row--1:nth-of-type(2)
-  //   > .en__component.en__component--column--1,
-  // form[action="/page/53017/data/2"].en__component
-  //   .en__component--row--1:nth-of-type(2)
-  //   > .en__component.en__component--column--1,
-  // form[action="/page/49041/subscriptions/2"].en__component
-  //   .en__component--row--1:nth-of-type(2)
-  //   > .en__component.en__component--column--1,
-  // form[action="/page/52319/subscriptions/2"].en__component
-  //   .en__component--row--1:nth-of-type(2)
-  //   > .en__component.en__component--column--1 {
-  //   /* max-width: 300px; */
-  //   margin: 0 auto;
-  //   padding-bottom: 32px;
-  // }
-
   form[action="/page/48210/data/2"].en__component
     > .en__component--row--1:nth-of-type(2)
     > .en__component--column--1,
@@ -103,14 +86,6 @@ Miscellaneous Pages (To Be Deleted After Development)
     color: #00bfb3;
   }
 
-  // .less-emails-section,
-  // .graphic-imagery-section {
-  //   border: 1px solid #c5c5c5;
-  //   /* max-width: 272px; */
-  //   padding: 11px 18px;
-  //   margin: 0 auto;
-  //   margin-bottom: 32px;
-  // }
   .manage-emails-container {
     display: flex;
     justify-content: center;
@@ -155,13 +130,6 @@ Miscellaneous Pages (To Be Deleted After Development)
     margin: 0;
     margin-top: 2px;
   }
-
-  // .less-emails-section svg,
-  // .reduce-graphic-imagery-header svg {
-  //   transition: 0.3s;
-  //   width: 27px;
-  //   height: 27px;
-  // }
 
   .en__field--reduced-e-mail-program.en__field--radio .en__field__item,
   .en__field--NOT_TAGGED_134.en__field--radio .en__field__item {
@@ -216,15 +184,6 @@ Miscellaneous Pages (To Be Deleted After Development)
     min-width: none;
   }
 
-  /* form[action="/page/48122/subscriptions/2"] .less-emails-button,
-form[action="/page/52017/subscriptions/2"] .less-emails-button,
-form[action="/page/49041/subscriptions/2"] .less-emails-button,
-form[action="/page/52319/subscriptions/2"] .less-emails-button {
-  max-width: 392px;
-  background-color: #ef4136;
-  border-radius: 0;
-} */
-
   .unsubscribe-options-header h3 {
     font-size: 28px;
     font-weight: 500;
@@ -272,29 +231,8 @@ form[action="/page/52319/subscriptions/2"] .less-emails-button {
     }
   }
 
-  // .graphic-imagery-section {
-  //   border: 1px solid #c5c5c5;
-  //   padding: 20px 16px 16px 16px;
-  // }
-
-  // .graphic-imagery-section h4 {
-  //   line-height: 22px;
-  //   margin: 0;
-  //   font-weight: 700;
-  //   font-size: 16px;
-  //   margin-bottom: 6px;
-  // }
-
-  // .graphic-imagery-section p {
-  //   font-size: 12px;
-  //   font-style: italic;
-  //   line-height: 18px;
-  //   padding: 0;
-  // }
-
   .graphic-slider {
     cursor: pointer;
-    // margin-top: 16px;
   }
 
   .graphic-slider rect {
@@ -626,13 +564,6 @@ form[action="/page/52319/subscriptions/2"] .less-emails-button {
       width: 100%;
     }
 
-    // .less-emails-section,
-    // .graphic-imagery-section {
-    //   max-width: 775px;
-    //   padding: 24px 32px 32px 32px;
-    //   margin-bottom: 48px;
-    // }
-
     .graphic-imagery-section {
       margin-top: 32px;
     }
@@ -647,58 +578,10 @@ form[action="/page/52319/subscriptions/2"] .less-emails-button {
       animation: none;
     }
 
-    /* .less-emails-button {
-    max-width: 176px;
-    min-width: none;
-  } */
-
     .unsubscribe-options-header h3 {
       font-size: 26px;
       margin-top: 0;
     }
-
-    // form[action="/page/48122/subscriptions/2"].en__component
-    //   .en__component--row--1:nth-of-type(4)
-    //   > .en__component--column--1,
-    // form[action="/page/53017/data/2"].en__component
-    //   .en__component--row--1:nth-of-type(4)
-    //   > .en__component--column--1,
-    // form[action="/page/49041/subscriptions/2"].en__component
-    //   .en__component--row--1:nth-of-type(4)
-    //   > .en__component--column--1,
-    // form[action="/page/52319/subscriptions/2"].en__component
-    //   .en__component--row--1:nth-of-type(4)
-    //   > .en__component--column--1 {
-    //   max-width: 711px;
-    //   margin: 0 auto;
-    //   padding: 0;
-    // }
-
-    // form[action="/page/48122/subscriptions/2"].en__component
-    //   > .en__component--row:nth-of-type(5),
-    // form[action="/page/53017/data/2"].en__component
-    //   > .en__component--row:nth-of-type(5),
-    // form[action="/page/49041/subscriptions/2"].en__component
-    //   > .en__component--row:nth-of-type(5),
-    // form[action="/page/52319/subscriptions/2"].en__component
-    //   > .en__component--row:nth-of-type(5) {
-    //   justify-content: center;
-    // }
-
-    // form[action="/page/48122/subscriptions/2"].en__component
-    //   > .en__component--row:nth-of-type(5)
-    //   .en__component--column,
-    // form[action="/page/53017/data/2"].en__component
-    //   > .en__component--row:nth-of-type(5)
-    //   .en__component--column,
-    // form[action="/page/49041/subscriptions/2"].en__component
-    //   > .en__component--row:nth-of-type(5)
-    //   .en__component--column,
-    // form[action="/page/52319/subscriptions/2"].en__component
-    //   > .en__component--row:nth-of-type(5)
-    //   .en__component--column {
-    //   max-width: 400px;
-    // }
 
     .mobile-advocacy-header {
       column-gap: 10%;
@@ -709,27 +592,6 @@ form[action="/page/52319/subscriptions/2"] .less-emails-button {
     .mobile-advocacy-section {
       width: 100%;
     }
-
-    /* .graphic-imagery-section {
-    margin: 0 auto;
-    margin-top: 48px;
-    max-width: 775px;
-    display: flex;
-    column-gap: 56px;
-    align-items: center;
-    padding: 20px 32px;
-  } */
-
-    /* .graphic-imagery-section p {
-    font-size: 13px;
-    font-style: italic;
-    line-height: 20px;
-  } */
-    /* 
-  .graphic-slider {
-    margin: 0;
-  } */
-
     .en__submit {
       margin-top: 0px;
     }
@@ -856,20 +718,6 @@ form[action="/page/52319/subscriptions/2"] .less-emails-button {
   }
 
   @media (min-width: 900px) {
-    /* form[action="/page/48122/subscriptions/2"].en__component
-    .en__component--row--1:nth-of-type(2)
-    > .en__component.en__component--column--1,
-  form[action="/page/53017/data/2"].en__component
-    .en__component--row--1:nth-of-type(2)
-    > .en__component.en__component--column--1,
-  form[action="/page/49041/subscriptions/2"].en__component
-    .en__component--row--1:nth-of-type(2)
-    > .en__component.en__component--column--1,
-  form[action="/page/52319/subscriptions/2"].en__component
-    .en__component--row--1:nth-of-type(2)
-    > .en__component.en__component--column--1 {
-    margin-left: 107px;
-  } */
 
     .el-opt-in-columns {
       justify-content: center;
@@ -996,13 +844,6 @@ form[action="/page/52319/subscriptions/2"] .less-emails-button {
       height: 305px;
     }
   }
-
-  // @media screen and (max-width: 825px) {
-  //   .unsubscribe-options-header {
-  //     padding-left: 1.5rem;
-  //     padding-right: 1.5rem;
-  //   }
-  // }
 
   @media screen and (max-width: 600px) {
     .unsubscribe-options-header h3 {
