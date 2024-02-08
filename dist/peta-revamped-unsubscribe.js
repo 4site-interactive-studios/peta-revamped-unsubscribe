@@ -9,10 +9,10 @@ PETA US Unsubscribe Pages
 PETA Latino Unsubscribe Pages
 1) Email Subscription Landing Page URL
   4Site - Development - New Latino Unsubscribe Page (Warm Visitor) #49041
-2) If the visitor comes to the Landing Page URL cold, they get redirected this DCF page.
-    4Site - Development - PETA Latino - New Unsubscribe Page - DCF (Cold Visitor) #55607
+2) If the visitor comes to the Landing Page URL cold, they get redirected to this DCF page.
+   4Site - Development - PETA Latino - New Unsubscribe Page - DCF (Cold Visitor) #55607
 3) After either of the above forms is completed, they get redirected here:
-   	4Site - Development - New PETA Latino Post-Unsubscribe All Page #49060
+   4Site - Development - New PETA Latino Post-Unsubscribe All Page #49060
 Miscellaneous Pages (To Be Deleted After Development)
 1) 4Site - Development - New Post-Unsubscribe Mobile Opt-In Page #48210 - Set up by Ry
 2) 4Site - Development - New Unsubscribe Page (Take 2) #52319 - Set up by Bryan
@@ -671,19 +671,18 @@ Miscellaneous Pages (To Be Deleted After Development)
     max-width: 100%;
   }
 }
-[name="supporter.questions.1855"],
-[name="supporter.NOT_TAGGED_134"],
-div:not(.less-emails-picker) > .en__field--1855 > label {
+[data-page-context=new-unsubscribe] [name="supporter.questions.1855"],
+[data-page-context=new-unsubscribe] [name="supporter.NOT_TAGGED_134"],
+[data-page-context=new-unsubscribe] div:not(.less-emails-picker) > .en__field--1855 > label {
   cursor: pointer;
 }
-body:not(#en__pagebuilder) div:not(.dcf-receive-fewer-emails-container) > div > .en__field--1855 {
+[data-page-context=new-unsubscribe]:not(#en__pagebuilder) div:not(.dcf-receive-fewer-emails-container) > div > .en__field--1855 {
   display: none;
 }
-body:not(#en__pagebuilder):not([data-status=unsubscribe]) .has-status_unsubscribe,
-body:not(#en__pagebuilder):not([data-status=update]) .has-status_update {
+[data-page-context=new-unsubscribe]:not(#en__pagebuilder):not([data-status=unsubscribe]) .has-status_unsubscribe, [data-page-context=new-unsubscribe]:not(#en__pagebuilder):not([data-status=update]) .has-status_update {
   display: none;
 }
-body[data-custom-js=loaded] {
+[data-page-context=new-unsubscribe][data-custom-js=loaded] {
   opacity: 1;
 }`)),document.head.appendChild(n)}}catch(e){console.error("vite-plugin-css-injected-by-js",e)}})();
 true&&(function polyfill() {
