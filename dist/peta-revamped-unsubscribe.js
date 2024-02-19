@@ -1,4 +1,4 @@
-(function(){"use strict";try{if(typeof document!="undefined"){var n=document.createElement("style");n.appendChild(document.createTextNode(`/* 
+(function(){"use strict";try{if(typeof document!="undefined"){var e=document.createElement("style");e.appendChild(document.createTextNode(`/* 
 PETA US Unsubscribe Pages
 1) Email Subscription Landing Page URL:
    4Site - Development - New Unsubscribe Page - List Subscription (Warm Visitor) #48122
@@ -237,7 +237,6 @@ Miscellaneous Pages (To Be Deleted After Development)
 [data-page-context=new-unsubscribe] .en__field--NOT_TAGGED_134 .en__field__element .en__field__label--item,
 [data-page-context=new-unsubscribe] .en__field--1855 .en__field__element .en__field__label--item {
   position: relative;
-  top: -3px;
 }
 [data-page-context=new-unsubscribe] .unsubscribe-all-button {
   text-align: center;
@@ -486,6 +485,38 @@ Miscellaneous Pages (To Be Deleted After Development)
   grid-row-gap: 1rem;
   justify-items: center;
 }
+[data-page-context=new-unsubscribe] .dcf-receive-fewer-emails-container-and-reduce-graphic-imagery-container .en__field--checkbox .en__field__item {
+  padding-top: 0px !important; /* PETA Latino pages have a different value than vanilla PETA pages, this makes them the same */
+}
+[data-page-context=new-unsubscribe] .dcf-receive-fewer-emails-container-and-reduce-graphic-imagery-container .en__field--checkbox .en__field__label--item {
+  margin-top: 0px !important; /* PETA Latino pages have a different value than vanilla PETA pages, this makes them the same */
+  margin-left: 0px !important; /* PETA Latino pages have a different value than vanilla PETA pages, this makes them the same */
+}
+[data-page-context=new-unsubscribe] .dcf-receive-fewer-emails-container-and-reduce-graphic-imagery-container .en__field__label {
+  line-height: 1.4 !important; /* PETA Latino pages have a different value than vanilla PETA pages, this makes them the same */
+}
+[data-page-context=new-unsubscribe] .dcf-receive-fewer-emails-container-and-reduce-graphic-imagery-container .en__field__input--checkbox {
+  margin: 0 !important;
+  flex-basis: initial;
+}
+[data-page-context=new-unsubscribe] .dcf-receive-fewer-emails-container-and-reduce-graphic-imagery-container .en__field--checkbox label {
+  width: 100%;
+}
+[data-page-context=new-unsubscribe] .dcf-receive-fewer-emails-container-and-reduce-graphic-imagery-container #en__field_supporter_questions_1855 + label {
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+}
+[data-page-context=new-unsubscribe] .dcf-receive-fewer-emails-container-and-reduce-graphic-imagery-container #en__field_supporter_NOT_TAGGED_134 {
+  width: 23px;
+  height: 23px;
+}
+[data-page-context=new-unsubscribe] .dcf-receive-fewer-emails-container-and-reduce-graphic-imagery-container + div .en__field--checkbox[style*=overflow-x] {
+  display: none; /* Hides Remember Me which was showing up on PETA Latino pages */
+}
 [data-page-context=new-unsubscribe] .dcf-receive-fewer-emails-container {
   justify-self: flex-end;
 }
@@ -500,6 +531,14 @@ Miscellaneous Pages (To Be Deleted After Development)
   padding: 1rem;
   flex: 1 0 auto;
   height: 100%;
+}
+[data-page-context=new-unsubscribe] .dcf-receive-fewer-emails-container .en__field__item,
+[data-page-context=new-unsubscribe] .dcf-reduce-graphic-imagery-container .en__field__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0;
+  gap: 15px;
 }
 [data-page-context=new-unsubscribe] .dcf-receive-fewer-emails-container label,
 [data-page-context=new-unsubscribe] .dcf-reduce-graphic-imagery-container label {
@@ -518,16 +557,12 @@ Miscellaneous Pages (To Be Deleted After Development)
 [data-page-context=new-unsubscribe] .dcf-reduce-graphic-imagery-container .en__field__element--checkbox .en__field__item {
   padding-bottom: 0;
 }
-[data-page-context=new-unsubscribe] .dcf-reduce-graphic-imagery-container #en__field_supporter_NOT_TAGGED_134 {
-  margin-right: 15px !important;
-  position: relative;
-  top: 2px;
-}
 [data-page-context=new-unsubscribe] .dcf-receive-fewer-emails-container .en__field--1855 {
-  display: flex;
+  display: flex !important; /* PETA Latino pages have a different value than vanilla PETA pages, this makes them the same */
   flex-direction: row-reverse;
   justify-content: flex-end;
   align-items: center;
+  gap: 15px;
 }
 [data-page-context=new-unsubscribe] .el-receive-fewer-emails-container,
 [data-page-context=new-unsubscribe] .el-reduce-graphic-imagery-container {
@@ -684,7 +719,7 @@ Miscellaneous Pages (To Be Deleted After Development)
 }
 [data-page-context=new-unsubscribe][data-custom-js=loaded] {
   opacity: 1;
-}`)),document.head.appendChild(n)}}catch(e){console.error("vite-plugin-css-injected-by-js",e)}})();
+}`)),document.head.appendChild(e)}}catch(n){console.error("vite-plugin-css-injected-by-js",n)}})();
 true&&(function polyfill() {
     const relList = document.createElement('link').relList;
     if (relList && relList.supports && relList.supports('modulepreload')) {
@@ -940,6 +975,8 @@ const emailDisabler = () => {
 
 const updateLabelContents = () => {
   function updateLabelContents() {
+    const langValue = document.documentElement.getAttribute("lang");
+
     // Get the label for the ".dcf-receive-fewer-emails-container" element
     const fewerEmailsLabel = document.querySelector(
       ".dcf-receive-fewer-emails-container label"
@@ -947,8 +984,14 @@ const updateLabelContents = () => {
 
     // If the label exists
     if (fewerEmailsLabel) {
-      // Update the label's contents
-      fewerEmailsLabel.textContent = "Receive Fewer E-Mails";
+      if (langValue === "es") {
+        // Update the label's contents
+        fewerEmailsLabel.textContent =
+          "Programa para reducir correos electrónicos";
+      } else {
+        // Update the label's contents
+        fewerEmailsLabel.textContent = "Receive Fewer E-Mails";
+      }
     }
 
     // Get the label for the ".dcf-reduce-graphic-imagery-container" element
@@ -959,7 +1002,11 @@ const updateLabelContents = () => {
     // If the label exists
     if (reduceGraphicImageryLabel) {
       // Update the label's contents
-      reduceGraphicImageryLabel.textContent = "Reduce Graphic Imagery";
+      if (langValue === "es") {
+        reduceGraphicImageryLabel.textContent = "Reduce las imágenes sensibles";
+      } else {
+        reduceGraphicImageryLabel.textContent = "Reduce Graphic Imagery";
+      }
     }
   }
 
@@ -1138,6 +1185,11 @@ const runScript = () => {
   if (dcfReducedEmailCheckbox) {
     // Uncheck the checkbox
     dcfReducedEmailCheckbox.checked = false;
+
+    // Need this second one because it was unchecking on PETA Latino pages
+    window.addEventListener("load", function () {
+      dcfReducedEmailCheckbox.checked = false;
+    });
   }
 
   (function toggleCheckboxOnClick() {
@@ -1190,25 +1242,25 @@ const runScript = () => {
     });
   }
 
-     // If the URL is 53017, wich is for cold visitors, we should unchecked the Master Supression list checkbox on page load
-     /**
-     * This function unchecks the "supporter.questions.178" checkbox if it exists.
-     * It runs only when "53017" is present anywhere in the URL.
-     */
-    function uncheckQuestions178Checkbox() {
-      const url = window.location.href;
-      if (url.includes("53017")) {
-        const questions178Checkbox = document.querySelector("input[name='supporter.questions.178']");
-        if (questions178Checkbox) {
-          questions178Checkbox.checked = false;
-        }
+  // If the URL is 53017, wich is for cold visitors, we should unchecked the Master Supression list checkbox on page load
+  /**
+   * This function unchecks the "supporter.questions.178" checkbox if it exists.
+   * It runs only when "53017" is present anywhere in the URL.
+   */
+  function uncheckQuestions178Checkbox() {
+    const url = window.location.href;
+    if (url.includes("53017" )) {
+      const questions178Checkbox = document.querySelector(
+        "input[name='supporter.questions.178']"
+      );
+      if (questions178Checkbox) {
+        questions178Checkbox.checked = false;
       }
     }
+  }
 
-    // Call the function to uncheck the checkbox if the condition is met
-    uncheckQuestions178Checkbox();
-
-
+  // Call the function to uncheck the checkbox if the condition is met
+  uncheckQuestions178Checkbox();
 
   console.log("PETA Custom JS loaded");
   document.body.setAttribute("data-custom-js", "loaded");

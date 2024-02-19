@@ -1,5 +1,7 @@
 export const updateLabelContents = () => {
   function updateLabelContents() {
+    const langValue = document.documentElement.getAttribute("lang");
+
     // Get the label for the ".dcf-receive-fewer-emails-container" element
     const fewerEmailsLabel = document.querySelector(
       ".dcf-receive-fewer-emails-container label"
@@ -7,8 +9,14 @@ export const updateLabelContents = () => {
 
     // If the label exists
     if (fewerEmailsLabel) {
-      // Update the label's contents
-      fewerEmailsLabel.textContent = "Receive Fewer E-Mails";
+      if (langValue === "es") {
+        // Update the label's contents
+        fewerEmailsLabel.textContent =
+          "Programa para reducir correos electrónicos";
+      } else {
+        // Update the label's contents
+        fewerEmailsLabel.textContent = "Receive Fewer E-Mails";
+      }
     }
 
     // Get the label for the ".dcf-reduce-graphic-imagery-container" element
@@ -19,7 +27,11 @@ export const updateLabelContents = () => {
     // If the label exists
     if (reduceGraphicImageryLabel) {
       // Update the label's contents
-      reduceGraphicImageryLabel.textContent = "Reduce Graphic Imagery";
+      if (langValue === "es") {
+        reduceGraphicImageryLabel.textContent = "Reduce las imágenes sensibles";
+      } else {
+        reduceGraphicImageryLabel.textContent = "Reduce Graphic Imagery";
+      }
     }
   }
 
