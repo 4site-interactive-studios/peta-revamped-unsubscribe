@@ -1,0 +1,29 @@
+<!-- START: UNSUBSCRIBE page scripts -->
+<!-- REF: https://app.productive.io/2650-4site-interactive-studios-inc/tasks/3677552 -->
+<script>
+    // Create a new script element
+    let script = document.createElement('script');
+
+    // Create a URLSearchParams object
+    let params = new URLSearchParams(window.location.search);
+
+    // Get current Unix timestamp in milliseconds
+    let timestamp = new Date().getTime();
+
+    // Check the URL parameters for 'assets' and then check if its value is 'local'
+    if (params.has('assets') && params.get('assets') === 'local') {
+        // If 'assets=local' is found, use the local script and set the crossOrigin attribute
+        script.src = 'https://peta-revamped-unsubscribe.test/dist/peta-revamped-unsubscribe.js';
+        // script.crossOrigin = 'anonymous';
+    } else {
+        // If 'assets=local' is not found, use the remote script
+        script.src = `https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10003/peta-revamped-unsubscribe.js?v=${timestamp}`;
+    }
+
+    // Set the type of the script
+    script.type = 'text/javascript';
+
+    // Append the script element to the head of the document
+    document.head.appendChild(script);
+</script>
+<!-- END: UNSUBSCRIBE page scripts -->
