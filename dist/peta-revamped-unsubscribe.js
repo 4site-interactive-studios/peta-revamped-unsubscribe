@@ -23,9 +23,6 @@ Miscellaneous Pages (To Be Deleted After Development)
   padding-left: 0;
   padding-right: 0;
 }
-[data-page-context=new-unsubscribe] .manage-emails-text-block p {
-  display: none;
-}
 [data-page-context=new-unsubscribe] .manage-emails-text-block h1 {
   font-size: 28px;
 }
@@ -720,6 +717,10 @@ Miscellaneous Pages (To Be Deleted After Development)
 }
 [data-page-context=new-unsubscribe][data-custom-js=loaded] {
   opacity: 1;
+}
+[data-page-context=new-unsubscribe] #pb_49041 .en__field--emailAddress + .en__field--checkbox[style],
+[data-page-context=new-unsubscribe] #pb_49041 .en__field--emailAddress + .en__field--checkbox:has(.rememberme-wrapper) {
+  display: none !important;
 }`)),document.head.appendChild(e)}}catch(n){console.error("vite-plugin-css-injected-by-js",n)}})();
 true&&(function polyfill() {
     const relList = document.createElement('link').relList;

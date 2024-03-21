@@ -44,9 +44,9 @@ Miscellaneous Pages (To Be Deleted After Development)
     padding-right: 0;
   }
 
-  .manage-emails-text-block p {
-    display: none;
-  }
+  // .manage-emails-text-block p {
+  //   display: none;
+  // }
 
   .manage-emails-text-block h1 {
     font-size: 28px;
@@ -927,5 +927,12 @@ Miscellaneous Pages (To Be Deleted After Development)
 
   &[data-custom-js="loaded"] {
     opacity: 1;
+  }
+
+  #pb_49041 .en__field--emailAddress + .en__field--checkbox[style],
+  #pb_49041
+    .en__field--emailAddress
+    + .en__field--checkbox:has(.rememberme-wrapper) {
+    display: none !important;
   }
 }
