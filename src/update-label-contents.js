@@ -11,8 +11,7 @@ export const updateLabelContents = () => {
     if (fewerEmailsLabel) {
       if (langValue === "es") {
         // Update the label's contents
-        fewerEmailsLabel.textContent =
-          "Programa para reducir correos electrónicos";
+        fewerEmailsLabel.textContent = "Recibir menos correos electrónicos";
       } else {
         // Update the label's contents
         fewerEmailsLabel.textContent = "Receive Fewer E-Mails";
@@ -28,7 +27,8 @@ export const updateLabelContents = () => {
     if (reduceGraphicImageryLabel) {
       // Update the label's contents
       if (langValue === "es") {
-        reduceGraphicImageryLabel.textContent = "Reduce las imágenes sensibles";
+        reduceGraphicImageryLabel.textContent =
+          "Reducir las imágenes sensibles";
       } else {
         reduceGraphicImageryLabel.textContent = "Reduce Graphic Imagery";
       }
