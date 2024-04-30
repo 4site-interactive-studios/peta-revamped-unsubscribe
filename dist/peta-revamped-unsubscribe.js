@@ -723,7 +723,7 @@ html:not([lang=es]) .email-preferences-copy {
 [data-page-context=new-unsubscribe]:not(#en__pagebuilder) div:not(.dcf-receive-fewer-emails-container) > div > .en__field--1855 {
   display: none;
 }
-[data-page-context=new-unsubscribe]:not(#en__pagebuilder):not([data-status=unsubscribe]) .has-status_unsubscribe, [data-page-context=new-unsubscribe]:not(#en__pagebuilder):not([data-status=update]) .has-status_update {
+[data-page-context=new-unsubscribe]:not(#en__pagebuilder)[data-status]:not([data-status=unsubscribe]) .has-status_unsubscribe, [data-page-context=new-unsubscribe]:not(#en__pagebuilder):not([data-status=update]) .has-status_update {
   display: none;
 }
 [data-page-context=new-unsubscribe][data-custom-js=loaded] {
