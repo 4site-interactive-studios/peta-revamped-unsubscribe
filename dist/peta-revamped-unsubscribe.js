@@ -64,8 +64,10 @@ Miscellaneous Pages (To Be Deleted After Development)
   padding-bottom: 32px;
 }
 [data-page-context=new-unsubscribe] .manage-emails-container > * {
-  max-width: 530px;
   width: 100%;
+}
+html:not([lang=es]) .manage-emails-container > * {
+  max-width: 530px;
 }
 [data-page-context=new-unsubscribe] .unsubscribe-options-header {
   display: flex;
@@ -74,8 +76,10 @@ Miscellaneous Pages (To Be Deleted After Development)
   align-items: center;
 }
 [data-page-context=new-unsubscribe] .unsubscribe-options-header > * {
-  max-width: 710px;
   width: 100%;
+}
+html:not([lang=es]) .unsubscribe-options-header > * {
+  max-width: 710px;
 }
 [data-page-context=new-unsubscribe] .email-preferences-copy {
   padding-bottom: 32px;
@@ -571,19 +575,26 @@ Miscellaneous Pages (To Be Deleted After Development)
 [data-page-context=new-unsubscribe] .el-receive-fewer-emails-container > *:first-child,
 [data-page-context=new-unsubscribe] .el-reduce-graphic-imagery-container > *:first-child {
   border: 1px solid #c5c5c5;
-  max-width: 775px;
   padding: 24px 32px 32px 32px;
   margin-bottom: 48px;
 }
+html:not([lang=es]) .el-receive-fewer-emails-container > *:first-child,
+html:not([lang=es]) .el-reduce-graphic-imagery-container > *:first-child {
+  max-width: 775px;
+}
 [data-page-context=new-unsubscribe] .privacy-policy {
-  max-width: 630px;
   margin-left: auto;
   margin-right: auto;
 }
-[data-page-context=new-unsubscribe] .email-preferences-copy {
+html:not([lang=es]) .privacy-policy {
   max-width: 630px;
+}
+[data-page-context=new-unsubscribe] .email-preferences-copy {
   margin-left: auto;
   margin-right: auto;
+}
+html:not([lang=es]) .email-preferences-copy {
+  max-width: 630px;
 }
 [data-page-context=new-unsubscribe] .en__component--advcolumn.center .en__field--emailAddress {
   max-width: 450px;
