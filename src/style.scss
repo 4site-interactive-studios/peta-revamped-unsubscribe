@@ -771,7 +771,7 @@ Miscellaneous Pages (To Be Deleted After Development)
   }
 
   .en__component--advcolumn.center .en__field--emailAddress {
-    max-width: 450px;
+    max-width: 325px;
     margin-bottom: 1rem;
     margin-left: auto;
     margin-right: auto;
@@ -883,7 +883,7 @@ Miscellaneous Pages (To Be Deleted After Development)
     form[action="/page/49060/data/2"]
       .mobile-advocacy-section
       .mobile-join-button {
-      display: none;
+      // display: none;
     }
 
     form[action="/page/49060/data/2"] .mobile-advocacy-parent {
@@ -912,7 +912,7 @@ Miscellaneous Pages (To Be Deleted After Development)
       );
       flex-direction: row;
       overflow: hidden;
-      height: 305px;
+      min-height: 305px;
     }
   }
 
@@ -941,9 +941,10 @@ Miscellaneous Pages (To Be Deleted After Development)
     display: none;
   }
 
-  &:not(#en__pagebuilder)[data-status]:not([data-status="unsubscribe"])
-    .has-status_unsubscribe,
-  &:not(#en__pagebuilder):not([data-status="update"]) .has-status_update {
+  &:not(#en__pagebuilder)[data-status]:not([data-status="update"])
+    .has-status_update,
+  &:not(#en__pagebuilder):not([data-status="unsubscribe"])
+    .has-status_unsubscribe {
     display: none;
   }
 
@@ -955,6 +956,11 @@ Miscellaneous Pages (To Be Deleted After Development)
   #pb_49041
     .en__field--emailAddress
     + .en__field--checkbox:has(.rememberme-wrapper) {
+    display: none !important;
+  }
+
+  // Hide the Remember Me "clear" message
+  #clear-autofill-data {
     display: none !important;
   }
 }

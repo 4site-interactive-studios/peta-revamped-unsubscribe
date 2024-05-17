@@ -134,9 +134,16 @@ const runScript = () => {
       let actionTeamFieldsFirstName = actionTeamFields.querySelector(
         '[for="en__field_supporter_firstName"]'
       );
+
+      // Check if the URL contains 'petalatino.com'
+      let url = window.location.href;
+      let labelText = url.includes("petalatino.com")
+        ? "Registro del Equipo de Acción:"
+        : "Action Team Signup:";
+
       actionTeamFieldsFirstName.insertAdjacentHTML(
         "afterbegin",
-        '<span class="en__field__label action-team-signup-field-label" style="">Action Team Signup:</span>'
+        `<span class="en__field__label action-team-signup-field-label" style="">${labelText}</span>`
       );
       actionTeamDesc.after(actionTeamFields);
     }

@@ -597,7 +597,7 @@ html:not([lang=es]) .email-preferences-copy {
   max-width: 630px;
 }
 [data-page-context=new-unsubscribe] .en__component--advcolumn.center .en__field--emailAddress {
-  max-width: 450px;
+  max-width: 325px;
   margin-bottom: 1rem;
   margin-left: auto;
   margin-right: auto;
@@ -687,9 +687,6 @@ html:not([lang=es]) .email-preferences-copy {
     line-height: 18px;
     margin-left: 50px;
   }
-  [data-page-context=new-unsubscribe] form[action="/page/49060/data/2"] .mobile-advocacy-section .mobile-join-button {
-    display: none;
-  }
   [data-page-context=new-unsubscribe] form[action="/page/49060/data/2"] .mobile-advocacy-parent {
     background-image: linear-gradient(-70deg, #19252e, #19252e 55%, #5160f1 38%, #5160f1);
   }
@@ -702,7 +699,7 @@ html:not([lang=es]) .email-preferences-copy {
     background-image: linear-gradient(-70deg, #254d68, #254d68 55%, #418fde 38%, #418fde);
     flex-direction: row;
     overflow: hidden;
-    height: 305px;
+    min-height: 305px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -723,7 +720,7 @@ html:not([lang=es]) .email-preferences-copy {
 [data-page-context=new-unsubscribe]:not(#en__pagebuilder) div:not(.dcf-receive-fewer-emails-container) > div > .en__field--1855 {
   display: none;
 }
-[data-page-context=new-unsubscribe]:not(#en__pagebuilder)[data-status]:not([data-status=unsubscribe]) .has-status_unsubscribe, [data-page-context=new-unsubscribe]:not(#en__pagebuilder):not([data-status=update]) .has-status_update {
+[data-page-context=new-unsubscribe]:not(#en__pagebuilder)[data-status]:not([data-status=update]) .has-status_update, [data-page-context=new-unsubscribe]:not(#en__pagebuilder):not([data-status=unsubscribe]) .has-status_unsubscribe {
   display: none;
 }
 [data-page-context=new-unsubscribe][data-custom-js=loaded] {
@@ -731,6 +728,9 @@ html:not([lang=es]) .email-preferences-copy {
 }
 [data-page-context=new-unsubscribe] #pb_49041 .en__field--emailAddress + .en__field--checkbox[style],
 [data-page-context=new-unsubscribe] #pb_49041 .en__field--emailAddress + .en__field--checkbox:has(.rememberme-wrapper) {
+  display: none !important;
+}
+[data-page-context=new-unsubscribe] #clear-autofill-data {
   display: none !important;
 }`)),document.head.appendChild(e)}}catch(n){console.error("vite-plugin-css-injected-by-js",n)}})();
 true&&(function polyfill() {
@@ -1152,9 +1152,16 @@ const runScript = () => {
       let actionTeamFieldsFirstName = actionTeamFields.querySelector(
         '[for="en__field_supporter_firstName"]'
       );
+
+      // Check if the URL contains 'petalatino.com'
+      let url = window.location.href;
+      let labelText = url.includes("petalatino.com")
+        ? "Registro del Equipo de Acción:"
+        : "Action Team Signup:";
+
       actionTeamFieldsFirstName.insertAdjacentHTML(
         "afterbegin",
-        '<span class="en__field__label action-team-signup-field-label" style="">Action Team Signup:</span>'
+        `<span class="en__field__label action-team-signup-field-label" style="">${labelText}</span>`
       );
       actionTeamDesc.after(actionTeamFields);
     }
