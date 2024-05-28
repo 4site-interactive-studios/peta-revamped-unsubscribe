@@ -770,7 +770,9 @@ Miscellaneous Pages (To Be Deleted After Development)
     max-width: 630px;
   }
 
-  .en__component--advcolumn.center .en__field--emailAddress {
+  .en__component--advcolumn.center .en__field--emailAddress,
+  #pb_49041 .en__field--emailAddress,
+  #pb_49041 .incorrect-email-link {
     max-width: 325px;
     margin-bottom: 1rem;
     margin-left: auto;

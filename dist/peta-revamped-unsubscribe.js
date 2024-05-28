@@ -596,7 +596,9 @@ html:not([lang=es]) .privacy-policy {
 html:not([lang=es]) .email-preferences-copy {
   max-width: 630px;
 }
-[data-page-context=new-unsubscribe] .en__component--advcolumn.center .en__field--emailAddress {
+[data-page-context=new-unsubscribe] .en__component--advcolumn.center .en__field--emailAddress,
+[data-page-context=new-unsubscribe] #pb_49041 .en__field--emailAddress,
+[data-page-context=new-unsubscribe] #pb_49041 .incorrect-email-link {
   max-width: 325px;
   margin-bottom: 1rem;
   margin-left: auto;
@@ -1156,7 +1158,7 @@ const runScript = () => {
       // Check if the URL contains 'petalatino.com'
       let url = window.location.href;
       let labelText = url.includes("petalatino.com")
-        ? "Registro del Equipo de Acción:"
+        ? "Inscripción al equipo de acción:"
         : "Action Team Signup:";
 
       actionTeamFieldsFirstName.insertAdjacentHTML(

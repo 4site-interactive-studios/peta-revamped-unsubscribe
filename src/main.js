@@ -138,7 +138,7 @@ const runScript = () => {
       // Check if the URL contains 'petalatino.com'
       let url = window.location.href;
       let labelText = url.includes("petalatino.com")
-        ? "Registro del Equipo de Acción:"
+        ? "Inscripción al equipo de acción:"
         : "Action Team Signup:";
 
       actionTeamFieldsFirstName.insertAdjacentHTML(
