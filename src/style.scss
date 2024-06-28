@@ -943,8 +943,7 @@ Miscellaneous Pages (To Be Deleted After Development)
     display: none;
   }
 
-  &:not(#en__pagebuilder)[data-status]:not([data-status="update"])
-    .has-status_update,
+  &:not(#en__pagebuilder)[data-]:not([data-status="update"]) .has-status_update,
   &:not(#en__pagebuilder):not([data-status="unsubscribe"])
     .has-status_unsubscribe {
     display: none;

@@ -100,11 +100,11 @@ const runScript = () => {
   }
 
   // Call the function for each SVG/checkbox pair
-  toggleSliderAndCheckbox(
-    ".el-receive-fewer-emails-container .graphic-slider",
-    'input[type="checkbox"]#en__field_supporter_questions_1855',
-    ".en__field--question.en__field--1855"
-  );
+  // toggleSliderAndCheckbox(
+  //   ".el-receive-fewer-emails-container .graphic-slider",
+  //   'input[type="checkbox"]#en__field_supporter_questions_1855',
+  //   ".en__field--question.en__field--1855"
+  // );
   toggleSliderAndCheckbox(
     ".el-reduce-graphic-imagery-container .graphic-slider",
     'input[type="checkbox"]#en__field_supporter_NOT_TAGGED_134',
@@ -187,10 +187,29 @@ const runScript = () => {
   if (dcfReducedEmailCheckbox) {
     // Uncheck the checkbox
     dcfReducedEmailCheckbox.checked = false;
+    console.log(
+      "dcfReducedEmailCheckbox has been de-selected - 1 of 4",
+      dcfReducedEmailCheckbox
+    );
 
     // Need this second one because it was unchecking on PETA Latino pages
     window.addEventListener("load", function () {
       dcfReducedEmailCheckbox.checked = false;
+      console.log(
+        "dcfReducedEmailCheckbox has been de-selected - 2 of 4",
+        dcfReducedEmailCheckbox
+      );
+      setTimeout(() => {
+        console.log(
+          "dcfReducedEmailCheckbox has been de-selected - 3 of 4",
+          dcfReducedEmailCheckbox
+        );
+        dcfReducedEmailCheckbox.checked = false;
+        console.log(
+          "dcfReducedEmailCheckbox has been de-selected - 4 of 4",
+          dcfReducedEmailCheckbox
+        );
+      }, 150);
     });
   }
 

@@ -28,9 +28,11 @@ export const toggleCheckboxOnClickOrTouch = () => {
       container.addEventListener("click", toggleCheckboxValue);
       container.addEventListener("touchend", (event) => {
         event.preventDefault();
-        toggleCheckboxValue();
+        toggleCheckboxValue("checkbox label clicked or touched");
       });
     }
+
+    console.log();
   }
 
   // Call the function for each container and checkbox pair

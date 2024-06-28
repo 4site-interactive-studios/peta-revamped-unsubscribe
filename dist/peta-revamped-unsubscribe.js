@@ -722,7 +722,7 @@ html:not([lang=es]) .email-preferences-copy {
 [data-page-context=new-unsubscribe]:not(#en__pagebuilder) div:not(.dcf-receive-fewer-emails-container) > div > .en__field--1855 {
   display: none;
 }
-[data-page-context=new-unsubscribe]:not(#en__pagebuilder)[data-status]:not([data-status=update]) .has-status_update, [data-page-context=new-unsubscribe]:not(#en__pagebuilder):not([data-status=unsubscribe]) .has-status_unsubscribe {
+[data-page-context=new-unsubscribe]:not(#en__pagebuilder)[data-]:not([data-status=update]) .has-status_update, [data-page-context=new-unsubscribe]:not(#en__pagebuilder):not([data-status=unsubscribe]) .has-status_unsubscribe {
   display: none;
 }
 [data-page-context=new-unsubscribe][data-custom-js=loaded] {
@@ -1120,11 +1120,11 @@ const runScript = () => {
   }
 
   // Call the function for each SVG/checkbox pair
-  toggleSliderAndCheckbox(
-    ".el-receive-fewer-emails-container .graphic-slider",
-    'input[type="checkbox"]#en__field_supporter_questions_1855',
-    ".en__field--question.en__field--1855"
-  );
+  // toggleSliderAndCheckbox(
+  //   ".el-receive-fewer-emails-container .graphic-slider",
+  //   'input[type="checkbox"]#en__field_supporter_questions_1855',
+  //   ".en__field--question.en__field--1855"
+  // );
   toggleSliderAndCheckbox(
     ".el-reduce-graphic-imagery-container .graphic-slider",
     'input[type="checkbox"]#en__field_supporter_NOT_TAGGED_134',
@@ -1207,10 +1207,29 @@ const runScript = () => {
   if (dcfReducedEmailCheckbox) {
     // Uncheck the checkbox
     dcfReducedEmailCheckbox.checked = false;
+    console.log(
+      "dcfReducedEmailCheckbox has been de-selected - 1 of 4",
+      dcfReducedEmailCheckbox
+    );
 
     // Need this second one because it was unchecking on PETA Latino pages
     window.addEventListener("load", function () {
       dcfReducedEmailCheckbox.checked = false;
+      console.log(
+        "dcfReducedEmailCheckbox has been de-selected - 2 of 4",
+        dcfReducedEmailCheckbox
+      );
+      setTimeout(() => {
+        console.log(
+          "dcfReducedEmailCheckbox has been de-selected - 3 of 4",
+          dcfReducedEmailCheckbox
+        );
+        dcfReducedEmailCheckbox.checked = false;
+        console.log(
+          "dcfReducedEmailCheckbox has been de-selected - 4 of 4",
+          dcfReducedEmailCheckbox
+        );
+      }, 150);
     });
   }
 
