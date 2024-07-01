@@ -1029,9 +1029,26 @@ const updateLabelContents = () => {
   updateLabelContents();
 };
 
+const resetCheckboxes = () => {
+  /**
+   * Disable autocomplete on all checkboxes (Firefox would persist the state otherwise)
+   * And set the state to unchecked
+   * */
+  function resetCheckboxes() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach((checkbox) => {
+      checkbox.setAttribute("autocomplete", "off");
+      checkbox.checked = false;
+      console.log(`Disabled autocomplete for checkbox: ${checkbox.name}`);
+    });
+  }
+  resetCheckboxes();
+};
+
 // Encapsulate your code into a function
 const runScript = () => {
   setBodyAttributes();
+  resetCheckboxes();
   // convert1855CheckboxToRadioButtons();
   setUnsubscribeAllOnClick();
   toggleSubscriptionCheckboxOnClick();
@@ -1207,30 +1224,6 @@ const runScript = () => {
   if (dcfReducedEmailCheckbox) {
     // Uncheck the checkbox
     dcfReducedEmailCheckbox.checked = false;
-    console.log(
-      "dcfReducedEmailCheckbox has been de-selected - 1 of 4",
-      dcfReducedEmailCheckbox
-    );
-
-    // Need this second one because it was unchecking on PETA Latino pages
-    window.addEventListener("load", function () {
-      dcfReducedEmailCheckbox.checked = false;
-      console.log(
-        "dcfReducedEmailCheckbox has been de-selected - 2 of 4",
-        dcfReducedEmailCheckbox
-      );
-      setTimeout(() => {
-        console.log(
-          "dcfReducedEmailCheckbox has been de-selected - 3 of 4",
-          dcfReducedEmailCheckbox
-        );
-        dcfReducedEmailCheckbox.checked = false;
-        console.log(
-          "dcfReducedEmailCheckbox has been de-selected - 4 of 4",
-          dcfReducedEmailCheckbox
-        );
-      }, 150);
-    });
   }
 
   (function toggleCheckboxOnClick() {
@@ -1243,7 +1236,7 @@ const runScript = () => {
 
     if (label && checkbox) {
       label.addEventListener("click", () => {
-        checkbox.checked = !checkbox.checked;
+        checkbox.checked = !!!checkbox.checked;
       });
     }
   })();
@@ -1275,7 +1268,7 @@ const runScript = () => {
   const lessEmailsBtn = document.querySelector(".less-emails-button");
   if (lessEmailsBtn && lessEmailsBox) {
     lessEmailsBtn.addEventListener("click", (e) => {
-      lessEmailsBox.checked = "true";
+      lessEmailsBox.checked = true;
       const submitBtn = document.querySelector(".en__submit button");
       if (submitBtn) {
         submitBtn.click();
@@ -1307,10 +1300,14 @@ const runScript = () => {
   document.body.setAttribute("data-custom-js", "loaded");
 };
 
-if (document.readyState === "loading") {
-  // If the content is still loading, add an event listener for DOMContentLoaded
-  document.addEventListener("DOMContentLoaded", runScript);
-} else {
-  // If the content has already loaded, run the function immediately
-  runScript();
-}
+// While the window.PETA_URL object is not available, keep checking every 100ms
+let interval = setInterval(() => {
+  if (window.PETA_URL) {
+    clearInterval(interval);
+    setTimeout(() => {
+      runScript();
+    }, 200);
+  } else {
+    console.log("PETA_URL is not available");
+  }
+}, 100);

@@ -8,10 +8,12 @@ import { toggleSubscriptionCheckboxOnClick } from "./make-opt-in-labels-clickabl
 import { addSVGAndH3ClickListeners } from "./svg-and-h3-click-listeners";
 import { emailDisabler } from "./email-disabled";
 import { updateLabelContents } from "./update-label-contents";
+import { resetCheckboxes } from "./reset-checkboxes.js";
 
 // Encapsulate your code into a function
 const runScript = () => {
   setBodyAttributes();
+  resetCheckboxes();
   // convert1855CheckboxToRadioButtons();
   setUnsubscribeAllOnClick();
   toggleSubscriptionCheckboxOnClick();
@@ -187,30 +189,6 @@ const runScript = () => {
   if (dcfReducedEmailCheckbox) {
     // Uncheck the checkbox
     dcfReducedEmailCheckbox.checked = false;
-    console.log(
-      "dcfReducedEmailCheckbox has been de-selected - 1 of 4",
-      dcfReducedEmailCheckbox
-    );
-
-    // Need this second one because it was unchecking on PETA Latino pages
-    window.addEventListener("load", function () {
-      dcfReducedEmailCheckbox.checked = false;
-      console.log(
-        "dcfReducedEmailCheckbox has been de-selected - 2 of 4",
-        dcfReducedEmailCheckbox
-      );
-      setTimeout(() => {
-        console.log(
-          "dcfReducedEmailCheckbox has been de-selected - 3 of 4",
-          dcfReducedEmailCheckbox
-        );
-        dcfReducedEmailCheckbox.checked = false;
-        console.log(
-          "dcfReducedEmailCheckbox has been de-selected - 4 of 4",
-          dcfReducedEmailCheckbox
-        );
-      }, 150);
-    });
   }
 
   (function toggleCheckboxOnClick() {
@@ -223,7 +201,7 @@ const runScript = () => {
 
     if (label && checkbox) {
       label.addEventListener("click", () => {
-        checkbox.checked = !checkbox.checked;
+        checkbox.checked = !!!checkbox.checked;
       });
     }
   })();
@@ -255,7 +233,7 @@ const runScript = () => {
   const lessEmailsBtn = document.querySelector(".less-emails-button");
   if (lessEmailsBtn && lessEmailsBox) {
     lessEmailsBtn.addEventListener("click", (e) => {
-      lessEmailsBox.checked = "true";
+      lessEmailsBox.checked = true;
       const submitBtn = document.querySelector(".en__submit button");
       if (submitBtn) {
         submitBtn.click();
@@ -287,10 +265,14 @@ const runScript = () => {
   document.body.setAttribute("data-custom-js", "loaded");
 };
 
-if (document.readyState === "loading") {
-  // If the content is still loading, add an event listener for DOMContentLoaded
-  document.addEventListener("DOMContentLoaded", runScript);
-} else {
-  // If the content has already loaded, run the function immediately
-  runScript();
-}
+// While the window.PETA_URL object is not available, keep checking every 100ms
+let interval = setInterval(() => {
+  if (window.PETA_URL) {
+    clearInterval(interval);
+    setTimeout(() => {
+      runScript();
+    }, 200);
+  } else {
+    console.log("PETA_URL is not available");
+  }
+}, 100);
