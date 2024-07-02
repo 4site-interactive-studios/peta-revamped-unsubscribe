@@ -1038,7 +1038,7 @@ const resetCheckboxes = () => {
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     checkboxes.forEach((checkbox) => {
       checkbox.setAttribute("autocomplete", "off");
-      checkbox.checked = false;
+      // checkbox.checked = false;
       console.log(`Disabled autocomplete for checkbox: ${checkbox.name}`);
     });
   }
