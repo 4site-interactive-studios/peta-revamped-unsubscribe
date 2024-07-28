@@ -1276,14 +1276,14 @@ const runScript = () => {
     });
   }
 
-  // If the URL is 53017, wich is for cold visitors, we should unchecked the Master Supression list checkbox on page load
+  // If the URL is 53017 or 55607, wich is for cold visitors, we should unchecked the Master Supression list checkbox on page load
   /**
    * This function unchecks the "supporter.questions.178" checkbox if it exists.
    * It runs only when "53017" is present anywhere in the URL.
    */
   function uncheckQuestions178Checkbox() {
     const url = window.location.href;
-    if (url.includes("53017" )) {
+    if (url.includes("53017") || url.includes("55607")) {
       const questions178Checkbox = document.querySelector(
         "input[name='supporter.questions.178']"
       );
