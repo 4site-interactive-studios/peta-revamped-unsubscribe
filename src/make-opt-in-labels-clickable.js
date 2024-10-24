@@ -17,17 +17,17 @@ export const toggleSubscriptionCheckboxOnClick = () => {
     subscriptionTitles.forEach((title, index) => {
       let input = title.querySelector('input[type="checkbox"]');
       let titleLabel = title.querySelector("label");
-
-      // for the corresponding title label
-      titleLabel.addEventListener("click", (event) => {
-        // console.log("title clicked", event);
-        event.preventDefault();
-        if (event.target.tagName !== "INPUT") input.checked = !input.checked;
-
-        // Create a bubbling change event and dispatch it
-        const changeEvent = new Event("change", { bubbles: true });
-        input.dispatchEvent(changeEvent);
-      });
+    
+      if (input && titleLabel) {
+        // only add event listener if both input and titleLabel exist
+        titleLabel.addEventListener("click", (event) => {
+          event.preventDefault();
+          if (event.target.tagName !== "INPUT") input.checked = !input.checked;
+    
+          const changeEvent = new Event("change", { bubbles: true });
+          input.dispatchEvent(changeEvent);
+        });
+      }
 
       // for the corresponding description paragraph
       // let description = subscriptionDescriptions[index];
