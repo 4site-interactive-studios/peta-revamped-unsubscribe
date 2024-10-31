@@ -734,6 +734,10 @@ html:not([lang=es]) .email-preferences-copy {
 }
 [data-page-context=new-unsubscribe] #clear-autofill-data {
   display: none !important;
+}
+[data-page-context=new-unsubscribe] form[action="/page/48122/subscriptions/2"] .subscription_description p,
+[data-page-context=new-unsubscribe] form[action="/page/49041/subscriptions/2"] .subscription_description p {
+  margin-top: 0px;
 }`)),document.head.appendChild(e)}}catch(n){console.error("vite-plugin-css-injected-by-js",n)}})();
 true&&(function polyfill() {
     const relList = document.createElement('link').relList;
